@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+
+html {
+  overflow-x: hidden;
+
+}
+
+header,
+body,
+footer {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  padding: 1em;
+}
+.site-content {
+  flex: 1;
+}
+
+header {
+  background-color: #141313;
+}
+
+body {
+  margin: -1em;
+  min-height: 15em;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-bottom: 0em;
+}
+
+footer {
+  background-color: #040603;
+  color: #ff0000;
+  padding:1em;
+
+  /* Height of the footer*/
+
+
+}
+
+/* -------------------------- .header ----------------------------*/
+header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.hlogo {
+  float: left;
+  bottom: 0.2em;
+  left: 1em;
+}
+
+header a:hover {
+  background-color: #aa0000;
+  color: black;
+}
+
+.header-right {
+  float: right;
+}
+
+/* ------------------------------- Footer -------------------------------- */
+.social {
+  margin: 15px;
+  margin-right: 15px;
+  color: #040603;
+}
+
+.socialimg {
+  width: 30px;
+  height: 30px;
+}
+
+.column {
+  float: left;
+  width: 33%;
+}
+.mover {
+  float: left;
+  width: 33%;
+}
+
+/*------------------------------------------------------------------*/
+
+@media only screen and (max-width: 450pt) {
+
+
+    .column {
+        width: 100%;
+    }
+
+  .hlogo {
+    top: -0.5em;
+    width: 93%;
+  }
+
+  .header-right {
+    width: 93%;
+    margin-left: 3em;
+  }
+
+  .aboutb {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 15px;
+  }
+
+  .abouttitle {
+    font-size: 20px;
+  }
+}
+
+

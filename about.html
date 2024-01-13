@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<head></head>
+<body>
+<header></header>
+
+<main class="site-content">
+    <!------------CONTENT HERE------------>
+
+    <div class="about">
+        <h1 class="abouttitle" style="color: #ff0000;">About us:</h1>
+        <p>
+            We are a company that develops security software that uses artificial
+            intelligence (AI) to protect businesses and individuals from cyberattacks. Our software is designed to not
+            only identify and block malicious traffic, but also to actively attack against attackers. This is a new and
+            innovative approach to cyber-security, and it has the potential to be very effective.
+            <br><br>
+            AI is becoming increasingly sophisticated, and it is being used in a variety of ways to improve security.
+            For example, AI can be used to identify and block malicious traffic, detect malware, and prevent data
+            breaches. LavaShield is taking this a step further by using AI to actively attack
+            against attackers.
+            <br><br>
+            When an attacker tries to breach a system protected by LavaShield, our software will
+            identify the attacker and launch a counterattack. This counterattack can disrupt the attacker's operations
+            and make it more difficult for them to launch a successful attack. This can help to protect businesses and
+            individuals from cyberattacks.
+        </p>
+    </div>
+
+
+    <!------------------------------------>
+    <script>
+        $(document).ready(function () {
+            $(".about").hide();
+            $(".about").fadeIn(2500);
+        });
+    </script>
+    <style>
+        .about {
+            background-color: #040603;
+            color: white;
+            font-family: Montserrat, serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            margin-left: 1em;
+            margin-right: 1em;
+            padding: 1em;
+            padding-top: 0.5em;
+
+        }
+
+        #about {
+            background-color: #ff0000;
+            color: black;
+        }
+    </style>
+</main>
+
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<head></head>
+<body>
+<header></header>
+
+<main class="site-content">
+    <!------------CONTENT HERE------------>
+    <br>
+    This will be developed much further (testing).
+    <br>
+    <br>
+
+    <h2>Different commands I use when setting up an OS</h2>
+    <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
+    <h6>eventually more utilities will be released here</h6>
+
+
+    <button id="winBtn">Windows Setup</button>
+
+
+    <!-- Windows -->
+    <div id="winModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="winClose" class="close">&times;</span>
+                <h2>Windows Setup</h2>
+            </div>
+            <div class="modal-body">
+                <br>
+                <a href="https://community.chocolatey.org/packages?q=">Chocolatey package search</a>
+                <br>
+                <h3>INSTALL CHOCO COMMANDS:</h3>
+                <p>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+                    = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
+                    System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
+                <br>
+                <h3>PACKAGES:</h3>
+                <h4>amd-</h4>
+                <p>choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master</p>
+                <h4>thinkpad-</h4>
+                <p>choco install --ignore-checksum lenovo-thinkvantage-system-update</p>
+                <h4>nvidia-</h4>
+                <p>choco install --ignore-checksum nvidia-display-driver</p>
+                <h4>general-</h4>
+                <p>
+                    choco install --ignore-checksum 7zip audacity autoruns bitwarden blender chromium drawio ffmpeg filezilla firefox gimp git github-desktop intel-dsa librewolf mingw mongodb nodejs nordvpn obs-studio php powertoys procexp pycharm-community python qbittorrent qflipper rufus shutup10 signal thunderbird veracrypt vim virtualbox vlc vscode wireshark zoom
+                </p>
+
+                <h4>games-</h4>
+                <p>choco install --ignore-checksum dolphin ds4windows goggalaxy gzdoom
+                    minecraft-launcher pcsx2 steam</p>
+
+
+                <h4>disable fast startup</h4>
+
+
+                <br>
+            </div>
+            <div class="modal-footer">
+                <h3>This is all subject to change (not definitive)</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!------------------------------------>
+    <script>
+        // Get the modal
+        let winModal = document.getElementById("winModal");
+
+        // Get the button that opens the modal
+        let winBtn = document.getElementById("winBtn");
+
+        // Get the <span> element that closes the modal
+        let winSpan = document.getElementById("winClose");
+
+        // When the user clicks the button, open the modal
+        winBtn.onclick = function () {
+            winModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        winSpan.onclick = function () {
+            winModal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == winModal) {
+                winModal.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            padding-bottom: 100px;
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 80%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #000000;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+            overflow-y: auto;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</main>
+
+<footer></footer>
+</body>
+</html>
