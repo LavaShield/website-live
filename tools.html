@@ -72,16 +72,19 @@
                 <h4>AUR packages:</h4>
                 <h5>Getting yay:</h5>
                 <p>
-                    
+                    git clone https://aur.archlinux.org/yay.git
+                </p>
+                <p>
+                    cd yay
+                </p>
+                <p>
+                    makepkg -si
                 </p>
                 <h5>packages:</h5>
                 <p>
                     yay drawio-desktop-bin github-desktop insync librewolf-bin minecraft-launcher 
                     nordvpn-bin qflipper-git visual-studio-code-bin zoom
                 </p>
-
-
-                
                 <br>
             </div>
             <div class="modal-footer">
@@ -119,6 +122,32 @@
                 winModal.style.display = "none";
             }
         }
+
+
+
+
+
+
+
+
+        
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let copyTextElement = document.getElementById('copyText');
+            copyTextElement.addEventListener('click', function() {
+                let textarea = document.createElement('textarea');
+                textarea.value = copyTextElement.textContent;
+                document.body.appendChild(textarea);
+                textarea.select();
+                textarea.setSelectionRange(0, textarea.value.length);
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                copyTextElement.classList.add('copied');
+                setTimeout(function() {
+                    copyTextElement.classList.remove('copied');
+                }, 1000);
+            });
+        });       
     </script>
     <style>
         body {
@@ -209,6 +238,22 @@
             padding: 2px 16px;
             background-color: #000000;
             color: white;
+        }
+
+
+
+
+
+
+
+        
+        #copyText {
+            cursor: pointer;
+        }
+
+        #copyText.copied {
+            background-color: #c8f7c5;
+            transition: background-color 0.5s ease;
         }
     </style>
 </main>
