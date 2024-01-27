@@ -35,19 +35,26 @@
                 <a href="https://community.chocolatey.org/packages?q=">Chocolatey package search</a>
                 <br>
                 <h3>INSTALL CHOCO COMMANDS:</h3>
-                <p>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+                <p id='copyText'>
+                    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
                     = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
                     System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
                 <br>
                 <h3>PACKAGES:</h3>
                 <h4>amd-</h4>
-                <p>choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master</p>
+                <p id='copyText'>
+                    choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master
+                </p>
                 <h4>thinkpad-</h4>
-                <p>choco install --ignore-checksum lenovo-thinkvantage-system-update</p>
+                <p id='copyText'>
+                    choco install --ignore-checksum lenovo-thinkvantage-system-update
+                </p>
                 <h4>nvidia-</h4>
-                <p>choco install --ignore-checksum nvidia-display-driver</p>
+                <p id='copyText'>
+                    choco install --ignore-checksum nvidia-display-driver
+                </p>
                 <h4>general-</h4>
-                <p>
+                <p id='copyText'>
                     choco install --ignore-checksum 7zip audacity autoruns bitwarden blender chromium 
                     drawio ffmpeg filezilla firefox gimp git github-desktop golang intel-dsa librewolf 
                     mingw nodejs nordvpn obs-studio openjdk php powertoys procexp pycharm-community 
@@ -55,13 +62,14 @@
                     virtualbox vlc vscode wireshark zoom
                 </p>
                 <h4>games-</h4>
-                <p>choco install --ignore-checksum dolphin ds4windows goggalaxy gzdoom
-                    minecraft-launcher pcsx2 steam</p>
+                <p id='copyText'>choco install --ignore-checksum dolphin ds4windows goggalaxy gzdoom
+                    minecraft-launcher pcsx2 steam
+                </p>
                 <h4>disable fast startup</h4>
-
+                <p>------------------------------------------------------------</p>
                 <h3>ARCHLINUX INSTALLS:</h3>
                 <h4>Official Packages:</h4>
-                <p>
+                <p id='copyText'>
                     sudo pacman -S audacity bitwarden blender chromium ffmpeg filezilla gcc gimp git 
                     go jdk-openjdk libreoffice-fresh nodejs obs-studio openjdk-doc openjdk-src p7zip php python 
                     qbittorrent ruby signal-desktop steam thunderbird veracrypt vim virtualbox vlc 
@@ -71,17 +79,17 @@
                 <!--------------------------------------->
                 <h4>AUR packages:</h4>
                 <h5>Getting yay:</h5>
-                <p>
+                <p id='copyText'>
                     git clone https://aur.archlinux.org/yay.git
                 </p>
-                <p>
+                <p id='copyText'>
                     cd yay
                 </p>
-                <p>
+                <p id='copyText'>
                     makepkg -si
                 </p>
                 <h5>packages:</h5>
-                <p>
+                <p id='copyText'>
                     yay drawio-desktop-bin github-desktop insync librewolf-bin minecraft-launcher 
                     nordvpn-bin qflipper-git visual-studio-code-bin zoom
                 </p>
