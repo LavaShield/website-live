@@ -97,6 +97,11 @@
                 <br>
                 <p>------------------------------------------------------------</p>
                 <h3>Macos:</h3>
+                <h4>Enable and Disable Key Repeats-</h4>
+                <h3>Enable-</h3>
+                <p>defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false</p>
+                <h3>Disable-</h3>
+                <p>defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true</p>
                 <h4>HomeBrew install command-</h4>
                 <p>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</p>
                 <h3>Macos packages-</h3>
@@ -112,16 +117,6 @@
                     brew install ffmpeg gcc git node openjdk php python@3.12 sevenzip vim
                 </p>
                 <br>
-                <h3>NixOS:</h3>
-                <p>
-                    nix-env -iA nixos.audacity nixos.bitwarden nixos.blender nixos.dolphin-emu nixos.drawio 
-                    nixos.ffmpeg nixos.filezilla nixos.gimp nixos.git nixos.github-desktop 
-                    nixos.gnome.gnome-disk-utility nixos.jdk21 nixos.libreoffice-fresh nixos.librewolf 
-                    nixos.minecraft nixos.neofetch nixos.nodejs_21 nixos.obs-studio nixos.p7zip nixos.php83 
-                    nixos.python312 nixos.qbittorrent nixos.qFlipper nixos.signal-desktop nixos.steam 
-                    nixos.thunderbird nixos.ungoogled-chromium nixos.veracrypt nixos.vim nixos.virtualbox 
-                    nixos.vlc nixos.vscode nixos.wireshark nixos.zoom
-                </p>
             </div>
             <div class="modal-footer">
                 <h3>This is all subject to change (not definitive)</h3>
