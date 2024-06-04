@@ -28,10 +28,11 @@ echo "yay installed"
 
 # Install yay packages
 expect -c "
-spawn yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
+spawn yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper zoom
 expect {
     -re \"\[N\]one \[A\]ll \[Ab\]ort \[I\]nstalled \[No\]tInstalled\" { send \"A\r\"; exp_continue }
     -re \"show the diffs\" { send \"N\r\"; exp_continue }
+    -re \"Packages to cleanBuild\" { send \"N\r\"; exp_continue }
     eof
 }
 "
