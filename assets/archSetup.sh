@@ -7,10 +7,10 @@ print_bright_blue() {
 
 # System services, starting and enabling them
 sudo echo "starting and enabling system services"
-systemctl start bluetooth.service || exit
-systemctl enable bluetooth.service || exit
-systemctl start org.cups.cupsd.service || exit
-systemctl enable org.cups.cupsd.service || exit
+sudo systemctl start bluetooth.service || exit
+sudo systemctl enable bluetooth.service || exit
+sudo systemctl start org.cups.cupsd.service || exit
+sudo systemctl enable org.cups.cupsd.service || exit
 echo "system service started and enabled"
 
 
