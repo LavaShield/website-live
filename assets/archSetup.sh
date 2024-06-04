@@ -27,7 +27,7 @@ rm -rf yay
 echo "yay installed"
 
 # Install yay packages
-yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper zoom
+echo -e 'A\nN\n' | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper zoom --noconfirm
 
 
 # Flagging script as being concluded
