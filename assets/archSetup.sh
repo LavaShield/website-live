@@ -6,12 +6,13 @@ print_bright_blue() {
 }
 
 # System services, starting and enabling them
-echo "starting bluetooth system service"
-sudo systemctl start bluetooth.service
-echo "bluetooth system service started"
-echo "enabling bluetooth system service"
-sudo systemctl enable bluetooth.service
-echo "bluetooth system service enabled"
+sudo echo "starting and enabling system services"
+systemctl start bluetooth.service
+systemctl enable bluetooth.service
+systemctl start org.cups.cupsd.service
+systemctl enable org.cups.cupsd.service
+echo "system service started and enabled"
+
 
 # Installing yay
 echo "installing yay"
