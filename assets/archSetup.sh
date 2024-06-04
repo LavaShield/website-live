@@ -5,6 +5,9 @@ print_bright_blue() {
     echo -e "\033[1;34m$1\033[0m"
 }
 
+# Installing official arch packages
+echo -e '\n\nY\n' | sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra hplip libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam system-config-printer thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia nvidia-settings nvidia-utils
+
 # System services, starting and enabling them
 sudo echo "starting and enabling system services"
 sudo systemctl start bluetooth.service || exit
