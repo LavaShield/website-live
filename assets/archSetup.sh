@@ -27,7 +27,10 @@ rm -rf yay
 echo "yay installed"
 
 # Install yay packages
-yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
+{
+    printf 'A\n' # yes cleanbuild all
+    printf 'N\n' # no i dont want to show the diffs
+} | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
 
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
