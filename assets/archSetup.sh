@@ -30,6 +30,7 @@ echo "yay installed"
 {
     printf 'A\n'  # Send 'A' and Enter for the [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled prompt
     printf 'N\n'  # Send 'N' and Enter for the "show the diffs" prompt
+    sleep 1
 } | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
 
 # Flagging script as being concluded
