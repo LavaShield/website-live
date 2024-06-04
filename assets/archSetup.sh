@@ -27,11 +27,14 @@ rm -rf yay
 echo "yay installed"
 
 # Install yay packages
-{
-    printf 'A\n'  # Send 'A' and Enter for the [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled prompt
-    printf 'N\n'  # Send 'N' and Enter for the "show the diffs" prompt
-    sleep 1
-} | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
+expect -c "
+spawn yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
+expect {
+    -re \"\[N\]one \[A\]ll \[Ab\]ort \[I\]nstalled \[No\]tInstalled\" { send \"A\r\"; exp_continue }
+    -re \"show the diffs\" { send \"N\r\"; exp_continue }
+    eof
+}
+"
 
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
