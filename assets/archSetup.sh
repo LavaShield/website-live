@@ -1,3 +1,5 @@
+# Makes application run with superuser permissions
+su
 # System services, starting and enabling them
 echo "starting bluetooth system service"
 sudo systemctl start bluetooth.service
