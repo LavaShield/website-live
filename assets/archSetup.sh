@@ -10,13 +10,9 @@ echo "installing yay"
 cd ~/Downloads
 git clone https://aur.archlinux.org/yay.git
 cd yay
-spawn makepkg -si
-expect {
-  "Proceed with the installation? [Y/n]" {
-    send "Y\r"
-    exp_continue
-    }
-}
+{
+  printf '\n'
+} | makepkg -si
 cd ..
 rm -rf yay
 echo "yay installed"
