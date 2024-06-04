@@ -28,8 +28,8 @@ echo "yay installed"
 
 # Install yay packages
 {
-    printf 'A\n' # yes cleanbuild all
-    printf 'N\n' # no i dont want to show the diffs
+    printf 'A\n'  # Send 'A' and Enter for the [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled prompt
+    printf 'N\n'  # Send 'N' and Enter for the "show the diffs" prompt
 } | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
 
 # Flagging script as being concluded
