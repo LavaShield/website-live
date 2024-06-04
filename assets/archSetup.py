@@ -33,8 +33,3 @@ run_command("yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pychar
 
 # Flagging script as being concluded
 print_bright_blue("Setup Finished ;)")
-
-
-
-if __name__ == "__main__":
-  main()
