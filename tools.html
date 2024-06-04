@@ -6,99 +6,72 @@
 <body>
 <header></header>
 
-
 <main class="site-content">
     <!------------CONTENT HERE------------>
     <br>
     This will be developed much further (testing).
     <br>
     <br>
-
-
     <h2>Different commands I use when setting up an OS</h2>
     <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
     <h6>eventually more utilities will be released here</h6>
+    <br>
+    <br>
+    <h2>Windows:</h2>
+    <br>
+    <h3>INSTALL CHOCO COMMANDS:</h3>
+    <p>
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+        = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
+        System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
+    <br>
+    <h3>PACKAGES:</h3>
+    <h4>amd-</h4>
+    <p>
+        choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master
+    </p>
+    <h4>thinkpad-</h4>
+    <p>
+        choco install lenovo-thinkvantage-system-update <br>
+    </p>
+    <a href="assets/lenovoVantageInstaller.exe">Click to download Lenovo Vantage</a>
+    <h4>general-</h4>
+    <p>
+        choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf minecraft-launcher nordvpn nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam
+    </p>
+    <h4>disable fast startup</h4>
+    <br>
+    <h2>ARCHLINUX INSTALLS:</h2> //main
+    <h3>During install:</h3>
+    <p>sudo pacman -Sy archinstall</p>
+    <h3>Official Packages:</h3>
+    <p> sudo pacman -Syu </p>
+    <h3>AUR packages:</h3>
+    <h4>Getting yay:</h4>
+    <p>git clone https://aur.archlinux.org/yay.git</p>
+    <p>cd yay</p>
+    <p>makepkg -si</p>
+    <h4>packages:</h4>
+    <p>
+        yay -S drawio github-desktop librewolf-bin nordvpn-bin pycharm-professional
+        qflipper visual-studio-code zoom
+    </p>
+    <br>
+    <h3>System services:</h3>
+    <h4>Bluetooth</h4>
+    <p>sudo pacman -Sy bluez bluez-utils</p>
+    <p>sudo systemctl start bluetooth.service</p>
+    <p>sudo systemctl enable bluetooth.service</p>
+    <br>
+    <h3>This is all subject to change (not definitive)</h3>
+    <!------------------------------------>
+    <script>
 
-
-    <button id="winBtn">Windows Setup</button>
-
-
-    <!-- Windows -->
-    <div id="winModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span id="winClose" class="close">&times;</span>
-                <h2>Windows Setup</h2>
-            </div>
-            <div class="modal-body">
-                <h2>Windows:</h2>
-                <br>
-                <h3>INSTALL CHOCO COMMANDS:</h3>
-                <p>
-                    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
-                    = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-                    System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
-                <br>
-                <h3>PACKAGES:</h3>
-                <h4>amd-</h4>
-                <p>
-                    choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master
-                </p>
-                <h4>thinkpad-</h4>
-                <p>
-                    choco install lenovo-thinkvantage-system-update <br>
-                    
-                </p>
-                <a href="assets/lenovoVantageInstaller.exe">Click to download Lenovo Vantage</a>
-                <h4>general-</h4>
-                <p>
-                    choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf minecraft-launcher nordvpn nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam
-                </p>
-                <h4>disable fast startup</h4>
-                <p>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-                <h2>ARCHLINUX INSTALLS:</h2> //main
-                <h3>During install:</h3>
-                <p>sudo pacman -Sy archinstall</p>
-                <h3>Official Packages:</h3>
-                <p id='copyText'>
-                    sudo pacman -Syu audacity bitwarden cinnamon dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra libreoffice-fresh 
-                    neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser 
-                    thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia
-                </p>
-                <h3>Games Packages:</h3>
-                <p>
-                    sudo pacman -Syu steam
-                </p>
-                <!--------------------------------------->
-                <!--------------------------------------->
-                <h3>AUR packages:</h3>
-                <h4>Getting yay:</h4>
-                <p id='copyText'>
-                    git clone https://aur.archlinux.org/yay.git
-                </p>
-                <p id='copyText'>
-                    cd yay
-                </p>
-                <p id='copyText'>
-                    makepkg -si
-                </p>
-                <h4>packages:</h4>
-                <p id='copyText'>
-                    yay -S drawio github-desktop librewolf-bin nordvpn-bin pycharm-professional 
-                    qflipper visual-studio-code zoom
-                </p>
-                <br>
-                <h3>System services:</h3>
-                <h4>Bluetooth</h4>
-                <p>sudo pacman -Sy bluez bluez-utils</p>
-                <p>sudo systemctl start bluetooth.service</p>
-                <p>sudo systemctl enable bluetooth.service</p>
-
-                <br>
-            </div>
-            <div class="modal-footer">
-                <h3>This is all subject to change (not definitive)</h3>
-            </div>
-        </div>
+    </script>
+    <style>
+        let archPackages = "audacity bitwarden cinnamon dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia";
+    </style>
+</main>
+<footer></footer>
+</body>
+</html>
