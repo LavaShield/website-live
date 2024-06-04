@@ -47,9 +47,7 @@
         <p id="aur">yay -S</p>
         <br>
         <h3>System services:</h3>
-        <h4>Bluetooth</h4>
-        <p>sudo systemctl start bluetooth.service</p>
-        <p>sudo systemctl enable bluetooth.service</p>
+        <p id=scriptUrl>
     </div>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
@@ -66,6 +64,7 @@
                 "arch": {
                     "arch": "sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia nvidia-settings nvidia-utils",
                     "aur": "yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom"
+                    "scriptUrl": "bash <(curl -s https://github.com/LavaShield/Website-Live/blob/main/assets/archSetup.sh)"
                 }
             };
 
