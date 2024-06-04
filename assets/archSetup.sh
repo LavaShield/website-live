@@ -15,4 +15,4 @@ cd ..
 rm -rf yay
 echo "yay installed"
 # Flagging script as being concluded
-echo "Setup Finished ;)"
+echo -e "\033[1;34mSetup Finished ;)\033[0m"
