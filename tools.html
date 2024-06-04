@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="script.js"></script>
-<head></head>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
 <body>
 <header></header>
 
@@ -10,61 +11,84 @@
     <!------------CONTENT HERE------------>
     <h2>Different commands I use when setting up an OS</h2>
     <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
-    <h6>eventually more utilities will be released here</h6>
-    <br>
-    <br>
-    <h2>Windows:</h2>
-    <br>
-    <h3>INSTALL CHOCO COMMANDS:</h3>
-    <p>
-        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
-        = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-        System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
-    <br>
-    <h3>PACKAGES:</h3>
-    <h4>amd-</h4>
-    <p>
-        choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master
-    </p>
-    <h4>thinkpad-</h4>
-    <p>
-        choco install lenovo-thinkvantage-system-update <br>
-    </p>
-    <a href="assets/lenovoVantageInstaller.exe">Click to download Lenovo Vantage</a>
-    <h4>general-</h4>
-    <p>
-        choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf minecraft-launcher nordvpn nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam
-    </p>
-    <h4>disable fast startup</h4>
-    <br>
-    <h2>ARCHLINUX INSTALLS:</h2> //main
-    <h3>During install:</h3>
-    <p>sudo pacman -Sy archinstall</p>
-    <h3>Official Packages:</h3>
-    <p> sudo pacman -Syu </p>
-    <br>
-    <h3>AUR packages:</h3>
-    <h4>Getting yay:</h4>
-    <p>git clone https://aur.archlinux.org/yay.git</p>
-    <p>cd yay</p>
-    <p>makepkg -si</p>
-    <h4>packages:</h4>
-    <p>yay -S</p>
-    <br>
-    <h3>System services:</h3>
-    <h4>Bluetooth</h4>
-    <p>sudo pacman -Sy bluez bluez-utils</p>
-    <p>sudo systemctl start bluetooth.service</p>
-    <p>sudo systemctl enable bluetooth.service</p>
+    <h6>eventually more utilities will be released here (actual utilities)</h6>
+    <div os="win">
+        <h2>Windows:</h2>
+        <h3>INSTALL CHOCO COMMANDS:</h3>
+        <p>
+            Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+            = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
+            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
+        <br>
+        <h3>PACKAGES:</h3>
+        <h4>amd-</h4>
+        <p id="amd"></p>
+        <h4>thinkpad-</h4>
+        <p id="think"></p>
+        <br>
+        <a href="assets/lenovoVantageInstaller.exe">Click to download Lenovo Vantage</a>
+        <h4>general-</h4>
+        <p id="choco"></p>
+        <h4>*also disable fast startup</h4>
+        <br>
+    </div>
+    <div os="arch">
+        <h2>ArchLinux:</h2>
+        <h3>During install:</h3>
+        <p>sudo pacman -Sy archinstall</p>
+        <h3>Official Packages:</h3>
+        <p id="arch"></p>
+        <h3>AUR packages:</h3>
+        <h4>Getting yay:</h4>
+        <p>git clone https://aur.archlinux.org/yay.git</p>
+        <p>cd yay</p>
+        <p>makepkg -si</p>
+        <h4>packages:</h4>
+        <p id="aur">yay -S</p>
+        <br>
+        <h3>System services:</h3>
+        <h4>Bluetooth</h4>
+        <p>sudo systemctl start bluetooth.service</p>
+        <p>sudo systemctl enable bluetooth.service</p>
+    </div>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
+    <br>
     <!------------------------------------>
     <script>
+        $(document).ready(function () {
+            let commands = {
+                "win": {
+                    "amd": "choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master",
+                    "think": "choco install --ignore-checksum lenovo-thinkvantage-system-update",
+                    "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf minecraft-launcher nordvpn nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam"
+                },
+                "arch": {
+                    "arch": "sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia",
+                    "aur": "yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom"
+                }
+            };
 
+            $("p").each(function () {
+                let osType = $(this).closest('div').attr('os');
+                let id = $(this).attr("id");
+                if (id && commands[osType] && commands[osType][id]) {
+                    $(this).text(commands[osType][id]);
+                }
+                $(this).after('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
+            });
+        });
+
+        function copyText(text) {
+            let tempInput = document.createElement("textarea");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
     </script>
     <style>
-        let archPackages = "audacity bitwarden cinnamon dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia";
-        let aurPackages = "drawio github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom";
     </style>
 </main>
 <footer></footer>
