@@ -1,5 +1,4 @@
-main():
-  import os
+import os
 import subprocess
 import sys
 
