@@ -6,7 +6,7 @@ print_bright_blue() {
 }
 
 # Temporary Allowing Unfree Packages (so you can install all the closed source shit)
-export NIXPKGS_ALLOW_UNFREE=1
+#export NIXPKGS_ALLOW_UNFREE=1
 
 # Installing nix packages
 echo "Installing Nix Packages..."
