@@ -6,7 +6,10 @@ print_bright_blue() {
 }
 
 # Installing official arch packages
-echo -e '\n\nY\n' | sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra hplip libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam system-config-printer thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia nvidia-settings nvidia-utils
+sudo echo "installing arch packages"
+#echo -e '\n\nY\n' | sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra hplip libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam system-config-printer thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia nvidia-settings nvidia-utils
+sudo pacman -Syu audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils filezilla flameshot freecad gimp git gnome gnome-extra hplip libreoffice-fresh neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser steam system-config-printer thunderbird timeshift veracrypt vim virtualbox vlc wireshark-qt nvidia nvidia-settings nvidia-utils
+sudo echo "arch packages installed"
 
 # System services, starting and enabling them
 sudo echo "starting and enabling system services"
@@ -30,8 +33,10 @@ rm -rf yay
 echo "yay installed"
 
 # Install yay packages
-echo -e 'A\nN\n' | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom --noconfirm
-
+sudo echo "installing aur packages"
+#echo -e 'A\nN\n' | yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom --noconfirm
+yay -S drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional qflipper visual-studio-code zoom
+sudo echo "aur packages installed"
 
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
