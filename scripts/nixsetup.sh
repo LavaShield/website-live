@@ -13,7 +13,7 @@ packages="audacity bitwarden-desktop gnome.cheese deja-dup drawio filezilla flam
           signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim
           virtualbox vlc vscode wireshark" # Add more packages separated by spaces
 nix_packages=$(echo $packages | sed 's/ / nixos./g')
-echo "Installing " + nix_packages
+echo "Installing " + $nix_packages
 nix-env -iA nixos.$nix_packages
 echo "Nix Packages Installed."
 
