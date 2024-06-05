@@ -7,7 +7,7 @@ print_bright_blue() {
 
 # Installing nix packages
 echo "Installing Nix Packages..."
-packages="audacity bitwarden-desktop cheese deja-dup drawio filezilla flameshot //
+packages="audacity bitwarden-desktop gnome.cheese deja-dup drawio filezilla flameshot //
           freecad gimp git github-desktop jetbrains.clion jetbrains.pycharm-professional //
           libreoffice-fresh librewolf neofetch obs-studio python3 qbittorrent qFlipper //
           signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim //
