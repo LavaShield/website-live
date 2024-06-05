@@ -12,7 +12,7 @@ export NIXPKGS_ALLOW_UNFREE=1
 echo "Installing Nix Packages..."
 packages="audacity bitwarden-desktop gnome.cheese drawio filezilla flameshot
           freecad gimp git github-desktop gnome.gnome-system-monitor htop jetbrains.clion jetbrains.pycharm-professional
-          libreoffice-fresh librewolf neofetch obs-studio python3 qbittorrent qFlipper
+          libreoffice-fresh librewolf neofetch ntfs3g obs-studio python3 qbittorrent qFlipper
           signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim
           virtualbox vlc vscode wireshark" # Add more packages separated by spaces
 nix_packages=$(echo $packages | sed 's/ / nixos./g')
