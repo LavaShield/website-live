@@ -37,7 +37,13 @@
         <h3>During install:</h3>
         <p>sudo pacman -Sy archinstall</p>
         <h3>Setup Script:</h3>
-        <p id="scriptUrl"></p>
+        <p id="archSetup"></p>
+    </div>
+    <div os="nix">
+        <h2>NixOS:</h2>
+        <h3>Setup Script:</h3>
+        <p id="nixSetup"></p>
+        
     </div>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
@@ -52,7 +58,10 @@
                     "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf minecraft-launcher nordvpn nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam"
                 },
                 "arch": {
-                    "scriptUrl": "bash <(curl -s https://lavashield.net/scripts/archsetup.sh)"
+                    "archSetup": "bash <(curl -s https://lavashield.net/scripts/archsetup.sh)"
+                },
+                "nix": {
+                    "nixSetup": "bash <(curl -s https://lavashield.net/scripts/archsetup.sh)"
                 }
             };
 
