@@ -5,6 +5,9 @@ print_bright_blue() {
     echo -e "\033[1;34m$1\033[0m"
 }
 
+# Temporary Allowing Unfree Packages (so you can install all the closed source shit)
+export NIXPKGS_ALLOW_UNFREE=1
+
 # Installing nix packages
 echo "Installing Nix Packages..."
 packages="audacity bitwarden-desktop gnome.cheese deja-dup drawio filezilla flameshot
