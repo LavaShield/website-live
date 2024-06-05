@@ -20,8 +20,8 @@ echo "Installing " $nix_packages
 nix-env -iA nixos.$nix_packages
 echo "Nix Packages Installed."
 
-# Restart Cinnamon to refresh the desktop environment seamlessly
-cinnamon --replace &
+# Restart Cinnamon to refresh the desktop environment seamlessly and close the terminal session
+nohup cinnamon --replace >/dev/null 2>&1 &
 
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
