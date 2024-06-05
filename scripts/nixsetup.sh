@@ -12,9 +12,9 @@ packages="audacity bitwarden-desktop gnome.cheese deja-dup drawio filezilla flam
           libreoffice-fresh librewolf neofetch obs-studio python3 qbittorrent qFlipper
           signal-desktop sqlitebrowser steam thunderbird timeshift veracrypt vim
           virtualbox vlc vscode wireshark" # Add more packages separated by spaces
-for package in $packages; do
-    nix-env -iA nixos.$package
-done
+nix_packages=$(echo $packages | sed 's/ / nixos./g')
+echo "Installing " + nix_packages
+nix-env -iA nixos.$nix_packages
 echo "Nix Packages Installed."
 
 # Flagging script as being concluded
