@@ -50,33 +50,5 @@ sudo echo "Installing Aur Packages"
 yay -S $yayPackages 
 sudo echo "Aur Packages Installed"
 
-# Downloading And Activating Cinnamon Themes
-echo "Installing And Activating Cinnamon Themes"
-is_theme_installed() {
-    if [ -d "$HOME/.themes/$1" ]; then
-        return 0
-    else
-        return 1
-    fi
-}
-install_theme() {
-    echo "Installing $1 theme..."
-    git clone "$2" "$HOME/.themes/$1"
-}
-if ! command -v git &> /dev/null; then
-    echo "Git is not installed. Please install git and try again."
-    exit 1
-fi
-if ! is_theme_installed "Mint-X"; then
-    install_theme "Mint-X" "https://github.com/linuxmint/mint-themes.git"
-fi
-if ! is_theme_installed "Mint-Y"; then
-    install_theme "Mint-Y" "https://github.com/linuxmint/mint-y-theme.git"
-fi
-gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y"
-echo "Mint-Y theme activated."
-echo "Cinnamon Themes Installed And Activated"
-
-
 # Flagging script as being concluded
-print_bright_blue "Setup Finished ;) Now just add flameshot and timeshift to startup."
+print_bright_blue "Setup Finished ;) Now just add flameshot and timeshift to startup. Maybe a theme???"
