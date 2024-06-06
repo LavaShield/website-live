@@ -77,8 +77,5 @@ gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y"
 echo "Mint-Y theme activated."
 sudo echo "Cinnamon Themes Installed And Activated"
 
-# Adding cinnamon workspace applet
-gsettings set org.cinnamon.applets.workspace-switcher enabled true
-
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
