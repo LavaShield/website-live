@@ -79,4 +79,4 @@ echo "Cinnamon Themes Installed And Activated"
 
 
 # Flagging script as being concluded
-print_bright_blue "Setup Finished ;)"
+print_bright_blue "Setup Finished ;) Now just add flameshot and timeshift to startup."
