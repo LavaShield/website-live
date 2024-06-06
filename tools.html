@@ -34,16 +34,16 @@
     </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
-        <h3>During install:</h3>
+        <h6>
+            I've used alot of linux distributions and the only remotely usable one has been ArchLinux, when you get it to work, it's perfect.
+            However, installing it and getting it to that point is annoying and pointless. If you just want something that works use a fork 
+            such as EndeavourOS (Ideally something as close to Arch as possible. No bloat or other garbage etc). So if you want the Arch 
+            experience install EndeavourOs and run the script below.
+        </h6>
+        <h3>During install (for archinstall application):</h3>
         <p>sudo pacman -Sy archinstall</p>
         <h3>Setup Script:</h3>
         <p id="archSetup"></p>
-    </div>
-    <div os="nix">
-        <h2>NixOS:</h2>
-        <h3>Setup Script:</h3>
-        <p id="nixSetup"></p>
-        
     </div>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
@@ -59,9 +59,6 @@
                 },
                 "arch": {
                     "archSetup": "bash <(curl -s https://lavashield.net/scripts/archsetup.sh)"
-                },
-                "nix": {
-                    "nixSetup": "bash <(curl -s https://lavashield.net/scripts/nixsetup.sh)"
                 }
             };
 
