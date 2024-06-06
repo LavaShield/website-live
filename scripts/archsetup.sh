@@ -51,7 +51,7 @@ yay -S $yayPackages
 sudo echo "Aur Packages Installed"
 
 # Downloading And Activating Cinnamon Themes
-sudo echo "Installing And Activating Cinnamon Themes"
+echo "Installing And Activating Cinnamon Themes"
 is_theme_installed() {
     if [ -d "$HOME/.themes/$1" ]; then
         return 0
@@ -75,7 +75,8 @@ if ! is_theme_installed "Mint-Y"; then
 fi
 gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y"
 echo "Mint-Y theme activated."
-sudo echo "Cinnamon Themes Installed And Activated"
+echo "Cinnamon Themes Installed And Activated"
+
 
 # Flagging script as being concluded
 print_bright_blue "Setup Finished ;)"
