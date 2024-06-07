@@ -6,7 +6,7 @@ archPackages="audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfa
               neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
               wireshark-qt nvidia nvidia-settings nvidia-utils"
-yayPackages="drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional 
+yayPackages="backintime clion drawio github-desktop librewolf-bin nordvpn-bin pycharm-professional 
              qflipper visual-studio-code zoom"
 
 # Function to print text in bright blue
