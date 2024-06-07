@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Packages
-archPackages="audacity bitwarden bluez bluez-utils cinnamon cups deja-dup dosfstools exfat-utils 
+archPackages="audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils 
               filezilla flameshot freecad gcc gimp git gnome gnome-extra hplip htop libreoffice-fresh 
               neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
