@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #Packages
-archPackages="audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils 
-              filezilla flameshot freecad gimp git gnome gnome-extra hplip htop libreoffice-fresh 
+archPackages="audacity bitwarden bluez bluez-utils cinnamon cups deja-dup dosfstools exfat-utils 
+              filezilla flameshot freecad gcc gimp git gnome gnome-extra hplip htop libreoffice-fresh 
               neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser 
-              steam system-config-printer thunderbird timeshift veracrypt vim virtualbox vlc 
+              steam system-config-printer thunderbird timeshift veracrypt vim vlc 
               wireshark-qt nvidia nvidia-settings nvidia-utils"
 yayPackages="drawio clion github-desktop librewolf-bin nordvpn-bin pycharm-professional 
              qflipper visual-studio-code zoom"
@@ -51,4 +51,4 @@ yay -S $yayPackages
 sudo echo "Aur Packages Installed"
 
 # Flagging script as being concluded
-print_bright_blue "Setup Finished ;) Now just add flameshot and timeshift to startup. Maybe a theme???"
+print_bright_blue "Setup Finished ;) Now just add flameshot, deja dup and timeshift to startup. Maybe a theme???"
