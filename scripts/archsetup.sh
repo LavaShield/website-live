@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Packages
-archPackages="audacity bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils 
-              filezilla flameshot freecad gcc gimp git gnome gnome-extra hplip htop libreoffice-fresh 
+archPackages="audacity base-devel bitwarden bluez bluez-utils cinnamon cups dosfstools exfat-utils 
+              filezilla flameshot freecad gimp git gnome gnome-extra gtk4 hplip htop libreoffice-fresh 
               neofetch ntfs-3g obs-studio p7zip python qbittorrent signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
               wireshark-qt nvidia nvidia-settings nvidia-utils"
