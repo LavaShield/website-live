@@ -52,8 +52,10 @@ sudo echo "Aur Packages Installed"
 
 # Setting up radicale
 sudo echo "Setting up radicale"
-radicale --storage-filesystem-folder=~/.var/lib/radicale/collections
-radicale --config ~/LavaShield/config/radicale/radicale.config
+sudo radicale --storage-filesystem-folder=~/.var/lib/radicale/collections
+sudo radicale --config ~/LavaShield/config/radicale/radicale.config
+sudo useradd --system --user-group --home-dir / --shell /sbin/nologin radicale
+sudo mkdir -p ~/LavaShield/config/radicale/collections && chown -R radicale:radicale ~/LavaShield/config/radicale/collections
 sudo echo "Radicale setup"
 
 # Flagging script as being concluded
