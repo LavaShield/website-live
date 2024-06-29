@@ -50,5 +50,11 @@ sudo echo "Installing Aur Packages"
 yay -S $yayPackages 
 sudo echo "Aur Packages Installed"
 
+# Setting up radicale
+sudo echo "Setting up radicale"
+radicale --storage-filesystem-folder=~/.var/lib/radicale/collections
+radicale --config ~/LavaShield/config/radicale/radicale.config
+sudo echo "Radicale setup"
+
 # Flagging script as being concluded
-print_bright_blue "Setup Finished ;) Now just add flameshot, deja dup and timeshift to startup. Maybe a theme???"
+print_bright_blue "Setup Finished ;) Now just add flameshot, back in time and timeshift to startup. Maybe a theme???"
