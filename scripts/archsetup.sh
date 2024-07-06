@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Packages
-archPackages="audacity base-devel bitwarden bluez bluez-utils cinnamon code cups dosfstools dotnet-sdk exfat-utils 
+archPackages="audacity base-devel bitwarden bluez bluez-utils cinnamon cmake code cups dosfstools dotnet-sdk exfat-utils 
               filezilla flameshot freecad gcc gimp git gnome gnome-extra gtk4 hplip htop libreoffice-fresh 
               neofetch ntfs-3g obs-studio p7zip python qbittorrent radicale signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
