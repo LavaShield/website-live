@@ -2,8 +2,8 @@
 
 #Packages
 archPackages="audacity base-devel bitwarden bluez bluez-utils cinnamon cmake code cups dosfstools dotnet-sdk exfat-utils 
-              filezilla flameshot freecad gcc gimp git gnome gnome-extra gtk4 hplip htop libreoffice-fresh 
-              neofetch ntfs-3g obs-studio p7zip python qbittorrent radicale signal-desktop sqlitebrowser 
+              filezilla flameshot freecad gcc gimp git gnome gnome-extra gtk4 hplip htop jdk21-openjdk libreoffice-fresh 
+              neofetch ntfs-3g obs-studio openjdk21-doc openjdk21-src p7zip python qbittorrent radicale signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
               wireshark-qt nvidia nvidia-settings nvidia-utils"
 yayPackages="backintime clion clion-jre clion-cmake clion-gdb clion-lldb drawio github-desktop librewolf-bin minecraft-launcher pycharm-professional 
