@@ -6,7 +6,7 @@ archPackages="audacity base-devel bitwarden bluez bluez-utils cinnamon cmake cod
               neofetch ntfs-3g obs-studio openjdk21-doc openjdk21-src p7zip python qbittorrent radicale signal-desktop sqlitebrowser 
               steam system-config-printer thunderbird timeshift veracrypt vim vlc 
               wireshark-qt nvidia nvidia-settings nvidia-utils"
-yayPackages="backintime clion clion-jre clion-cmake clion-gdb clion-lldb drawio github-desktop librewolf-bin minecraft-launcher pycharm-professional 
+yayPackages="backintime clion clion-jre clion-cmake clion-gdb clion-lldb drawio github-desktop intellij-idea-ultimate-edition librewolf-bin minecraft-launcher pycharm-professional 
              qflipper visual-studio-code zoom"
 
 # Function to print text in bright blue
