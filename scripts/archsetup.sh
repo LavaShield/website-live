@@ -23,22 +23,22 @@ print_blue() {
 
 # Function to install Arch Linux packages
 install_packages() {
-    print_blue "Installing $2 Official Arch Packages"
-    pacman -Syu $1
-    print_blue "$2 Official Arch Packages Installed"
+    print_blue "Installing $1 Official Arch Packages"
+    sudo pacman -Syu $2
+    print_blue "$1 Official Arch Packages Installed"
 }
 
 # Function to install AUR packages using yay
 install_aur_packages() {
-    print_blue "Installing $2 Aur Packages"
-    yay -S $1
-    print_blue "$2 Aur Packages Installed"
+    print_blue "Installing $1 Aur Packages"
+    yay -S $2
+    print_blue "$1 Aur Packages Installed"
 }
 
 general() {
     # Remove Bloat
     print_blue "Removing Bloat"
-    pacman -Rsu welcome
+    sudo pacman -Rsu welcome
     print_blue "Bloat Removed"
 
     # Installing Yay
@@ -50,40 +50,40 @@ general() {
         printf 'y\n'  # Send 'y' and Enter for the [Y/n] prompt
     } | makepkg -si --noconfirm
     cd ..
-    rm -rf yay
+    sudo rm -rf yay
     print_blue "Yay Installed"
 
     # Install General Packages
-    install_packages $general_Packages "General"
+    install_packages "General" $general_Packages 
 
     # Install General Aur Packages
-    install_aur_packages $general_Aur_Packages "General"
+    install_aur_packages "General" $general_Aur_Packages
 }
 
 # Function to setup server environment
 setup_server() {
     # Install Server Packages
-    install_packages $server_Packages "Server"
+    install_packages "Server" $server_Packages
 
     # Install Server Aur Packages
-    install_aur_packages $server_Aur_Packages "Server"
+    install_aur_packages "Server" $server_Aur_Packages
 }
 
 # Function to setup desktop environment
 setup_desktop() {
 
     # Install Desktop Packages
-    install_packages $desktop_Packages "Desktop"
+    install_packages "Desktop" $desktop_Packages
     
     # Install Desktop Aur Packages
-    install_aur_packages $desktop_Aur_Packages "Desktop"
+    install_aur_packages "Desktop" $desktop_Aur_Packages
 
     # Desktop System services, starting and enabling them
     echo "Starting And Enabling System Services"
-    systemctl start bluetooth.service || exit
-    systemctl enable bluetooth.service || exit
-    systemctl start cups.service || exit
-    systemctl enable cups.service || exit
+    sudo systemctl start bluetooth.service || exit
+    sudo systemctl enable bluetooth.service || exit
+    sudo systemctl start cups.service || exit
+    sudo systemctl enable cups.service || exit
     echo "System Service Started And Enabled"
 }
 
