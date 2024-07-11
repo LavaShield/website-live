@@ -41,6 +41,9 @@ general() {
     sudo pacman -Rsu welcome
     print_blue "Bloat Removed"
 
+    # Install General Packages
+    install_packages "General" $general_Packages 
+
     # Installing Yay
     print_blue "Installing Yay"
     cd ~/Downloads || exit
@@ -52,9 +55,6 @@ general() {
     cd ..
     sudo rm -rf yay
     print_blue "Yay Installed"
-
-    # Install General Packages
-    install_packages "General" $general_Packages 
 
     # Install General Aur Packages
     install_aur_packages "General" $general_Aur_Packages
