@@ -13,7 +13,7 @@ desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio
                       github-desktop intellij-idea-ultimate-edition
                       minecraft-launcher pycharm-professional qflipper
                       visual-studio-code zoom"
-server_Packages="openssh ufw"
+server_Packages="docker openssh ufw"
 server_Aur_Packages=""
 
 # Function to print text in bright blue
@@ -72,6 +72,8 @@ setup_server() {
     echo "Starting And Enabling Server System Services"
     sudo systemctl start sshd || exit
     sudo systemctl enable sshd || exit
+    sudo systemctl enable docker
+    sudo systemctl start docker 
     echo "Server System Service Started And Enabled"
 
     # Allow ssh connections
