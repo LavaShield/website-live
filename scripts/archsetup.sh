@@ -35,13 +35,7 @@ install_aur_packages() {
     print_blue "$1 Aur Packages Installed"
 }
 
-general() {
-    # Install General Packages
-    install_packages "General" $general_Packages 
-
-    # Install General Aur Packages
-    install_aur_packages "General" $general_Aur_Packages
-    
+general() { 
     # Remove Bloat
     print_blue "Removing Bloat"
     sudo pacman -Rsu welcome
@@ -58,6 +52,12 @@ general() {
     cd ..
     sudo rm -rf yay
     print_blue "Yay Installed"
+
+    # Install General Packages
+    install_packages "General" $general_Packages 
+
+    # Install General Aur Packages
+    install_aur_packages "General" $general_Aur_Packages
 }
 
 # Function to setup server environment
