@@ -42,7 +42,7 @@ general() {
     print_blue "Bloat Removed"
 
     # Install General Packages
-    install_packages "General" general_Packages 
+    install_packages "General" "$general_Packages"
 
     # Installing Yay
     print_blue "Installing Yay"
@@ -57,26 +57,26 @@ general() {
     print_blue "Yay Installed"
 
     # Install General Aur Packages
-    install_aur_packages "General" $general_Aur_Packages
+    install_aur_packages "General" "$general_Aur_Packages"
 }
 
 # Function to setup server environment
 setup_server() {
     # Install Server Packages
-    install_packages "Server" $server_Packages
+    install_packages "Server" "$server_Packages"
 
     # Install Server Aur Packages
-    install_aur_packages "Server" $server_Aur_Packages
+    install_aur_packages "Server" "$server_Aur_Packages"
 }
 
 # Function to setup desktop environment
 setup_desktop() {
 
     # Install Desktop Packages
-    install_packages "Desktop" $desktop_Packages
+    install_packages "Desktop" "$desktop_Packages"
     
     # Install Desktop Aur Packages
-    install_aur_packages "Desktop" $desktop_Aur_Packages
+    install_aur_packages "Desktop" "$desktop_Aur_Packages"
 
     # Desktop System services, starting and enabling them
     echo "Starting And Enabling System Services"
