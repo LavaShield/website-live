@@ -42,7 +42,7 @@ general() {
     print_blue "Bloat Removed"
 
     # Install General Packages
-    install_packages "General" $general_Packages 
+    install_packages "General" general_Packages 
 
     # Installing Yay
     print_blue "Installing Yay"
