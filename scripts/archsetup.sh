@@ -13,7 +13,7 @@ desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio
                       github-desktop intellij-idea-ultimate-edition
                       minecraft-launcher pycharm-professional qflipper
                       visual-studio-code zoom"
-server_Packages=""
+server_Packages="openssh"
 server_Aur_Packages=""
 
 # Function to print text in bright blue
@@ -67,6 +67,19 @@ setup_server() {
 
     # Install Server Aur Packages
     install_aur_packages "Server" "$server_Aur_Packages"
+
+    # Server System services, starting and enabling them
+    echo "Starting And Enabling Server System Services"
+    sudo systemctl start sshd || exit
+    sudo systemctl enable sshd || exit
+    echo "Server System Service Started And Enabled"
+
+    # Allow ssh connections
+    print_blue "Allowing SSH Connections"
+    sudo ufw allow ssh
+    sudo ufw enable
+    print_blue "SSH Connections Allowed"
+    ### to configure ssh go to /etc/ssh/sshd_config
 }
 
 # Function to setup desktop environment
@@ -79,12 +92,12 @@ setup_desktop() {
     install_aur_packages "Desktop" "$desktop_Aur_Packages"
 
     # Desktop System services, starting and enabling them
-    echo "Starting And Enabling System Services"
+    echo "Starting And Enabling Desktop System Services"
     sudo systemctl start bluetooth.service || exit
     sudo systemctl enable bluetooth.service || exit
     sudo systemctl start cups.service || exit
     sudo systemctl enable cups.service || exit
-    echo "System Service Started And Enabled"
+    echo "Desktop System Service Started And Enabled"
 }
 
 # ------Main script starts here------
