@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Package Groups
-general_Packages="cinnamon dosfstools exfat-utils git gnome gnome-extra htop ntfs-3g
+general_Packages="cinnamon curl dosfstools exfat-utils git gnome gnome-extra htop ntfs-3g
                   p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin"
 desktop_Packages="audacity base-devel bitwarden bluez bluez-utils cmake code cups 
