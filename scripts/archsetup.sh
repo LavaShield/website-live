@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Package Groups
-general_Packages="cinnamon curl dosfstools exfat-utils git gnome gnome-extra htop ntfs-3g
-                  p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
+general_Packages="cinnamon curl dosfstools exfat-utils git gnome gnome-extra htop jdk21-openjdk ntfs-3g
+                  openjdk21-doc openjdk21-src p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin"
 desktop_Packages="audacity base-devel bitwarden bluez bluez-utils cmake code cups 
-                  filezilla flameshot freecad gcc gimp gtk4 hplip jdk21-openjdk 
-                  libreoffice-fresh neofetch obs-studio openjdk21-doc openjdk21-src
+                  filezilla flameshot freecad gcc gimp gtk4 hplip 
+                  libreoffice-fresh neofetch obs-studio
                   qbittorrent radicale signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio 
