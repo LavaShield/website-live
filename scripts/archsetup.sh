@@ -8,7 +8,7 @@ general_Aur_Packages="backintime librewolf-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups 
                   filezilla flameshot freecad gimp gtk4 hplip 
                   libreoffice-fresh neofetch obs-studio
-                  qbittorrent radicale signal-desktop sqlitebrowser steam
+                  qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio 
                       github-desktop intellij-idea-ultimate-edition
