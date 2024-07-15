@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Package Groups
-general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome gnome-extra htop jdk21-openjdk ntfs-3g
-                  openjdk21-doc openjdk21-src p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
+general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
+                  gnome-extra htop jdk21-openjdk ntfs-3g openjdk21-doc openjdk21-src 
+                  p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups 
                   filezilla flameshot freecad gimp gtk4 hplip 
