@@ -13,7 +13,7 @@ desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups
 desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio 
                       github-desktop intellij-idea-ultimate-edition
                       minecraft-launcher pycharm-professional qflipper
-                      visual-studio-code zoom"
+                      visual-studio-code webstorm zoom"
 server_Packages="docker docker-compose openssh ufw"
 server_Aur_Packages=""
 
