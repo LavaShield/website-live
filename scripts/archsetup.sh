@@ -3,7 +3,7 @@
 # Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
                   gnome-extra htop jdk21-openjdk nodejs ntfs-3g openjdk21-doc openjdk21-src 
-                  p7zip python timeshift vim nvidia nvidia-settings nvidia-utils"
+                  p7zip python tailscale timeshift vim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups 
                   filezilla flameshot freecad gimp gtk4 hplip 
@@ -59,6 +59,12 @@ general() {
 
     # Install General Aur Packages
     install_aur_packages "General" "$general_Aur_Packages"
+
+    # Tailscale General Setup
+    sudo systemctl enable --now tailscaled
+    sudo tailscale up
+    sudo tailscale ip -4
+    # https://tailscale.com/download/linux/arch
 }
 
 # Function to setup server environment
@@ -127,4 +133,8 @@ case $setup_choice in
 esac
 
 # Flagging script as being concluded
-print_blue "Setup Finished ;) Now just add flameshot, back in time and timeshift to startup. Maybe a theme???"
+print_blue "Setup Finished ;)"
+print_blue "Now, go to /usr/lib/sysctl.d/50-default.conf and then make sure these conditions 
+            are set in the config file: \"net.ipv4.conf.default.rp_filter = 1\", 
+            \"net.ipv4.conf.all.rp_filter = 1\""
+print_blue "Now just add flameshot, back in time and timeshift to startup. Maybe a theme???"
