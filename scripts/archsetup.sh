@@ -3,7 +3,7 @@
 # Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
                   gnome-extra htop jdk21-openjdk nodejs ntfs-3g openjdk21-doc openjdk21-src 
-                  p7zip python tailscale timeshift vim nvidia nvidia-settings nvidia-utils"
+                  p7zip python tailscale timeshift gvim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups 
                   filezilla flameshot freecad gimp gtk4 hplip 
