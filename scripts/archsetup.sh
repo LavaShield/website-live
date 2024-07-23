@@ -93,6 +93,9 @@ setup_server() {
     sudo ufw enable
     print_blue "SSH Connections Allowed"
     ### to configure ssh go to /etc/ssh/sshd_config
+
+    # Radicale setup
+    sudo radicale --storage-filesystem-folder=~/SERVER/radicale/data --config ~/SERVER/radicale/config
 }
 
 # Function to setup desktop environment
