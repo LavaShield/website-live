@@ -96,6 +96,7 @@ setup_server() {
 
     # Radicale setup
     sudo touch ~/SERVER/radicale/config && sudo radicale --storage-filesystem-folder=~/SERVER/radicale/data --config ~/SERVER/radicale/config
+    # Full setup guide, https://radicale.org/v3.html#tutorials
 }
 
 # Function to setup desktop environment
