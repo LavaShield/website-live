@@ -134,7 +134,8 @@ esac
 
 # Flagging script as being concluded
 print_blue "Setup Finished ;)"
-print_blue "Now, go to /usr/lib/sysctl.d/50-default.conf and then make sure these conditions 
+print_blue "Now for tailscale, go to /usr/lib/sysctl.d/50-default.conf and then make sure these conditions 
             are set in the config file: \"net.ipv4.conf.default.rp_filter = 1\", 
             \"net.ipv4.conf.all.rp_filter = 1\" (here for more details, https://tailscale.com/download/linux/arch)"
+print_blue "Additionally go to vim and then execute this command ':set clipboard=unnamedplus'"
 print_blue "Now just add flameshot, back in time and timeshift to startup. Maybe a theme???"
