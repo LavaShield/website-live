@@ -14,7 +14,7 @@ desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio
                       github-desktop intellij-idea-ultimate-edition
                       minecraft-launcher pycharm-professional qflipper
                       visual-studio-code webstorm zoom"
-server_Packages="docker docker-compose openssh ufw"
+server_Packages="docker docker-compose openssh radicale ufw"
 server_Aur_Packages=""
 
 # Function to print text in bright blue
