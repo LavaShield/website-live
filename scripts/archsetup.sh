@@ -65,6 +65,10 @@ general() {
     sudo tailscale up
     sudo tailscale ip -4
     # https://tailscale.com/download/linux/arch
+
+    # add copy paste to gvim
+    printf "set clipboard=unnamedplus\n" >> ~/.vimrc
+
 }
 
 # Function to setup server environment
