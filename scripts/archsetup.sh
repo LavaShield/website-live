@@ -12,7 +12,7 @@ desktop_Packages="audacity bitwarden bluez bluez-utils code cups
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="drawio github-desktop minecraft-launcher pycharm-professional 
                       qflipper webstorm zoom"
-server_Packages="docker docker-compose openssh radicale ufw"
+server_Packages="docker docker-compose openssh ufw"
 server_Aur_Packages=""
 
 # Function to print text in bright blue
