@@ -2,18 +2,16 @@
 
 # Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
-                  gnome-extra htop jdk21-openjdk lua nodejs ntfs-3g openjdk21-doc openjdk21-src 
+                  gnome-extra htop lua luarocks ntfs-3g  
                   p7zip python tailscale timeshift gvim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
-desktop_Packages="audacity bitwarden bluez bluez-utils cmake code cups 
-                  filezilla flameshot freecad gimp gtk4 hplip 
+desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
+                  filezilla flameshot freecad gimp hplip 
                   libreoffice-fresh neofetch obs-studio
                   qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
-desktop_Aur_Packages="clion clion-jre clion-cmake clion-gdb clion-lldb drawio 
-                      github-desktop intellij-idea-ultimate-edition
-                      minecraft-launcher pycharm-professional qflipper
-                      visual-studio-code webstorm zoom"
+desktop_Aur_Packages="drawio github-desktop minecraft-launcher pycharm-professional 
+                      qflipper webstorm zoom"
 server_Packages="docker docker-compose openssh radicale ufw"
 server_Aur_Packages=""
 
