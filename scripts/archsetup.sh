@@ -7,7 +7,7 @@ general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
                   filezilla flameshot freecad gimp hplip 
-                  libreoffice-fresh neofetch obs-studio
+                  libreoffice-fresh love neofetch obs-studio
                   qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="drawio github-desktop minecraft-launcher pycharm-professional 
