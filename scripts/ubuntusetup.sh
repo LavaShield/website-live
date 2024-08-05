@@ -1,6 +1,14 @@
 #!/bin/bash
 
 # Package Groups
+general_packages=""
+desktop_packages=""
+server_packages=""
+
+
+# ----------------------------------------
+
+# Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
                   gnome-extra htop ntfs-3g p7zip python tailscale timeshift 
                   gvim nvidia nvidia-settings nvidia-utils"
