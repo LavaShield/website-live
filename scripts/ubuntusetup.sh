@@ -1,26 +1,34 @@
 #!/bin/bash
 
-# Package Groups
-general_packages="nvidia-gpu-firmware freecad flameshot git htop gimp obs-studio
-                  neofetch nvidia-settings audacity
-                  gcc filezilla tailscale timeshift python3 php htop nodejs"
+apt_packages="vim tmux"
 
 
-# ----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+# ------------------------------------------------------------------------
+
+
 # Package Groups
-r_Packages="backintime librewolf-bin nordvpn-bin"
-desktop_Packages=" bitwarden bluez bluez-utils  
-                   hplip 
-                  libreoffice-fresh 
+general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
+                  gnome-extra htop nodejs ntfs-3g p7zip php python tailscale timeshift 
+                  nvidia nvidia-settings nvidia-utils"
+general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
+desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
+                  filezilla flameshot freecad gimp hplip 
+                  libreoffice-fresh neofetch obs-studio
                   qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="drawio minecraft-launcher qflipper"
 server_Packages="docker docker-compose openssh ufw"
-
-
-------------------------------------------
-vscode
-bitwarden linux
+server_Aur_Packages=""
 
 # Function to print text in bright blue
 print_blue() {
