@@ -1,10 +1,25 @@
 #!/bin/bash
+general_apt_packages=""
+general_snap_packages=""
 
-desktop_apt_packages=""
-desktop_snap_packages=""
 server_apt_packages=""
 server_snap_packages="docker"
 
+desktop_apt_packages="wireshark gimp vlc qbittorrent"
+desktop_snap_packages="steam thunderbird"
+# --- Install Signal on Desktop Start ---
+# Command 1
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+# Command 2
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee /etc/apt/sources.list.d/signal-xenial.list
+# Command 3
+sudo apt update && sudo apt install signal-desktop
+# --- Install Signal on Desktop End ---
+# --- Install LibreWolf on Desktop Start ---
+
+# --- Install LibreWolf on Desktop End ---
 
 
 # ------------------------------------------------------------------------
@@ -13,8 +28,7 @@ general_Packages="curl dosfstools exfat-utils gcc git
                   gvim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
-                  filezilla flameshot freecad gimp hplip 
-                  libreoffice-fresh neofetch obs-studio
-                  qbittorrent signal-desktop sqlitebrowser steam
-                  system-config-printer thunderbird veracrypt vlc wireshark-qt"
+                  filezilla flameshot freecad hplip 
+                  obs-studio sqlitebrowser
+                  system-config-printer veracrypt"
 desktop_Aur_Packages="drawio minecraft-launcher qflipper"
