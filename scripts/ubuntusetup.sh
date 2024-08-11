@@ -5,8 +5,8 @@ general_snap_packages=""
 server_apt_packages=""
 server_snap_packages="docker"
 
-desktop_apt_packages="wireshark gimp vlc qbittorrent"
-desktop_snap_packages="steam thunderbird"
+desktop_apt_packages="wireshark gimp vlc qbittorrent filezilla flameshot curl"
+desktop_snap_packages="steam thunderbird code bitwarden"
 # --- Install Signal on Desktop Start ---
 # Command 1
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -23,12 +23,11 @@ sudo apt update && sudo apt install signal-desktop
 
 
 # ------------------------------------------------------------------------
-general_Packages="curl dosfstools exfat-utils gcc git 
+general_Packages="exfat-utils gcc git 
                   htop nodejs ntfs-3g p7zip php python tailscale timeshift tmux 
                   gvim nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
-desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
-                  filezilla flameshot freecad hplip 
-                  obs-studio sqlitebrowser
-                  system-config-printer veracrypt"
+desktop_Packages="audacity cups 
+                  freecad hplip 
+                  obs-studio veracrypt"
 desktop_Aur_Packages="drawio minecraft-launcher qflipper"
