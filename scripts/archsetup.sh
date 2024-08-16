@@ -2,8 +2,9 @@
 
 # Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
-                  gnome-extra htop nodejs ntfs-3g p7zip php python tailscale timeshift tmux 
-                  gvim nvidia nvidia-settings nvidia-utils"
+                  gnome-extra htop jdk-openjdk nodejs ntfs-3g openjdk-doc 
+                  openjdk-src p7zip php python tailscale timeshift tmux gvim 
+                  nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
                   filezilla flameshot freecad gimp hplip 
