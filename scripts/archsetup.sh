@@ -2,7 +2,7 @@
 
 # Package Groups
 general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
-                  gnome-extra htop jdk21-openjdk man-db man-pages nodejs ntfs-3g openjdk21-doc 
+                  gnome-extra htop jdk21-openjdk love lua luajit luarocks man-db man-pages nodejs ntfs-3g openjdk21-doc 
                   openjdk21-src p7zip php python tailscale timeshift tmux gvim 
                   nvidia nvidia-settings nvidia-utils"
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
