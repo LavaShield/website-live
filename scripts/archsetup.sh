@@ -11,7 +11,7 @@ desktop_Packages="audacity bitwarden bluez bluez-utils code cups
                   libreoffice-fresh neofetch obs-studio
                   qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
-desktop_Aur_Packages="drawio minecraft-launcher qflipper"
+desktop_Aur_Packages="brother-hll2460dw drawio minecraft-launcher qflipper"
 server_Packages="docker docker-compose openssh ufw"
 server_Aur_Packages=""
 
