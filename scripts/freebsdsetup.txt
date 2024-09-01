@@ -1,0 +1,27 @@
+# Packages
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------
+
+general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome 
+                  gnome-extra htop jdk21-openjdk love lua luajit luarocks man-db man-pages nodejs ntfs-3g openjdk21-doc 
+                  openjdk21-src p7zip php python tailscale timeshift tmux gvim 
+                  nvidia nvidia-settings nvidia-utils"
+general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
+desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
+                  filezilla flameshot freecad gimp hplip 
+                  libreoffice-fresh neofetch obs-studio
+                  qbittorrent signal-desktop sqlitebrowser steam
+                  system-config-printer thunderbird veracrypt vlc wireshark-qt"
+desktop_Aur_Packages="brother-hll2460dw drawio minecraft-launcher qflipper"
+server_Packages="docker docker-compose openssh ufw"
+server_Aur_Packages=""
