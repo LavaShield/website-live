@@ -1,28 +1,68 @@
-# Packages
+freebsd_general_packages=
+"
+gcc cinnamon curl gnome vim tmux filezilla git node
+"
 
-pkgs="vscode qflipper cinnamon filezilla hplip neovim"
+freebsd_desktop_packages=
+"
+audacity vlc librewolf flameshot thunderbird freecad qflipper gimp
+qbittorrent 
+neofetch                           
+"
+
+
+
+
+--------------------------------------------------------------------------------------------------
 
 
 
 
 
+php 
+lua 
+luajit 
+code 
+base-devel 
+dosfstools 
+exfat-utils  
+htop 
+jdk21-openjdk 
+love 
+luarocks 
+man-db 
+man-pages 
+ntfs-3g 
+openjdk21-doc 
+openjdk21-src 
+p7zip 
+python  
+nvidia 
+nvidia-settings 
+nvidia-utils
+nordvpn
+bitwarden 
+bluez 
+bluez-utils 
+cups 
+hplip 
+libreoffice-fresh 
+obs-studio
+signal-desktop 
+sqlitebrowser 
+system-config-printer 
+veracrypt 
+wireshark-qt
+drawio 
+minecraft-launcher 
+docker 
+docker-compose 
+openssh 
+ufw
 
 
-
-
-
--------------------------------------------------------------------
-
-base-devel  curl dosfstools 
-                  exfat-utils gcc git gnome 
-                  gnome-extra htop jdk21-openjdk 
-                  love lua luajit luarocks man-db man-pages nodejs ntfs-3g openjdk21-doc 
-                  openjdk21-src p7zip php python tailscale timeshift tmux
-                  nvidia nvidia-settings nvidia-utils
-backintime librewolf-bin nordvpn-bin
-audacity bitwarden bluez bluez-utils cups 
-         flameshot freecad gimp 
-                  libreoffice-fresh neofetch obs-studio
-                  qbittorrent signal-desktop sqlitebrowser steam
-                  system-config-printer thunderbird veracrypt vlc wireshark-qt
-
+DOESNT HAVE:
+gnome-extra
+timeshift 
+backintime 
+steam
