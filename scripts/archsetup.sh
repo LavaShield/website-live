@@ -108,8 +108,8 @@ setup_desktop() {
     sudo systemctl enable bluetooth.service || exit
     sudo systemctl start cups.service || exit # Printing services
     sudo systemctl enable cups.service || exit
-    sudo systemctl start opensnitchd.service || exit # Little Snitch services
-    sudo systemctl enable opensnitchd.service || exit
+    sudo systemctl start opensnitchd || exit # Little Snitch services
+    sudo systemctl enable opensnitchd || exit
     echo "Desktop System Service Started And Enabled"
 }
 
