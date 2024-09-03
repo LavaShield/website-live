@@ -8,7 +8,7 @@ general_Packages="base-devel cinnamon curl dosfstools exfat-utils gcc git gnome
 general_Aur_Packages="backintime librewolf-bin nordvpn-bin"
 desktop_Packages="audacity bitwarden bluez bluez-utils code cups 
                   filezilla flameshot freecad gimp hplip 
-                  libreoffice-fresh neofetch obs-studio
+                  libreoffice-fresh neofetch obs-studio opensnitch 
                   qbittorrent signal-desktop sqlitebrowser steam
                   system-config-printer thunderbird veracrypt vlc wireshark-qt"
 desktop_Aur_Packages="brother-hll2460dw drawio minecraft-launcher qflipper"
@@ -104,10 +104,12 @@ setup_desktop() {
 
     # Desktop System services, starting and enabling them
     echo "Starting And Enabling Desktop System Services"
-    sudo systemctl start bluetooth.service || exit
+    sudo systemctl start bluetooth.service || exit # Bluetooth services
     sudo systemctl enable bluetooth.service || exit
-    sudo systemctl start cups.service || exit
+    sudo systemctl start cups.service || exit # Printing services
     sudo systemctl enable cups.service || exit
+    sudo systemctl start opensnitchd.service || exit # Little Snitch services
+    sudo systemctl enable opensnitchd.service || exit
     echo "Desktop System Service Started And Enabled"
 }
 
