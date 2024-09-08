@@ -12,11 +12,22 @@
             color: black;
         }
         .copy-button-container {
-            text-align: center;
+            display: flex;
+            align-items: center;
             margin: 10px 0;
+            max-width: 100%;
+        }
+        .scrollable-text {
+            overflow-x: auto;
+            white-space: nowrap;
+            flex: 1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: #f9f9f9;
         }
         .copy-button-container button {
-            margin: 5px;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -109,7 +120,8 @@
                 if (id && commands[osType] && commands[osType][id]) {
                     $(this).text(commands[osType][id]);
                 }
-                $(this).after('<div class="copy-button-container"><button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button></div>');
+                $(this).wrap('<div class="copy-button-container"></div>');
+                $(this).parent().append('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
             });
         });
 
