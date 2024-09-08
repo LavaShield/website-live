@@ -55,6 +55,6 @@
 # disable_ddtrace: No (Generally unnecessary to disable unless you have specific concerns. DTrace can be useful for performance monitoring and debugging.)
 #
 # ADD USERS:
-# >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is same as encryption keyphrase for ZFS dataset)
+# >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is not same as encryption keyphrase for ZFS dataset)
 #
 # --- INSTALL CHOICES END ---
