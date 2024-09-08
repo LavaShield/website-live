@@ -1,3 +1,4 @@
+# below are the choices to chose when setting up your system with the installer usb
 # --- INSTALL CHOICES START ---
 # KEYMAPPING:
 # >>> Continue with default keymap for US keyboard format
