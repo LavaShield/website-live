@@ -14,5 +14,6 @@
 # Encrypt Disks?: YES (always encrypt your devices)
 # Partition Scheme: GPT (UEFI) (should be fine with all standard modern devices)
 # Swap Size: ram size (really up to you, I personally like to make it the same as ram size for hybernation)
-#
+# Mirror Swap?: NO (not really necessary in the context of a regular users setup, regular consumer hw is reliable enough)
+# Encrypt Swap? YES (encrypt everything)
 # --- INSTALL CHOICES END ---
