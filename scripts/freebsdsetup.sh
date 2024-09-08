@@ -73,7 +73,7 @@
 # >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is not same as encryption keyphrase for ZFS dataset)
 #
 # --- INSTALL CHOICES END ---
-
+echo "SCRIPT START"
 read -p "What is your username: " username
 
 
