@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # ---SH SCRIPTING NOTES START ---
 # Prompt Message Inline: You can also provide the prompt message directly with the read command:
 #  read -p "Please enter your response: " user_input
@@ -10,7 +12,7 @@
 # ---SH SCRIPTING NOTES END ---
 
 
-
+# ---------- INSTALL NOTES ----------
 # below are the choices to chose when setting up your system with the installer usb in the context of a modern laptop
 # --- INSTALL CHOICES START ---
 #
