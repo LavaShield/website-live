@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -11,19 +10,15 @@
 <main class="site-content">
     <!------------CONTENT HERE------------>
     <h2>Different commands I use when setting up an OS.</h2>
-    <h6>I have to set up OSes extremely frequently so these are just a list of commands I use to make life easier.</h6>
-    <h6>Eventually more utilities will be released here (actual utilities)</h6>
+    <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
+    <h6>eventually more utilities will be released here (actual utilities)</h6>
     <div os="win">
         <h2>Windows:</h2>
         <h3>INSTALL CHOCO COMMANDS:</h3>
-        <div class="p_copy-container">
-            <p id="win-choco">
-                Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
-                = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-                System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-            </p>
-            <button onclick="copyText(document.getElementById('win-choco').innerText)">Copy Text</button>
-        </div>
+        <p>
+            Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+            = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
+            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
         <br>
         <h3>PACKAGES:</h3>
         <h4>amd-</h4>
@@ -36,39 +31,30 @@
     <div os="freebsd">
         <h2>FreeBSD:</h2>
         <h3>During install:</h3>
-        <p>Read options for setup in the setup script and then do</p>
-        <div class="p_copy-container">
-            <p id="freebsd-setup">pkg install curl bash</p>
-            <button onclick="copyText(document.getElementById('freebsd-setup').innerText)">Copy Text</button>
-        </div>
-        <p>So the script below will work, make sure to run it in the bash terminal</p>
+        <p>read options for setup in the setup script and then do</p>
+        <p>pkg install curl bash</p>
+        <p>so the script below will work, make sure to run it in the bash terminal</p>
         <h3>Setup Script:</h3>
-        <div class="p_copy-container">
-            <p id="freebsdSetup"></p>
-            <button onclick="copyText(document.getElementById('freebsdSetup').innerText)">Copy Text</button>
-        </div>
+        <p_copy id="freebsdSetup"></p>
     </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
         <h6>
-            I've used a lot of Linux distributions, and the only remotely usable one has been ArchLinux. When you get it to work, it's perfect.
+            I've used alot of linux distributions and the only remotely usable one has been ArchLinux, when you get it to work, it's perfect.
             However, installing it and getting it to that point is annoying and pointless. If you just want something that works, when you've 
-            booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an Arch install. 
+            booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an arch install. 
             This will leave you with a functioning Arch Installation with all the essentials you need to use your machine.
         </h6>
         <h3>During install (for archinstall application):</h3>
         <p>sudo pacman -Sy archinstall</p>
         <h3>Setup Script:</h3>
-        <div class="p_copy-container">
-            <p id="archSetup"></p>
-            <button onclick="copyText(document.getElementById('archSetup').innerText)">Copy Text</button>
-        </div>
+        <p_copy id="archSetup"></p_copy>
         <h3>Server:</h3>
-        <p>sudo pacman -Syu</p>
+        <p>sudo pacman -Syu </p>
     </div>
     <br>
     <p># Arch Linux TTY and Graphical Session Shortcuts</p>
-    <p>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p>
+    <p1>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p1>
     <p>Ctrl + Alt + F2  - Switch to TTY2 (text console)</p>
     <p>Ctrl + Alt + F3  - Switch to TTY3 (text console)</p>
     <p>Ctrl + Alt + F4  - Switch to TTY4 (text console)</p>
@@ -80,11 +66,36 @@
     <p>Ctrl + Alt + F10 - Unused virtual console (blank screen) or additional graphical session</p>
     <p>Ctrl + Alt + F11 - Unused virtual console (blank screen) or additional graphical session</p>
     <p>Ctrl + Alt + F12 - Unused virtual console (blank screen) or additional graphical session</p>
+    </p>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
     <br>
     <!------------------------------------>
     <script>
+        $(document).ready(function () {
+            let commands = {
+                "win": {
+                    "amd": "choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master",
+                    "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam"
+                },
+                "arch": {
+                    "archSetup": "bash <(curl -sL https://lavashield.net/scripts/archsetup.sh)"
+                }
+                "freebsd": {
+                    "freebsdSetup": "bash <(curl -sL https://lavashield.net/scripts/freebsdsetup.sh)"
+                }
+            };
+
+            $("p_copy").each(function () {
+                let osType = $(this).closest('div').attr('os');
+                let id = $(this).attr("id");
+                if (id && commands[osType] && commands[osType][id]) {
+                    $(this).text(commands[osType][id]);
+                }
+                $(this).after('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
+            });
+        });
+
         function copyText(text) {
             let tempInput = document.createElement("textarea");
             tempInput.value = text;
@@ -93,69 +104,10 @@
             document.execCommand("copy");
             document.body.removeChild(tempInput);
         }
-
-        $(document).ready(function () {
-            let commands = {
-                "win": {
-                    "amd": "choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master",
-                    "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam"
-                },
-                "arch": {
-                    "archSetup": "bash <(curl -s https://lavashield.net/scripts/archsetup.sh)"
-                }
-            };
-        };
     </script>
     <style>
-        .p_copy-container {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-            position: relative;
-            max-width: 33.33%; /* Max width of 1/3 of the container */
-            box-sizing: border-box; /* Include padding and border in the width */
-        }
-        
-        .p_copy-container p {
-            margin: 0;
-            flex-grow: 1;
-            overflow-x: auto; /* Allow horizontal scroll if text overflows */
-            white-space: nowrap; /* Prevent text from wrapping */
-        }
-        
-        .p_copy-container button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 5px 10px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        
-        .p_copy-container button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .p_copy-container {
-                max-width: 100%;
-                padding: 10px 20px; /* Padding on mobile */
-                overflow-x: auto; /* Allow horizontal scrolling on mobile */
-            }
-        }
     </style>
 </main>
-    
 <footer></footer>
 </body>
 </html>
