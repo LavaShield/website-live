@@ -74,18 +74,13 @@
 #
 # --- INSTALL CHOICES END ---
 echo "SCRIPT START"
-echo "What is your username: "
-read username
 
+read -p "What is your username: " username
 echo $username
-#read -p "What is your username: " username
-
 
 packages="curl"
 # the -y flag to pkg install automatically confirms the installation
 pkg install -y $packages
-
-
 
 # --- X WINDOW SYSTEM SETUP START ---
 graphics_packages="xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver"
