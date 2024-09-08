@@ -40,6 +40,12 @@
         });
     </script>
     <style>
+    .site-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .p_copy-container {
         display: flex;
         align-items: center;
@@ -52,6 +58,8 @@
         max-width: 33.33vw; /* Max width of 1/3 of the viewport width */
         box-sizing: border-box; /* Include padding and border in the width */
         overflow: hidden; /* Hide overflow to handle scrolling */
+        width: 100%; /* Full width to center within the parent */
+        max-width: 600px; /* Optional: Max width for very large screens */
     }
     
     .p_copy-container p {
@@ -90,6 +98,7 @@
         }
     }
 </style>
+
 
 </head>
 <body class="disable-scroll">
