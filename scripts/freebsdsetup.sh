@@ -52,4 +52,7 @@
 # secure_console: Yes (Adds an extra layer of protection to the console, preventing unauthorized access to critical system points.)
 # disable_ddtrace: No (Generally unnecessary to disable unless you have specific concerns. DTrace can be useful for performance monitoring and debugging.)
 #
+# ADD USERS:
+# >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is same as encryption keyphrase for ZFS dataset)
+#
 # --- INSTALL CHOICES END ---
