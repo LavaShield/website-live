@@ -3,6 +3,8 @@
 #
 # KEYMAPPING:
 # >>> Continue with default keymap for US keyboard format
+#
+# SET HOSTNAME:
 # >>> Pick name for computer in accordance with standards
 #
 # COMPONENTS:
