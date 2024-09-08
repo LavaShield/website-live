@@ -77,13 +77,14 @@
 read -p "What is your username: " username
 
 
-packages = "curl"
-pkg install $packages
+packages="curl"
+# the -y flag to pkg install automatically confirms the installation
+pkg install -y $packages
 
 
 
 # --- X WINDOW SYSTEM SETUP START ---
-graphics_packages = "xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver"
+graphics_packages="xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver"
 pw groupmod video -m $username
 pw groupmod video -m root
 sysrc kld_list+=i915kms
