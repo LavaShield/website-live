@@ -83,7 +83,7 @@
                 }
             };
 
-            $(".p_copy").each(function () {
+            $(".p").each(function () {
                 let id = $(this).attr("id");
                 let osType = $(this).closest('div').attr('os');
                 if (id && commands[osType] && commands[osType][id]) {
