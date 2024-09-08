@@ -75,7 +75,8 @@
 read -p "What is your username: " username
 
 
-packages = ""
+packages = "curl"
+pkg install $packages
 
 
 
