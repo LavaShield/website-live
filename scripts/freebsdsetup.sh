@@ -1,3 +1,16 @@
+# ---SH SCRIPTING NOTES START ---
+# Prompt Message Inline: You can also provide the prompt message directly with the read command:
+#  read -p "Please enter your response: " user_input
+#
+# Silent Input: If you need to capture input without showing it (like for passwords), use the -s option:
+#  read -sp "Enter your password: " user_password
+#  echo
+#
+# The -s option makes the input silent (no characters are displayed), and echo is used to print a newline after input.
+# ---SH SCRIPTING NOTES END ---
+
+
+
 # below are the choices to chose when setting up your system with the installer usb in the context of a modern laptop
 # --- INSTALL CHOICES START ---
 #
@@ -58,3 +71,24 @@
 # >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is not same as encryption keyphrase for ZFS dataset)
 #
 # --- INSTALL CHOICES END ---
+
+read -p "What is your username: " username
+
+
+packages = "xorg "
+
+
+
+
+
+# --- X WINDOW SYSTEM SETUP START ---
+pw groupmod video -m $username
+pw groupmod video -m root
+# --- X WINDOW SYSTEM SETUP END ---
+
+
+
+# --- SETUP SUDO FOR USERS START --- 
+
+# --- SETUP SUDO FOR USERS END --- 
+
