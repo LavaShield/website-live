@@ -40,55 +40,57 @@
         });
     </script>
     <style>
-        .p_copy-container {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-            position: relative;
-            max-width: 100%; /* Adjusted to fit within container */
-            box-sizing: border-box; /* Include padding and border in the width */
-            overflow: hidden; /* Hide overflow to handle scrolling */
-        }
-        
-        .p_copy-container p {
-            margin: 0;
-            flex: 1; /* Grow to take available space */
-            overflow-x: auto; /* Allow horizontal scroll if text overflows */
-            white-space: nowrap; /* Prevent text from wrapping */
-            padding-right: 120px; /* Space for the button */
-        }
-        
-        .p_copy-container button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 5px 10px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        
-        .p_copy-container button:hover {
-            background-color: #0056b3;
-        }
+    .p_copy-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        position: relative;
+        max-width: 33.33vw; /* Max width of 1/3 of the viewport width */
+        box-sizing: border-box; /* Include padding and border in the width */
+        overflow: hidden; /* Hide overflow to handle scrolling */
+    }
+    
+    .p_copy-container p {
+        margin: 0;
+        flex: 1; /* Grow to take available space */
+        overflow-x: auto; /* Allow horizontal scroll if text overflows */
+        white-space: nowrap; /* Prevent text from wrapping */
+        padding-right: 120px; /* Space for the button */
+    }
+    
+    .p_copy-container button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px 10px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        z-index: 1; /* Ensure the button stays on top */
+    }
+    
+    .p_copy-container button:hover {
+        background-color: #0056b3;
+    }
 
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .p_copy-container {
-                max-width: 100%;
-                padding: 10px 20px; /* Padding on mobile */
-                overflow-x: auto; /* Allow horizontal scrolling on mobile */
-            }
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .p_copy-container {
+            max-width: 100%; /* Full width on small screens */
+            padding: 10px 20px; /* Padding on mobile */
+            overflow-x: auto; /* Allow horizontal scrolling on mobile */
         }
-    </style>
+    }
+</style>
+
 </head>
 <body class="disable-scroll">
 <header>
