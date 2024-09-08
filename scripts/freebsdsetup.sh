@@ -17,4 +17,9 @@
 # Swap Size: ram size (really up to you, I personally like to make it the same as ram size for hybernation)
 # Mirror Swap?: NO (not really necessary in the context of a regular users setup, regular consumer hw is reliable enough)
 # Encrypt Swap? YES (encrypt everything)
+# NETWORK SETTINGS:
+# >>> Yes to configure ipv4 and dhcp
+# >>> Yes for ipv6 and the SLAAC
+# REGDOMAIN SELECTION:
+# >>> Depends on your location, i for instance would go with APAC/AU being in the Asia Pacific Region
 # --- INSTALL CHOICES END ---
