@@ -76,19 +76,27 @@
 echo "SCRIPT START"
 
 read -p "What is your username: " username
-echo $username
+echo "Alight $username, lets do this..."
 
-packages="curl"
+packages="curl vscode qtcreator vim libreoffice kmymoney gnucash"
 # the -y flag to pkg install automatically confirms the installation
 pkg install -y $packages
 
-# --- X WINDOW SYSTEM SETUP START ---
-graphics_packages="xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver"
+# --- GUI SETUP START ---
+# xorg and drivers
+graphics_packages="xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver gnome cinnamon lightdm lightdm-gtk-greeter"
+pkg install -y $graphics_packages
 pw groupmod video -m $username
 pw groupmod video -m root
 sysrc kld_list+=i915kms
 sysrc kld_list+=nvidia-modeset
-# --- X WINDOW SYSTEM SETUP END ---
+echo "proc                    /proc           procfs  rw              0       0" >> /etc/fstab
+sysrc dbus_enable="YES"
+sysrc lightdm_enable="YES"
+# sysrc gdm_enable="YES" # not using gnome exclusively so not starting gdm at boot
+
+
+# --- GUI SETUP END ---
 
 
 
