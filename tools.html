@@ -15,17 +15,13 @@
     <div os="win">
         <h2>Windows:</h2>
         <h3>INSTALL CHOCO COMMANDS:</h3>
-        <p class="p_copy" id="win-choco">
-            Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
-            = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-        </p>
+        <p class="p_copy" id="win-choco"></p>
         <br>
         <h3>PACKAGES:</h3>
         <h4>amd-</h4>
-        <p id="amd"></p>
+        <p class="p_copy" id="amd"></p>
         <h4>general-</h4>
-        <p id="choco"></p>
+        <p class="p_copy" id="choco"></p>
         <h4>*also disable fast startup</h4>
         <br>
     </div>
@@ -75,6 +71,7 @@
         $(document).ready(function () {
             let commands = {
                 "win": {
+                    "win-choco": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
                     "amd": "choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master",
                     "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf nvidia-display-driver obs-studio pcsx2 qbittorrent signal steam"
                 },
