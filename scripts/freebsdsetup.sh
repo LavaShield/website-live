@@ -75,15 +75,16 @@
 read -p "What is your username: " username
 
 
-packages = "xorg "
-
-
+packages = ""
 
 
 
 # --- X WINDOW SYSTEM SETUP START ---
+graphics_packages = "xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-driver"
 pw groupmod video -m $username
 pw groupmod video -m root
+sysrc kld_list+=i915kms
+sysrc kld_list+=nvidia-modeset
 # --- X WINDOW SYSTEM SETUP END ---
 
 
