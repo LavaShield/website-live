@@ -74,7 +74,11 @@
 #
 # --- INSTALL CHOICES END ---
 echo "SCRIPT START"
-read -p "What is your username: " username
+echo "What is your username: "
+read username
+
+echo $username
+#read -p "What is your username: " username
 
 
 packages="curl"
