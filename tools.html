@@ -15,16 +15,16 @@
     <div os="win">
         <h2>Windows:</h2>
         <h3>INSTALL CHOCO COMMANDS:</h3>
-        <p>
+        <p1>
             Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
             = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p>
+            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p1>
         <br>
         <h3>PACKAGES:</h3>
         <h4>amd-</h4>
-        <p id="amd"></p>
+        <p1 id="amd"></p1>
         <h4>general-</h4>
-        <p id="choco"></p>
+        <p1 id="choco"></p1>
         <h4>*also disable fast startup</h4>
         <br>
     </div>
@@ -32,10 +32,10 @@
         <h2>FreeBSD:</h2>
         <h3>During install:</h3>
         <p>read options for setup in the setup script and then do</p>
-        <p>pkg install curl bash</p>
+        <p1>pkg install curl bash</p1>
         <p>so the script below will work, make sure to run it in the bash terminal</p>
         <h3>Setup Script:</h3>
-        <p_copy id="freebsdSetup"></p>
+        <p1 id="freebsdSetup"></p1>
     </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
@@ -50,11 +50,11 @@
         <h3>Setup Script:</h3>
         <p_copy id="archSetup"></p_copy>
         <h3>Server:</h3>
-        <p>sudo pacman -Syu </p>
+        <p1>sudo pacman -Syu </p1>
     </div>
     <br>
     <p># Arch Linux TTY and Graphical Session Shortcuts</p>
-    <p1>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p1>
+    <p>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p>
     <p>Ctrl + Alt + F2  - Switch to TTY2 (text console)</p>
     <p>Ctrl + Alt + F3  - Switch to TTY3 (text console)</p>
     <p>Ctrl + Alt + F4  - Switch to TTY4 (text console)</p>
@@ -86,7 +86,7 @@
                 }
             };
 
-            $("p_copy").each(function () {
+            $("p1").each(function () {
                 let osType = $(this).closest('div').attr('os');
                 let id = $(this).attr("id");
                 if (id && commands[osType] && commands[osType][id]) {
