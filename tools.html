@@ -5,7 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAVASHIELD</title>
     <link rel="icon" href="../assets/head_header_logo.svg">
-    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .site-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .p_copy-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+            max-width: 33.33vw; /* Max width of 1/3 of the viewport width */
+            box-sizing: border-box; /* Include padding and border in the width */
+            overflow: hidden; /* Hide overflow to handle scrolling */
+            width: 100%; /* Full width to center within the parent */
+            max-width: 600px; /* Optional: Max width for very large screens */
+        }
+        
+        .p_copy-container p {
+            margin: 0;
+            flex: 1; /* Grow to take available space */
+            overflow-x: auto; /* Allow horizontal scroll if text overflows */
+            white-space: nowrap; /* Prevent text from wrapping */
+            padding-right: 120px; /* Space for the button */
+        }
+        
+        .p_copy-container button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 5px 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1; /* Ensure the button stays on top */
+        }
+        
+        .p_copy-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .p_copy-container {
+                max-width: 100%; /* Full width on small screens */
+                padding: 10px 20px; /* Padding on mobile */
+                overflow-x: auto; /* Allow horizontal scrolling on mobile */
+            }
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         function copyText(text) {
@@ -34,73 +93,13 @@
                 if (id && commands[osType] && commands[osType][id]) {
                     $(this).text(commands[osType][id]);
                 }
+                // Wrap the <p> tag with the container div
                 $(this).wrap('<div class="p_copy-container"></div>');
+                // Append the button to the container
                 $(this).parent().append('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
             });
         });
     </script>
-    <style>
-        .site-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .p_copy-container {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-            position: relative;
-            max-width: 33.33vw; /* Max width of 1/3 of the viewport width */
-            box-sizing: border-box; /* Include padding and border in the width */
-            overflow: hidden; /* Hide overflow to handle scrolling */
-            width: auto; /* Let width scale according to text length */
-            min-width: 200px; /* Minimum width to ensure readability */
-            text-align: center; /* Center content */
-        }
-
-        .p_copy-container p {
-            margin: 0;
-            flex: 1; /* Grow to take available space */
-            overflow-x: auto; /* Allow horizontal scroll if text overflows */
-            white-space: nowrap; /* Prevent text from wrapping */
-            padding-right: 120px; /* Space for the button */
-            text-align: center; /* Center text */
-        }
-
-        .p_copy-container button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 5px 10px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            z-index: 1; /* Ensure the button stays on top */
-        }
-
-        .p_copy-container button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .p_copy-container {
-                max-width: 100%; /* Full width on small screens */
-                padding: 10px 20px; /* Padding on mobile */
-                overflow-x: auto; /* Allow horizontal scrolling on mobile */
-            }
-        }
-    </style>
 </head>
 <body class="disable-scroll">
 <header>
@@ -118,65 +117,53 @@
     <h2>Different commands I use when setting up an OS.</h2>
     <h6>I have to set up OSes extremely frequently so these are just a list of commands I use to make life easier.</h6>
     <h6>Eventually more utilities will be released here (actual utilities)</h6>
+
     <div os="win">
         <h2>Windows:</h2>
         <h3>INSTALL CHOCO COMMANDS:</h3>
-        <div class="p_copy-container">
-            <p id="win-choco" class="p_copy">
-                Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
-                = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-                System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-            </p>
-            <button onclick="copyText(document.getElementById('win-choco').innerText)">Copy Text</button>
-        </div>
-        <br>
+        <p id="win-choco" class="p_copy">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
+            = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
+            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+        </p>
+
         <h3>PACKAGES:</h3>
         <h4>amd-</h4>
-        <div class="p_copy-container">
-            <p id="amd" class="p_copy"></p>
-            <button onclick="copyText(document.getElementById('amd').innerText)">Copy Text</button>
-        </div>
+        <p id="amd" class="p_copy"></p>
+
         <h4>general-</h4>
-        <div class="p_copy-container">
-            <p id="choco" class="p_copy"></p>
-            <button onclick="copyText(document.getElementById('choco').innerText)">Copy Text</button>
-        </div>
+        <p id="choco" class="p_copy"></p>
+
         <h4>*also disable fast startup</h4>
-        <br>
     </div>
+
     <div os="freebsd">
         <h2>FreeBSD:</h2>
         <h3>During install:</h3>
-        <div class="p_copy-container">
-            <p id="freebsd-setup" class="p_copy">pkg install curl bash</p>
-            <button onclick="copyText(document.getElementById('freebsd-setup').innerText)">Copy Text</button>
-        </div>
+        <p id="freebsd-setup" class="p_copy">pkg install curl bash</p>
         <p>So the script below will work, make sure to run it in the bash terminal</p>
+
         <h3>Setup Script:</h3>
-        <div class="p_copy-container">
-            <p id="freebsdSetup" class="p_copy"></p>
-            <button onclick="copyText(document.getElementById('freebsdSetup').innerText)">Copy Text</button>
-        </div>
+        <p id="freebsdSetup" class="p_copy"></p>
     </div>
+
     <div os="arch">
         <h2>ArchLinux:</h2>
-        <h6>
-            I've used a lot of Linux distributions, and the only remotely usable one has been ArchLinux. When you get it to work, it's perfect.
+        <h6>I've used a lot of Linux distributions, and the only remotely usable one has been ArchLinux. When you get it to work, it's perfect.
             However, installing it and getting it to that point is annoying and pointless. If you just want something that works, when you've 
             booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an Arch install. 
             This will leave you with a functioning Arch Installation with all the essentials you need to use your machine.
         </h6>
+
         <h3>During install (for archinstall application):</h3>
         <p>sudo pacman -Sy archinstall</p>
+
         <h3>Setup Script:</h3>
-        <div class="p_copy-container">
-            <p id="archSetup" class="p_copy"></p>
-            <button onclick="copyText(document.getElementById('archSetup').innerText)">Copy Text</button>
-        </div>
+        <p id="archSetup" class="p_copy"></p>
+
         <h3>Server:</h3>
         <p>sudo pacman -Syu</p>
     </div>
-    <br>
+
     <p># Arch Linux TTY and Graphical Session Shortcuts</p>
     <p>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p>
     <p>Ctrl + Alt + F2  - Switch to TTY2 (text console)</p>
@@ -184,15 +171,8 @@
     <p>Ctrl + Alt + F4  - Switch to TTY4 (text console)</p>
     <p>Ctrl + Alt + F5  - Switch to TTY5 (text console)</p>
     <p>Ctrl + Alt + F6  - Switch to TTY6 (text console)</p>
-    <p>Ctrl + Alt + F7  - Switch to TTY7 (usually graphical session)</p>
-    <p>Ctrl + Alt + F8  - Unused virtual console (blank screen) or additional graphical session</p>
-    <p>Ctrl + Alt + F9  - Unused virtual console (blank screen) or additional graphical session</p>
-    <p>Ctrl + Alt + F10 - Unused virtual console (blank screen) or additional graphical session</p>
-    <p>Ctrl + Alt + F11 - Unused virtual console (blank screen) or additional graphical session</p>
-    <p>Ctrl + Alt + F12 - Unused virtual console (blank screen) or additional graphical session</p>
-    <br>
+
     <h3>This is all subject to change (not definitive)</h3>
-    <br>
 </main>
 
 <footer>
@@ -211,13 +191,14 @@
             <a href="https://www.youtube.com/@lavashieldnet" style="color: #040603">
                 <img class="socialimg" src="../assets/footer_youtube.svg" alt="LAVASHIELD youtube">
             </a>
-            <a href="https://www.instagram.com/lavashield/" style="color: #040603">
-                <img class="socialimg" src="../assets/footer_instagram.svg" alt="LAVASHIELD instagram">
-            </a>
             <a href="https://twitter.com/LavaShield" style="color: #040603">
                 <img class="socialimg" src="../assets/footer_twitter.svg" alt="LAVASHIELD twitter">
             </a>
         </div>
+    </div>
+    <div class="column">
+        <p>© 2024 LAVASHIELD</p>
+        <p><a href="../privacy.html">Privacy Policy</a></p>
     </div>
 </footer>
 </body>
