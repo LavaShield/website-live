@@ -78,6 +78,9 @@ echo "SCRIPT START"
 read -p "What is your username: " username
 echo "Alight $username, lets do this..."
 
+pkg update
+pkg upgrade
+
 packages="curl vscode qtcreator vim libreoffice kmymoney gnucash"
 # the -y flag to pkg install automatically confirms the installation
 pkg install -y $packages
