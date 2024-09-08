@@ -11,46 +11,47 @@
     <!------------CONTENT HERE------------>
     <h2>Different commands I use when setting up an OS.</h2>
     <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
-    <h6>eventually more utilities will be released here (actual utilities)</h6>
+    <h6>Eventually more utilities will be released here (actual utilities)</h6>
     <div os="win">
         <h2>Windows:</h2>
         <h3>INSTALL CHOCO COMMANDS:</h3>
-        <p1>
+        <p class="p_copy" id="win-choco">
             Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol
             = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object
-            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</p1>
+            System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+        </p>
         <br>
         <h3>PACKAGES:</h3>
         <h4>amd-</h4>
-        <p1 id="amd"></p1>
+        <p id="amd"></p>
         <h4>general-</h4>
-        <p1 id="choco"></p1>
+        <p id="choco"></p>
         <h4>*also disable fast startup</h4>
         <br>
     </div>
     <div os="freebsd">
         <h2>FreeBSD:</h2>
         <h3>During install:</h3>
-        <p>read options for setup in the setup script and then do</p>
-        <p1>pkg install curl bash</p1>
-        <p>so the script below will work, make sure to run it in the bash terminal</p>
+        <p>Read options for setup in the setup script and then do</p>
+        <p class="p_copy" id="freebsd-setup">pkg install curl bash</p>
+        <p>So the script below will work, make sure to run it in the bash terminal</p>
         <h3>Setup Script:</h3>
-        <p1 id="freebsdSetup"></p1>
+        <p class="p_copy" id="freebsdSetup"></p>
     </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
         <h6>
-            I've used alot of linux distributions and the only remotely usable one has been ArchLinux, when you get it to work, it's perfect.
+            I've used a lot of Linux distributions, and the only remotely usable one has been ArchLinux. When you get it to work, it's perfect.
             However, installing it and getting it to that point is annoying and pointless. If you just want something that works, when you've 
-            booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an arch install. 
+            booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an Arch install. 
             This will leave you with a functioning Arch Installation with all the essentials you need to use your machine.
         </h6>
         <h3>During install (for archinstall application):</h3>
         <p>sudo pacman -Sy archinstall</p>
         <h3>Setup Script:</h3>
-        <p_copy id="archSetup"></p_copy>
+        <p class="p_copy" id="archSetup"></p>
         <h3>Server:</h3>
-        <p1>sudo pacman -Syu </p1>
+        <p>sudo pacman -Syu</p>
     </div>
     <br>
     <p># Arch Linux TTY and Graphical Session Shortcuts</p>
@@ -66,7 +67,6 @@
     <p>Ctrl + Alt + F10 - Unused virtual console (blank screen) or additional graphical session</p>
     <p>Ctrl + Alt + F11 - Unused virtual console (blank screen) or additional graphical session</p>
     <p>Ctrl + Alt + F12 - Unused virtual console (blank screen) or additional graphical session</p>
-    </p>
     <br>
     <h3>This is all subject to change (not definitive)</h3>
     <br>
@@ -80,18 +80,19 @@
                 },
                 "arch": {
                     "archSetup": "bash <(curl -sL https://lavashield.net/scripts/archsetup.sh)"
-                }
+                },
                 "freebsd": {
                     "freebsdSetup": "bash <(curl -sL https://lavashield.net/scripts/freebsdsetup.sh)"
                 }
             };
 
-            $("p1").each(function () {
-                let osType = $(this).closest('div').attr('os');
+            $(".p_copy").each(function () {
                 let id = $(this).attr("id");
+                let osType = $(this).closest('div').attr('os');
                 if (id && commands[osType] && commands[osType][id]) {
                     $(this).text(commands[osType][id]);
                 }
+                // Add the copy button after each <p> with the class p_copy
                 $(this).after('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
             });
         });
