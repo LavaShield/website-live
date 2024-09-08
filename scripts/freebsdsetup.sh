@@ -110,3 +110,41 @@ pkg install -y sudo
 echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the root entry"
 # --- SETUP SUDO FOR USERS END --- 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --- general ---
+pkg update && pkg upgrade
+pkg install vim
+# --- xorg setup ---
+pkg install xorg
+pw groupmod video -m alex
+pw groupmod video -m root
+# --- intel graphics ---
+pkg install drm-kmod libva-intel-driver mesa-libs mesa-dri
+sysrc kld_list+=i915kms
+# --- nvidia graphics ---
+pkg install nvidia-driver
+sysrc linux_enable="YES"
+sysrc kld_list+=nvidia-modeset
+# --- desktop environment ---
+pkg install cinnamon
+*added proc line to /etc/fstab
+sysrc dbus_enable="YES"
+pkg install lightdm lightdm-gtk-greeter
+sysrc lightdm_enable="YES"
+
