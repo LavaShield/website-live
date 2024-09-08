@@ -94,18 +94,16 @@ pw groupmod video -m $username
 pw groupmod video -m root
 sysrc kld_list+=i915kms
 sysrc kld_list+=nvidia-modeset
-echo "proc                    /proc           procfs  rw              0       0" >> /etc/fstab
+#echo "proc                    /proc           procfs  rw              0       0" >> /etc/fstab
 sysrc dbus_enable="YES"
 sysrc lightdm_enable="YES"
 sysrc nvidia_xorg_enable="YES"
 # sysrc gdm_enable="YES" # not using gnome exclusively so not starting gdm at boot
-
-
 # --- GUI SETUP END ---
 
 
-
 # --- SETUP SUDO FOR USERS START --- 
-
+pkg install -y sudo
+echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the root entry"
 # --- SETUP SUDO FOR USERS END --- 
 
