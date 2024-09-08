@@ -102,7 +102,6 @@ sysrc kld_list+=nvidia-modeset
 sysrc dbus_enable="YES"
 sysrc lightdm_enable="YES"
 sysrc nvidia_xorg_enable="YES"
-# sysrc gdm_enable="YES" # not using gnome exclusively so not starting gdm at boot
 # --- GUI SETUP END ---
 
 
