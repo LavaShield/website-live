@@ -81,7 +81,7 @@ echo "Alight $username, lets do this..."
 pkg update
 pkg upgrade
 
-packages="curl qtcreator vim libreoffice kmymoney gnucash"
+packages="curl bash qtcreator vim libreoffice kmymoney gnucash"
 # the -y flag to pkg install automatically confirms the installation
 pkg install -y $packages
 sysrc kld_list+=linux
