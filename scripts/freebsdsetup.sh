@@ -16,12 +16,6 @@
 # below are the choices to chose when setting up your system with the installer usb in the context of a modern laptop
 # --- INSTALL CHOICES START ---
 #
-# KEYMAPPING:
-# >>> Continue with default keymap for US keyboard format
-#
-# SET HOSTNAME:
-# >>> Pick name for computer in accordance with standards
-#
 # COMPONENTS:
 # >>> Have components kernel-dbg, lib32, ports, src
 #
@@ -36,17 +30,13 @@
 # Partition Scheme: GPT (UEFI)
 # Swap Size: ram size
 # Mirror Swap?: NO (not really necessary in the context of a regular users setup, regular consumer hw is reliable enough)
-# Encrypt Swap? YES (encrypt everything)
+# Encrypt Swap?: YES
 #
 # REGDOMAIN SELECTION:
 # >>> Depends on your location, i for instance would go with APAC/AU being in the Asia Pacific Region
 #
 # NETWORK SETTINGS:
 # >>> Yes to configure ipv4 and dhcp
-# >>> Yes for ipv6 and the SLAAC
-#
-# TIME ZONE SELECTOR:
-# >>> Select your timezone :O
 #
 # SYSTEM CONFIGURATION:
 # local_unbound: No
