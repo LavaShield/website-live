@@ -30,7 +30,7 @@
 # >>> Auto (ZFS)
 # >>> ZFS Configurations
 # Pool Type/Disks: stripe: 1 disk
-# Pool Name: zroot
+# Pool Name: zroot (CHANGE THIS, on accordance with standardisations)
 # Force 4K Sectors?: YES (if you are installing on a system with relatively modern components)
 # Encrypt Disks?: YES (always encrypt your devices)
 # Partition Scheme: GPT (UEFI) (should be fine with all standard modern devices)
