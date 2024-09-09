@@ -105,9 +105,13 @@ echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the r
 
 
 
+
 # --- general ---
 pkg update && pkg upgrade
 pkg install vim
+# --- kernel update ---
+freebsd-update fetch
+freebsd-update install
 # --- xorg setup ---
 pkg install xorg
 pw groupmod video -m alex
