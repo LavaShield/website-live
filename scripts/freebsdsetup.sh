@@ -13,11 +13,11 @@
 
 
 # ---------- INSTALL NOTES ----------
-# below are the choices to chose when setting up your system with the installer usb in the context of a modern laptop
+# context of a modern laptop
 # --- INSTALL CHOICES START ---
 #
 # COMPONENTS:
-# >>> Have components kernel-dbg, lib32, ports, src
+# Select kernel-dbg, lib32, ports, src
 #
 # PARTITIONING:
 # Pool Type/Disks: stripe: 1 disk
@@ -30,10 +30,10 @@
 # Encrypt Swap?: YES
 #
 # REGDOMAIN SELECTION:
-# >>> Depends on your location, i for instance would go with APAC/AU being in the Asia Pacific Region
+# APAC/AU
 #
 # NETWORK SETTINGS:
-# >>> Yes to configure ipv4 and dhcp
+# Yes to configure ipv4 and dhcp
 #
 # SYSTEM CONFIGURATION:
 # local_unbound: No
@@ -45,19 +45,19 @@
 # dumpdev: Yes
 #
 # SYSTEM HARDENING:
-# hide_uids: Yes (Provides additional security by hiding user IDs from non-privileged users, reducing the risk of information leakage about system accounts.)
-# hide_gids: Yes (Enhances security by hiding group IDs from non-privileged users, limiting exposure of system group information.)
-# hide_jail: No (Not typically necessary for a regular laptop user. This option is more relevant for systems using jails where you want to obscure their presence.)
-# read_msgbuf: Yes (Prevents non-privileged users from accessing kernel messages, which could contain sensitive system information.)
-# proc_debug: No (Restricts access to process information, which might interfere with debugging tools. Generally not needed for regular users unless you have specific debugging needs.)
-# random_pid: Yes (Improves security by randomizing process IDs, making it harder for attackers to predict and exploit process IDs.)
-# clear_tmp: Yes (Clears temporary files on boot, helping to remove potentially sensitive data and reduce clutter.)
-# disable_syslogd: No (Disabling system logging is not recommended as it is crucial for monitoring and troubleshooting. Properly configuring syslogd is preferred.)
-# secure_console: Yes (Adds an extra layer of protection to the console, preventing unauthorized access to critical system points.)
-# disable_ddtrace: No (Generally unnecessary to disable unless you have specific concerns. DTrace can be useful for performance monitoring and debugging.)
+# hide_uids: Yes
+# hide_gids: Yes
+# hide_jail: No (?)
+# read_msgbuf: Yes
+# proc_debug: No
+# random_pid: Yes
+# clear_tmp: Yes
+# disable_syslogd: No
+# secure_console: Yes
+# disable_ddtrace: No
 #
 # ADD USERS:
-# >>> Just go with default for everything but select yes for ZFS encryption (make sure user password is not same as encryption keyphrase for ZFS dataset)
+# defaults + ZFS encryption
 #
 # --- INSTALL CHOICES END ---
 echo "SCRIPT START"
