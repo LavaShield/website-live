@@ -20,16 +20,13 @@
 # >>> Have components kernel-dbg, lib32, ports, src
 #
 # PARTITIONING:
-# >>> (for 1 storage systems, no raid)
-# >>> Auto (ZFS)
-# >>> ZFS Configurations
 # Pool Type/Disks: stripe: 1 disk
-# Pool Name: zroot (CHANGE THIS, on accordance with standardisations)
-# Force 4K Sectors?: YES (if you are installing on a system with relatively modern components)
+# Pool Name: zroot (CHANGE THIS)
+# Force 4K Sectors?: YES
 # Encrypt Disks?: YES
 # Partition Scheme: GPT (UEFI)
 # Swap Size: ram size
-# Mirror Swap?: NO (not really necessary in the context of a regular users setup, regular consumer hw is reliable enough)
+# Mirror Swap?: NO
 # Encrypt Swap?: YES
 #
 # REGDOMAIN SELECTION:
