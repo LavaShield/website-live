@@ -32,9 +32,9 @@
 # Pool Type/Disks: stripe: 1 disk
 # Pool Name: zroot (CHANGE THIS, on accordance with standardisations)
 # Force 4K Sectors?: YES (if you are installing on a system with relatively modern components)
-# Encrypt Disks?: YES (always encrypt your devices)
-# Partition Scheme: GPT (UEFI) (should be fine with all standard modern devices)
-# Swap Size: ram size (really up to you, I personally like to make it the same as ram size for hybernation)
+# Encrypt Disks?: YES
+# Partition Scheme: GPT (UEFI)
+# Swap Size: ram size
 # Mirror Swap?: NO (not really necessary in the context of a regular users setup, regular consumer hw is reliable enough)
 # Encrypt Swap? YES (encrypt everything)
 #
@@ -120,14 +120,6 @@ echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the r
 
 
 
-
-
-
-
-# --- get wifi working ---
-pkill wpa_supplicant
-*go into conf file and change network
-wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 # --- general ---
 pkg update && pkg upgrade
 pkg install vim
