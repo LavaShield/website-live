@@ -100,7 +100,7 @@ pkg install xorg
 pw groupmod video -m alex
 pw groupmod video -m root
 # --- intel graphics ---
-pkg install drm-kmod libva-intel-driver mesa-libs mesa-dri
+pkg install drm-kmod
 sysrc kld_list+=i915kms
 # --- nvidia graphics ---
 pkg install nvidia-driver
