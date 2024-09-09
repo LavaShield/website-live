@@ -81,28 +81,11 @@ graphics_packages="xorg drm-kmod libva-intel-driver mesa-libs mesa-dri nvidia-dr
 pkg install -y $graphics_packages
 pw groupmod video -m $username
 pw groupmod video -m root
-sysrc kld_list+=i915kms
-sysrc kld_list+=nvidia-modeset
 echo "proc                    /proc           procfs  rw              0       0" >> /etc/fstab
 sysrc dbus_enable="YES"
 sysrc lightdm_enable="YES"
 sysrc nvidia_xorg_enable="YES"
 # --- GUI SETUP END ---
-
-
-# --- SETUP SUDO FOR USERS START --- 
-pkg install -y sudo
-echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the root entry"
-# --- SETUP SUDO FOR USERS END --- 
-
-
-
-
-
-
-
-
-
 
 
 
@@ -129,4 +112,6 @@ pkg install cinnamon
 sysrc dbus_enable="YES"
 pkg install lightdm lightdm-gtk-greeter
 sysrc lightdm_enable="YES"
-
+# --- sudo setup ---
+pkg install sudo
+echo "add entry to etc/sudoers"
