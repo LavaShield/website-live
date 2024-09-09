@@ -49,13 +49,13 @@
 # >>> Select your timezone :O
 #
 # SYSTEM CONFIGURATION:
-# local_unbound: No (Optional; DNS caching typically not needed for most users.)
-# sshd: No (yes if remote access to your machine is needed; otherwise No to enhance security.)
-# moused: No (yes if using the mouse in command-line environments; otherwise No.)
-# ntpd: Yes (for ongoing time synchronization with remote servers.)
-# ntpd_sync_on_start: Yes (for immediate synchronization at ntpd start; otherwise No if periodic synchronization suffices.)
-# powerd: Yes (for managing power and extending battery life.)
-# dumpdev: Yes (if you want crash dumps for debugging; otherwise No if not needed or space is limited.)
+# local_unbound: No
+# sshd: No
+# moused: No
+# ntpd: Yes
+# ntpd_sync_on_start: Yes
+# powerd: Yes
+# dumpdev: Yes
 #
 # SYSTEM HARDENING:
 # hide_uids: Yes (Provides additional security by hiding user IDs from non-privileged users, reducing the risk of information leakage about system accounts.)
