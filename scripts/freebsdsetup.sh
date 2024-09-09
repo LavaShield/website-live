@@ -1,9 +1,7 @@
 #!/bin/sh
 
 # ---SH SCRIPTING NOTES START ---
-# Prompt Message Inline: You can also provide the prompt message directly with the read command:
-#  read -p "Please enter your response: " user_input
-#
+# 
 # Silent Input: If you need to capture input without showing it (like for passwords), use the -s option:
 #  read -sp "Enter your password: " user_password
 #  echo
