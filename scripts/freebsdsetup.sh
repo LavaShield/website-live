@@ -1,15 +1,5 @@
 #!/bin/sh
 
-# ---SH SCRIPTING NOTES START ---
-# 
-# Silent Input: If you need to capture input without showing it (like for passwords), use the -s option:
-#  read -sp "Enter your password: " user_password
-#  echo
-#
-# The -s option makes the input silent (no characters are displayed), and echo is used to print a newline after input.
-# ---SH SCRIPTING NOTES END ---
-
-
 # ---------- INSTALL NOTES ----------
 # context of a modern laptop
 # --- INSTALL CHOICES START ---
@@ -34,9 +24,6 @@
 # Yes to configure ipv4 and dhcp
 #
 # SYSTEM CONFIGURATION:
-# local_unbound: No
-# sshd: No
-# moused: No
 # ntpd: Yes
 # ntpd_sync_on_start: Yes
 # powerd: Yes
@@ -47,12 +34,9 @@
 # hide_gids: Yes
 # hide_jail: No (?)
 # read_msgbuf: Yes
-# proc_debug: No
 # random_pid: Yes
 # clear_tmp: Yes
-# disable_syslogd: No
 # secure_console: Yes
-# disable_ddtrace: No
 #
 # ADD USERS:
 # defaults + ZFS encryption
@@ -63,6 +47,8 @@ echo "SCRIPT START"
 read -p "What is your username: " username
 echo "Alight $username, lets do this..."
 
+read -sp "Enter your password: " user_password
+echo
 
 packages="curl bash qtcreator vim libreoffice kmymoney gnucash"
 # the -y flag to pkg install automatically confirms the installation
