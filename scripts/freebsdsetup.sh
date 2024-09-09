@@ -126,6 +126,7 @@ echo "GO TO etc/sudoers and add '$username    ALL=(ALL) ALL',  right below the r
 
 # --- get wifi working ---
 pkill wpa_supplicant
+*go into conf file and change network
 wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 # --- general ---
 pkg update && pkg upgrade
