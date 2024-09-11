@@ -63,12 +63,6 @@ general() {
     # Install General Aur Packages
     install_aur_packages "General" "$general_Aur_Packages"
 
-    # Tailscale General Setup
-    sudo systemctl enable --now tailscaled
-    sudo tailscale up
-    sudo tailscale ip -4
-    # https://tailscale.com/download/linux/arch
-
     # add copy paste to gvim
     printf "set clipboard=unnamedplus\n" >> ~/.vimrc
 
