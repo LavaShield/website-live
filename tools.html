@@ -25,15 +25,6 @@
         <h4>*also disable fast startup</h4>
         <br>
     </div>
-    <div os="freebsd">
-        <h2>FreeBSD:</h2>
-        <h3>During install:</h3>
-        <p>Read options for setup in the setup script and then do</p>
-        <p class="p_copy" id="freebsd-setup">pkg install curl bash</p>
-        <p>So the script below will work, make sure to run it in the bash terminal</p>
-        <h3>Setup Script:</h3>
-        <p class="p_copy" id="freebsdSetup"></p>
-    </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
         <h6>
@@ -46,8 +37,6 @@
         <p>sudo pacman -Sy archinstall</p>
         <h3>Setup Script:</h3>
         <p class="p_copy" id="archSetup"></p>
-        <h3>Server:</h3>
-        <p>sudo pacman -Syu</p>
     </div>
     <br>
     <p># Arch Linux TTY and Graphical Session Shortcuts</p>
@@ -77,9 +66,6 @@
                 },
                 "arch": {
                     "archSetup": "bash <(curl -sL https://lavashield.net/scripts/archsetup.sh)"
-                },
-                "freebsd": {
-                    "freebsdSetup": "bash <(curl -sL https://lavashield.net/scripts/freebsdsetup.sh)"
                 }
             };
 
