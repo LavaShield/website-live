@@ -4,7 +4,7 @@ import sys
 
 # Package Groups
 general_packages = [
-    "base-devel", "cinnamon", "curl", "dosfstools", "exfat-utils", "gcc", "git", "gnome",
+    "base-devel", "cinnamon", "curl", "dosfstools", "exfat-utils", "gcc", "gdb", "git", "gnome",
     "gnome-extra", "htop", "jdk21-openjdk", "man-db", "man-pages", "nodejs", "ntfs-3g",
     "openjdk21-doc", "openjdk21-src", "p7zip", "python", "timeshift", "tmux", "gvim",
     "nvidia", "nvidia-settings", "nvidia-utils"
