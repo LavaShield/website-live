@@ -14,7 +14,7 @@ desktop_packages = [
     "audacity", "bitwarden", "bluez", "bluez-utils", "code", "cups",
     "filezilla", "flameshot", "gimp", "libreoffice-fresh", "neofetch", "obs-studio",
     "opensnitch", "qbittorrent", "signal-desktop", "sqlitebrowser",
-    "system-config-printer", "thunderbird", "veracrypt", "vlc", "wireshark-qt"
+    "system-config-printer", "thunderbird", "veracrypt", "vlc", "wine", "wireshark-qt"
 ]
 desktop_aur_packages = ["qflipper-bin"]  # brother-hll2460dw
 server_packages = ["docker", "docker-compose", "openssh", "ufw"]
