@@ -12,20 +12,7 @@
     <h2>Different commands I use when setting up an OS.</h2>
     <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
     <h6>Eventually more utilities will be released here (actual utilities)</h6>
-    <div os="win">
-        <h2>Windows:</h2>
-        <h3>INSTALL CHOCO COMMANDS:</h3>
-        <p class="p_copy" id="win-choco"></p>
-        <br>
-        <h3>PACKAGES:</h3>
-        <h4>amd-</h4>
-        <p class="p_copy" id="amd"></p>
-        <h4>general-</h4>
-        <p class="p_copy" id="choco"></p>
-        <h4>*also disable fast startup and uninstall onedrive</h4>
-        <h4>system updates, intel dsa updates</h4>
-        <br>
-    </div>
+    
     <div os="arch">
         <h2>ArchLinux:</h2>
         <h6>
@@ -61,9 +48,8 @@
         $(document).ready(function () {
             let commands = {
                 "win": {
-                    "win-choco": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))",
-                    "amd": "choco install --ignore-checksum amd-ryzen-chipset amd-ryzen-master",
-                    "choco": "choco install --ignore-checksum 7zip bitwarden blender chromium dolphin goggalaxy gzdoom intel-dsa librewolf nvidia-display-driver obs-studio pcsx2 qbittorrent samsung-magician signal steam"
+                    "amd": "amd-ryzen-chipset amd-ryzen-master",
+                    "choco": " intel-dsa nvidia-display-driver
                 },
                 "arch": {
                     "archSetup": "curl -sSL https://lavashield.net/scripts/archsetup.py -o /tmp/archsetup.py && python3 /tmp/archsetup.py && rm -f /tmp/archsetup.py"
