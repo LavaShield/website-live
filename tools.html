@@ -9,10 +9,16 @@
 
 <main class="site-content">
     <!------------CONTENT HERE------------>
-    <h2>Different commands I use when setting up an OS.</h2>
-    <h6>I have to set up os's extremely frequently so these are just a list of commands I use to make life easier.</h6>
-    <h6>Eventually more utilities will be released here (actual utilities)</h6>
-    
+    <h6>Eventually actual utilities will be released here</h6>
+    <div os="win">
+        <h2>Windows:</h2>
+        <h3>Software:</h3>
+        <p>
+            winget install LibreWolf.LibreWolf Valve.Steam OBSProject.OBSStudio Bitwarden.Bitwarden 
+            GOG.Galaxy DolphinEmulator.Dolphin OpenWhisperSystems.Signal qBittorrent.qBittorrent 
+            Logitech.UnifyingSoftware Logitech.OptionsPlus Intel.IntelDriverAndSupportAssistant
+        </p>
+    </div>
     <div os="arch">
         <h2>ArchLinux:</h2>
         <h6>
@@ -47,10 +53,6 @@
     <script>
         $(document).ready(function () {
             let commands = {
-                "win": {
-                    "amd": "amd-ryzen-chipset amd-ryzen-master",
-                    "choco": " intel-dsa nvidia-display-driver
-                },
                 "arch": {
                     "archSetup": "curl -sSL https://lavashield.net/scripts/archsetup.py -o /tmp/archsetup.py && python3 /tmp/archsetup.py && rm -f /tmp/archsetup.py"
                 }
