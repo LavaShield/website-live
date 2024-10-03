@@ -97,7 +97,7 @@ def manage_services(services):
     for service in services.split():
         if service:
             print_blue(f"Enabling and starting {service} service...")
-            run_command(f"sudo systemctl enable {service}", 
+            run_command(f"sudo systemctl enable --now {service}", 
                         f"Enabled {service}", f"Failed to enable {service}", exit_on_fail=False)
             run_command(f"sudo systemctl start {service}", 
                         f"Started {service}", f"Failed to start {service}", exit_on_fail=False)
