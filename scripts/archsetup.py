@@ -192,7 +192,7 @@ def main():
     
     setup_laptop()
     
-    print_blue("Setup finished! Review the log at /var/log/arch_setup.log for details.")
+    print_blue("Setup finished! Review the log at /var/log/arch_setup.log for details. Additionally don't forget to add flameshot, back in time, and timeshift to startup.")
 
 if __name__ == "__main__":
     main()
