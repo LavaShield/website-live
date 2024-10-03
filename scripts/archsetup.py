@@ -86,7 +86,7 @@ def run_command(command, description, fail_message, exit_on_fail=True):
 def install_packages(name, package_list):
     """Installs the specified list of packages using pacman."""
     print_blue(f"Installing {name} packages...")
-    run_command(f"sudo pacman -Syu --noconfirm {package_list}", 
+    run_command(f"sudo pacman -Sy --noconfirm {package_list}", 
                 f"Installed {name} packages", f"Failed to install {name} packages")
 
 def install_aur_packages(name, package_list):
@@ -196,7 +196,7 @@ def main():
     setup_laptop()
 
     print_blue("Removing Bloat")
-    run_command(f"Sudo pacman -Rs {CONFIG["bloat_packages"]}")
+    run_command(f"sudo pacman -Rs {CONFIG["bloat_packages"]}")
     print_blue("Bloat Removed")
 
     print_blue("Enabling Clipboard For Vim")
