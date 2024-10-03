@@ -10,7 +10,7 @@ CONFIG = {
         "man-db man-pages nodejs ntfs-3g openjdk21-doc openjdk21-src p7zip python "
         "rsync timeshift tmux gvim pipewire pipewire-pulse pipewire-alsa reflector "
         "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader "
-        "lib32-libglvnd mesa lib32-mesa"
+        "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon"
     ),
     "aur_general_packages": "backintime librewolf-bin nordvpn-bin",
     "general_services": "",
@@ -19,7 +19,7 @@ CONFIG = {
     "desktop_packages": (
         "audacity bitwarden bluez bluez-utils code cups filezilla flameshot gimp "
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
-        "sqlitebrowser system-config-printer thunderbird veracrypt vlc wine wireshark-qt "
+        "sqlitebrowser system-config-printer thunderbird veracrypt vlc wireshark-qt "
         "zathura zathura-pdf-poppler redshift pipewire-jack easyeffects"
     ),
     "aur_desktop_packages": "qflipper-bin",
@@ -27,7 +27,7 @@ CONFIG = {
 
     # Server-specific packages
     "server_packages": "docker docker-compose openssh ufw",
-    "server_services": "sshd docker ufw",
+    "server_services": "sshd docker ufw", # ufw needs to be enabled and allow
 
     # Laptop-specific packages
     "laptop_packages": (
@@ -55,7 +55,10 @@ CONFIG = {
     "intel_cpu_microcode": "intel-ucode",
 
     # Logging
-    "log_file": "/var/log/arch_setup.log"
+    "log_file": "/var/log/arch_setup.log",
+
+    # Shit to remove
+    "bloat_packages": "welcome"
 }
 
 # Utility Functions
@@ -191,6 +194,15 @@ def main():
         setup_desktop()
     
     setup_laptop()
+
+    print_blue("Removing Bloat")
+    run_command(f"Sudo pacman -Rs {CONFIG["bloat_packages"]}")
+    print_blue("Bloat Removed")
+
+    print_blue("Enabling Clipboard For Vim")
+    with open(os.path.expanduser("~/.vimrc"), "a") as vimrc:
+        vimrc.write("set clipboard=unnamedplus\n")
+    print_blue("Vim Clipboard Enabled")
     
     print_blue("Setup finished! Review the log at /var/log/arch_setup.log for details. Additionally don't forget to add flameshot, back in time, and timeshift to startup.")
 
