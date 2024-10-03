@@ -2,133 +2,197 @@ import os
 import subprocess
 import sys
 
-# Package Groups
-general_packages = [
-    "base-devel", "cinnamon", "curl", "dosfstools", "exfat-utils", "gcc", "gdb", "git", "gnome",
-    "gnome-extra", "htop", "jdk21-openjdk", "man-db", "man-pages", "nodejs", "ntfs-3g",
-    "openjdk21-doc", "openjdk21-src", "p7zip", "python", "timeshift", "tmux", "gvim",
-    "nvidia", "nvidia-settings", "nvidia-utils"
-]
-general_aur_packages = ["backintime", "librewolf-bin", "nordvpn-bin"]
-desktop_packages = [
-    "audacity", "bitwarden", "bluez", "bluez-utils", "code", "cups",
-    "filezilla", "flameshot", "gimp", "libreoffice-fresh", "neofetch", "obs-studio",
-    "opensnitch", "qbittorrent", "signal-desktop", "sqlitebrowser",
-    "system-config-printer", "thunderbird", "veracrypt", "vlc", "wine", "wireshark-qt"
-]
-desktop_aur_packages = ["qflipper-bin"]  # brother-hll2460dw
-server_packages = ["docker", "docker-compose", "openssh", "ufw"]
+# Configuration Block - Centralized for easy customization
+CONFIG = {
+    # General packages for all setups
+    "general_packages": (
+        "base-devel curl dosfstools exfat-utils gcc gdb git htop jdk21-openjdk "
+        "man-db man-pages nodejs ntfs-3g openjdk21-doc openjdk21-src p7zip python "
+        "rsync timeshift tmux gvim pipewire pipewire-pulse pipewire-alsa reflector "
+        "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader "
+        "lib32-libglvnd mesa lib32-mesa"
+    ),
+    "aur_general_packages": "backintime librewolf-bin nordvpn-bin",
+    "general_services": "",
 
-# Function to print text in bright blue
+    # Desktop-specific packages
+    "desktop_packages": (
+        "audacity bitwarden bluez bluez-utils code cups filezilla flameshot gimp "
+        "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
+        "sqlitebrowser system-config-printer thunderbird veracrypt vlc wine wireshark-qt "
+        "zathura zathura-pdf-poppler redshift pipewire-jack easyeffects"
+    ),
+    "aur_desktop_packages": "qflipper-bin",
+    "desktop_services": "bluetooth.service cups.service opensnitchd",
+
+    # Server-specific packages
+    "server_packages": "docker docker-compose openssh ufw",
+    "server_services": "sshd docker ufw",
+
+    # Laptop-specific packages
+    "laptop_packages": (
+        "tlp tlp-rdw thermald cpupower auto-cpufreq powertop tlpui fancontrol lm_sensors"
+    ),
+    "laptop_services": "tlp.service thermald.service cpupower.service fancontrol.service",
+
+    # GPU drivers and graphics stack
+    "nvidia_dedicated_gpu_packages": (
+        "nvidia nvidia-settings nvidia-utils lib32-nvidia-utils"
+    ),
+    "amd_dedicated_gpu_packages": (
+        "xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon mesa-vdpau "
+        "lib32-mesa-vdpau opencl-mesa"
+    ),
+    "intel_integrated_gpu_packages": (
+        "intel-media-driver vulkan-intel lib32-vulkan-intel"
+    ),
+    "amd_integrated_gpu_packages": (
+        "vulkan-radeon lib32-vulkan-radeon mesa-vdpau lib32-mesa-vdpau"
+    ),
+
+    # CPU microcode
+    "amd_cpu_microcode": "amd-ucode",
+    "intel_cpu_microcode": "intel-ucode",
+
+    # Logging
+    "log_file": "/var/log/arch_setup.log"
+}
+
+# Utility Functions
 def print_blue(text):
+    """Prints text in blue for emphasis."""
     print(f"\033[1;34m{text}\033[0m")
 
-# Function to install Arch Linux packages
-def install_packages(name, packages):
-    print_blue(f"Installing {name} Official Arch Packages")
-    subprocess.run(["sudo", "pacman", "-Syu"] + packages)
-    print_blue(f"{name} Official Arch Packages Installed")
+def log_message(message, log_file=CONFIG["log_file"]):
+    """Logs messages to the setup log file."""
+    with open(log_file, "a") as log:
+        log.write(f"{message}\n")
 
-# Function to install AUR packages using yay
-def install_aur_packages(name, packages):
-    print_blue(f"Installing {name} AUR Packages")
-    subprocess.run(["yay", "-S"] + packages)
-    print_blue(f"{name} AUR Packages Installed")
+def run_command(command, description, fail_message, exit_on_fail=True):
+    """Executes a shell command, logs success or failure, and optionally exits on failure."""
+    log_message(f"Running: {command}")
+    try:
+        subprocess.run(command, shell=True, check=True)
+        log_message(f"Success: {description}")
+    except subprocess.CalledProcessError as e:
+        log_message(f"Error: {e}")
+        print_blue(f"{fail_message}\nError: {e}")
+        if exit_on_fail:
+            sys.exit(1)
 
-def general():
-    # Remove Bloat
-    print_blue("Removing Bloat")
-    subprocess.run(["sudo", "pacman", "-Rsu", "welcome"])
-    print_blue("Bloat Removed")
+def install_packages(name, package_list):
+    """Installs the specified list of packages using pacman."""
+    print_blue(f"Installing {name} packages...")
+    run_command(f"sudo pacman -Syu --noconfirm {package_list}", 
+                f"Installed {name} packages", f"Failed to install {name} packages")
 
-    # Install General Packages
-    install_packages("General", general_packages)
+def install_aur_packages(name, package_list):
+    """Installs the specified list of AUR packages using yay."""
+    print_blue(f"Installing {name} AUR packages...")
+    run_command(f"yay -S --noconfirm {package_list}", 
+                f"Installed {name} AUR packages", f"Failed to install {name} AUR packages")
 
-    # Installing Yay
-    print_blue("Installing Yay")
-    os.chdir(os.path.expanduser("~/Downloads"))
-    subprocess.run(["git", "clone", "https://aur.archlinux.org/yay.git"])
-    os.chdir("yay")
-    subprocess.run(["makepkg", "-si", "--noconfirm"], input=b'y\n')
-    os.chdir("..")
-    subprocess.run(["sudo", "rm", "-rf", "yay"])
-    print_blue("Yay Installed")
+def manage_services(services):
+    """Enables and starts the specified systemd services."""
+    for service in services.split():
+        if service:
+            print_blue(f"Enabling and starting {service} service...")
+            run_command(f"sudo systemctl enable {service}", 
+                        f"Enabled {service}", f"Failed to enable {service}", exit_on_fail=False)
+            run_command(f"sudo systemctl start {service}", 
+                        f"Started {service}", f"Failed to start {service}", exit_on_fail=False)
 
-    # Install General AUR Packages
-    install_aur_packages("General", general_aur_packages)
+# Pre-Checks
+def pre_checks():
+    """Ensures the script is run as root and installs yay if not present."""
+    if os.geteuid() != 0:
+        print("This script must be run as root!")
+        sys.exit(1)
+    
+    if subprocess.call("command -v yay", shell=True) != 0:
+        print_blue("Installing Yay AUR helper...")
+        run_command(
+            "git clone https://aur.archlinux.org/yay.git ~/Downloads/yay && cd ~/Downloads/yay && makepkg -si --noconfirm && sudo rm -rf ~/Downloads/yay",
+            "Installed Yay",
+            "Failed to install Yay"
+        )
 
-    # Tailscale General Setup
-    subprocess.run(["sudo", "systemctl", "enable", "--now", "tailscaled"])
-    subprocess.run(["sudo", "tailscale", "up"])
-    subprocess.run(["sudo", "tailscale", "ip", "-4"])
+# GPU Setup
+def setup_gpu():
+    gpu_choice = get_valid_input("Do you have a discrete (dedicated) GPU? (yes/no): ", ["yes", "no"])
+    if gpu_choice == "yes":
+        gpu_brand = get_valid_input("Which brand is your discrete GPU? (nvidia/amd): ", ["nvidia", "amd"])
+        if gpu_brand == "nvidia":
+            install_packages("NVIDIA GPU Drivers", CONFIG["nvidia_dedicated_gpu_packages"])
+        else:
+            install_packages("AMD GPU Drivers", CONFIG["amd_dedicated_gpu_packages"])
+    elif get_valid_input("Do you have integrated graphics in your CPU? (yes/no): ", ["yes", "no"]) == "yes":
+        cpu_brand = get_valid_input("Which brand is your CPU with integrated graphics? (intel/amd): ", ["intel", "amd"])
+        if cpu_brand == "intel":
+            install_packages("Intel Integrated Graphics Drivers", CONFIG["intel_integrated_gpu_packages"])
+        else:
+            install_packages("AMD Integrated Graphics Drivers", CONFIG["amd_integrated_gpu_packages"])
 
-    # Add copy-paste to gvim
-    with open(os.path.expanduser("~/.vimrc"), "a") as vimrc:
-        vimrc.write("set clipboard=unnamedplus\n")
+# CPU Setup
+def setup_cpu():
+    cpu_brand = get_valid_input("Which brand is your CPU? (amd/intel): ", ["amd", "intel"])
+    install_packages(f"{cpu_brand.upper()} CPU Microcode", CONFIG[f"{cpu_brand}_cpu_microcode"])
 
-# Function to setup server environment
+# Laptop Power Management Setup
+def setup_laptop():
+    if get_valid_input("Is this a laptop? (yes/no): ", ["yes", "no"]) == "yes":
+        print_blue("Installing laptop power management and performance tools...")
+        install_packages("Laptop Power Management", CONFIG["laptop_packages"])
+        manage_services(CONFIG["laptop_services"])
+
+# General Setup
+def general_setup():
+    setup_gpu()
+    setup_cpu()
+    print_blue("Installing General Packages...")
+    install_packages("General", CONFIG["general_packages"])
+    install_aur_packages("AUR General", CONFIG["aur_general_packages"])
+
+# Server Setup
 def setup_server():
-    # Install Server Packages
-    install_packages("Server", server_packages)
+    install_packages("Server", CONFIG["server_packages"])
+    manage_services(CONFIG["server_services"])
+    run_command("sudo ufw allow ssh && sudo ufw enable", 
+                "Configured firewall", "Failed to configure firewall")
 
-    # Install Server AUR Packages
-    install_aur_packages("Server", [])  # No server AUR packages provided
-
-    # Server System services, starting and enabling them
-    print_blue("Starting And Enabling Server System Services")
-    subprocess.run(["sudo", "systemctl", "start", "sshd"])
-    subprocess.run(["sudo", "systemctl", "enable", "sshd"])
-    subprocess.run(["sudo", "systemctl", "enable", "docker"])
-    subprocess.run(["sudo", "systemctl", "start", "docker"])
-    print_blue("Server System Service Started And Enabled")
-
-    # Allow SSH connections
-    print_blue("Allowing SSH Connections")
-    subprocess.run(["sudo", "ufw", "allow", "ssh"])
-    subprocess.run(["sudo", "ufw", "enable"])
-    print_blue("SSH Connections Allowed")
-
-# Function to setup desktop environment
+# Desktop Setup
 def setup_desktop():
-    # Install Desktop Packages
-    install_packages("Desktop", desktop_packages)
+    install_packages("Desktop", CONFIG["desktop_packages"])
+    install_aur_packages("AUR Desktop", CONFIG["aur_desktop_packages"])
+    manage_services(CONFIG["desktop_services"])
 
-    # Install Desktop AUR Packages
-    install_aur_packages("Desktop", desktop_aur_packages)
+# Input Validation
+def get_valid_input(prompt, valid_choices, error_message="Invalid choice."):
+    """Gets valid input from user with re-prompting until a valid choice is made."""
+    while True:
+        choice = input(prompt).strip().lower()
+        if choice in valid_choices:
+            return choice
+        else:
+            print_blue(f"{error_message} Please enter one of: {', '.join(valid_choices)}")
 
-    # Desktop System services, starting and enabling them
-    print_blue("Starting And Enabling Desktop System Services")
-    subprocess.run(["sudo", "systemctl", "enable", "bluetooth.service"])
-    subprocess.run(["sudo", "systemctl", "start", "bluetooth.service"])
-    subprocess.run(["sudo", "systemctl", "enable", "cups.service"])
-    subprocess.run(["sudo", "systemctl", "start", "cups.service"])
-    subprocess.run(["sudo", "systemctl", "enable", "--now", "opensnitchd"])
-    subprocess.run(["sudo", "systemctl", "start", "opensnitchd"])
-    print_blue("Desktop System Service Started And Enabled")
-
-# ------Main script starts here------
+# Main Function
 def main():
-    subprocess.run(["sudo", "echo", "Welcome to the ArchLinux setup script!"])
-    setup_choice = input("What would you like to setup?\n1. Server setup\n2. Desktop setup\nEnter your choice (1/2): ")
-
-    # Run the general setup
-    general()
-
+    """Main entry point for the script."""
+    pre_checks()
+    print_blue("Welcome to the Arch Linux setup script!")
+    setup_choice = get_valid_input("What would you like to set up?\n1. Server\n2. Desktop\nEnter your choice (1/2): ", ["1", "2"])
+    
+    general_setup()
+    
     if setup_choice == "1":
         setup_server()
     elif setup_choice == "2":
         setup_desktop()
-    else:
-        print("Invalid choice. Please choose either 1 or 2.")
-        sys.exit(1)
-
-    # Conclusion message
-    print_blue("Setup Finished ;)")
-    print_blue("Now for tailscale, go to /usr/lib/sysctl.d/50-default.conf and then make sure these conditions "
-               "are set in the config file: \"net.ipv4.conf.default.rp_filter = 1\", "
-               "\"net.ipv4.conf.all.rp_filter = 1\" (here for more details, https://tailscale.com/download/linux/arch)")
-    print_blue("Additionally, go to vim and then execute this command ':set clipboard=unnamedplus'")
-    print_blue("Now just add flameshot, back in time, and timeshift to startup. Maybe a theme???")
+    
+    setup_laptop()
+    
+    print_blue("Setup finished! Review the log at /var/log/arch_setup.log for details.")
 
 if __name__ == "__main__":
     main()
