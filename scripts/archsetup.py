@@ -13,7 +13,6 @@ CONFIG = {
         "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon"
     ),
     "aur_general_packages": "backintime librewolf-bin nordvpn-bin",
-    "general_services": "",
 
     # Desktop-specific packages
     "desktop_packages": (
@@ -27,13 +26,7 @@ CONFIG = {
 
     # Server-specific packages
     "server_packages": "docker docker-compose openssh ufw",
-    "server_services": "sshd docker ufw", # ufw needs to be enabled and allow
-
-    # Laptop-specific packages
-    "laptop_packages": (
-        "tlp tlp-rdw thermald cpupower auto-cpufreq powertop tlpui fancontrol lm_sensors"
-    ),
-    "laptop_services": "tlp.service thermald.service cpupower.service fancontrol.service",
+    "server_services": "sshd docker ufw",
 
     # GPU drivers and graphics stack
     "nvidia_dedicated_gpu_packages": (
@@ -141,13 +134,6 @@ def setup_cpu():
     cpu_brand = get_valid_input("Which brand is your CPU? (amd/intel): ", ["amd", "intel"])
     install_packages(f"{cpu_brand.upper()} CPU Microcode", CONFIG[f"{cpu_brand}_cpu_microcode"])
 
-# Laptop Power Management Setup
-def setup_laptop():
-    if get_valid_input("Is this a laptop? (yes/no): ", ["yes", "no"]) == "yes":
-        print_blue("Installing laptop power management and performance tools...")
-        install_packages("Laptop Power Management", CONFIG["laptop_packages"])
-        manage_services(CONFIG["laptop_services"])
-
 # General Setup
 def general_setup():
     setup_gpu()
@@ -192,8 +178,6 @@ def main():
         setup_server()
     elif setup_choice == "2":
         setup_desktop()
-    
-    setup_laptop()
 
     print_blue("Removing Bloat")
     run_command(f"sudo pacman -Rs {CONFIG["bloat_packages"]}")
