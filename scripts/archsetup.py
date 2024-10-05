@@ -100,10 +100,10 @@ def manage_services(services):
 
 # Pre-Checks
 def pre_checks():
-    """Ensures the script is run as root and installs yay if not present."""
-    if os.geteuid() != 0:
-        print("This script must be run as root!")
-        sys.exit(1)
+    # """Ensures the script is run as root and installs yay if not present."""
+    # if os.geteuid() != 0:
+    #     print("This script must be run as root!")
+    #     sys.exit(1)
     
     if subprocess.call("command -v yay", shell=True) != 0:
         print_blue("Installing Yay AUR helper...")
