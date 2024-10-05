@@ -71,13 +71,13 @@ def run_command(command, description, fail_message, exit_on_fail=True):
 def install_packages(name, package_list):
     """Installs the specified list of packages using pacman."""
     print_blue(f"Installing {name} packages...")
-    run_command(f"sudo pacman -Sy --noconfirm {package_list}", 
+    run_command(f"sudo pacman -Sy {package_list}", 
                 f"Installed {name} packages", f"Failed to install {name} packages")
 
 def install_aur_packages(name, package_list):
     """Installs the specified list of AUR packages using yay."""
     print_blue(f"Installing {name} AUR packages...")
-    run_command(f"yay -S --noconfirm {package_list}", 
+    run_command(f"yay -S {package_list}", 
                 f"Installed {name} AUR packages", f"Failed to install {name} AUR packages")
 
 def manage_services(services):
