@@ -59,19 +59,11 @@ def print_blue(text):
     """Prints text in blue for emphasis."""
     print(f"\033[1;34m{text}\033[0m")
 
-def log_message(message, log_file=CONFIG["log_file"]):
-    """Logs messages to the setup log file."""
-    with open(log_file, "a") as log:
-        log.write(f"{message}\n")
-
 def run_command(command, description, fail_message, exit_on_fail=True):
     """Executes a shell command, logs success or failure, and optionally exits on failure."""
-    log_message(f"Running: {command}")
     try:
         subprocess.run(command, shell=True, check=True)
-        log_message(f"Success: {description}")
     except subprocess.CalledProcessError as e:
-        log_message(f"Error: {e}")
         print_blue(f"{fail_message}\nError: {e}")
         if exit_on_fail:
             sys.exit(1)
