@@ -180,7 +180,7 @@ def main():
         vimrc.write("set clipboard=unnamedplus\n")
     print_blue("Vim Clipboard Enabled")
     
-    print_blue("Setup finished! Review the log at /var/log/arch_setup.log for details. Additionally don't forget to add flameshot, back in time, and timeshift to startup.")
+    print_blue("Setup finished! Additionally don't forget to add flameshot, back in time, and timeshift to startup.")
 
 if __name__ == "__main__":
     main()
