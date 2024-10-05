@@ -171,9 +171,9 @@ def main():
     elif setup_choice == "2":
         setup_desktop()
 
-    print_blue("Removing Bloat")
-    run_command(f"sudo pacman -Rs {CONFIG["bloat_packages"]}", "Removing Bloat", "Failed To Remove Bloat")
-    print_blue("Bloat Removed")
+    # print_blue("Removing Bloat")
+    # run_command(f"sudo pacman -Rs {CONFIG["bloat_packages"]}", "Removing Bloat", "Failed To Remove Bloat")
+    # print_blue("Bloat Removed")
 
     print_blue("Enabling Clipboard For Vim")
     with open(os.path.expanduser("~/.vimrc"), "a") as vimrc:
