@@ -12,7 +12,7 @@ CONFIG = {
         "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader "
         "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon"
     ),
-    "aur_general_packages": "backintime librewolf-bin nordvpn-bin brother-hll2460dw",
+    "aur_general_packages": "backintime librewolf-bin nordvpn-bin",
 
     # Desktop-specific packages
     "desktop_packages": (
