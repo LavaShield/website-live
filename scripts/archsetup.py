@@ -26,7 +26,7 @@ CONFIG = {
 
     # Server-specific packages
     "server_packages": "docker docker-compose openssh ufw",
-    "server_services": "sshd docker",
+    "server_services": "sshd docker ufw",
 
     # GPU drivers and graphics stack
     "nvidia_dedicated_gpu_packages": (
