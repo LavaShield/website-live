@@ -19,7 +19,7 @@ CONFIG = {
         "audacity bitwarden bluez bluez-utils code cups filezilla flameshot gimp "
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
         "sqlitebrowser system-config-printer thunderbird veracrypt vlc wireshark-qt "
-        "redshift pipewire-jack easyeffects virtualbox"
+        "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arc"
     ),
     "aur_desktop_packages": "qflipper-bin",
     "desktop_services": "bluetooth.service cups.service opensnitchd",
