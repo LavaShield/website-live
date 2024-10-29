@@ -7,7 +7,7 @@ CONFIG = {
     # General packages for all setups
     "general_packages": (
         "base-devel curl dosfstools exfat-utils gcc gdb git htop jdk21-openjdk "
-        "man-db man-pages nodejs ntfs-3g openjdk21-doc openjdk21-src p7zip python "
+        "man-db man-pages nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python "
         "rsync timeshift tmux gvim pipewire pipewire-pulse pipewire-alsa reflector "
         "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader "
         "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon"
