@@ -21,7 +21,7 @@ CONFIG = {
         "sqlitebrowser system-config-printer thunderbird veracrypt vlc wireshark-qt "
         "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arch"
     ),
-    "aur_desktop_packages": "qflipper-bin",
+    "aur_desktop_packages": "qflipper-bin davinci-resolve",
     "desktop_services": "bluetooth.service cups.service opensnitchd",
 
     # Server-specific packages
