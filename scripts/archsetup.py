@@ -22,7 +22,7 @@ CONFIG = {
         "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arch"
         "kdenlive"
     ),
-    "aur_desktop_packages": "qflipper-bin davinci-resolve",
+    "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin",
     "desktop_services": "bluetooth.service cups.service opensnitchd",
 
     # Server-specific packages
