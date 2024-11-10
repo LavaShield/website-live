@@ -1,6 +1,8 @@
-import os
-import subprocess
-import sys
+# Install Nix (Multi-User)
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+
+
 
 # Configuration Block - Centralized for easy customization
 CONFIG = {
@@ -165,16 +167,7 @@ def main():
     print_blue("Welcome to the Arch Linux setup script!")
     setup_choice = get_valid_input("What would you like to set up?\n1. Server\n2. Desktop\nEnter your choice (1/2): ", ["1", "2"])
     
-    general_setup()
     
-    if setup_choice == "1":
-        setup_server()
-    elif setup_choice == "2":
-        setup_desktop()
-
-    # print_blue("Removing Bloat")
-    # run_command(f"sudo pacman -Rs {CONFIG["bloat_packages"]}", "Removing Bloat", "Failed To Remove Bloat")
-    # print_blue("Bloat Removed")
 
     print_blue("Enabling Clipboard For Vim")
     with open(os.path.expanduser("~/.vimrc"), "a") as vimrc:
@@ -183,5 +176,3 @@ def main():
     
     print_blue("Setup finished! Additionally don't forget to add flameshot, back in time, and timeshift to startup.")
 
-if __name__ == "__main__":
-    main()
