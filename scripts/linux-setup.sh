@@ -17,6 +17,6 @@ sudo apt update && sudo apt install signal-desktop
 sudo systemctl start --now opensnitch.service
 sudo systemctl enable --now opensnitch.service
 
-# Additional packages are Bitwarden, vscode, nordvpn, python, steam, thunderbird and veracrypt. These have been installed already via .deb
+# Additional packages are Bitwarden, vscode, nordvpn, python, steam, libreoffice, thunderbird and veracrypt (installed via local installer).
 
 # Add flameshot, backintime, and timeshift to startup
