@@ -1,35 +1,22 @@
-# Install Nix (Multi-User)
-sh <(curl -L https://nixos.org/nix/install) --daemon
-
-# Packages to installed via nix
-nix-env -iA nixpkgs.qFlipper
-
 # Packages installed with apt
-sudo apt install audacity filezilla flameshot gimp
+sudo apt install audacity filezilla flameshot gimp git obs-studio qbittorrent opensnitch kdenlive vim vlc sqlitebrowser wireshark backintime-common
 
-# ---------------------
-        " git htop jdk21-openjdk "
-        "nodejs npm openjdk21-doc openjdk21-src p7zip python "
-        gvim
+# Install LibreWolf
+sudo apt update && sudo apt install extrepo -y
+sudo extrepo enable librewolf
+sudo apt update && sudo apt install librewolf -y
 
-    "aur
-    _general_packages": "backintime librewolf-bin",
+# Install Signal
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update && sudo apt install signal-desktop
 
+# Enable Services
+sudo systemctl start --now opensnitch.service
+sudo systemctl enable --now opensnitch.service
 
-    "desktop_packages": (
-        
-        "obs-studio opensnitch qbittorrent signal-desktop "
-        "sqlitebrowser vlc wireshark-qt"
-        "virtualbox"
-        "kdenlive"
-    ),
-
-    "desktop_services": "opensnitchd",
-
-
-    
-        
-
-# Additional packages are Bitwarden, vscode, nordvpn, steam, thunderbird and veracrypt. These have been installed already via .deb
+# Additional packages are Bitwarden, vscode, nordvpn, python, steam, thunderbird and veracrypt. These have been installed already via .deb
 
 # Add flameshot, backintime, and timeshift to startup
