@@ -21,7 +21,7 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
         "kdenlive"
     ),
     "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin",
-    "desktop_services": "bluetooth.service cups.service opensnitchd",
+    "desktop_services": "opensnitchd",
 
 
     
