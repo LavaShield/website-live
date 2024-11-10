@@ -1,7 +1,8 @@
 # Install Nix (Multi-User)
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
-
+# Packages to installed via nix
+nix-env -iA nixpkgs.qFlipper
 
 
         "base-devel gcc gdb git htop jdk21-openjdk "
@@ -14,11 +15,11 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
     "desktop_packages": (
         "audacity  cups filezilla flameshot gimp "
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
-        "sqlitebrowser thunderbird veracrypt vlc wireshark-qt "
+        "sqlitebrowser vlc wireshark-qt "
         "virtualbox"
         "kdenlive"
     ),
-    "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin",
+
     "desktop_services": "opensnitchd",
 
 
