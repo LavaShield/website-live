@@ -9,7 +9,7 @@ sudo apt install audacity filezilla flameshot gimp
 
 # ---------------------
         " git htop jdk21-openjdk "
-        "nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python "
+        "nodejs npm openjdk21-doc openjdk21-src p7zip python "
         gvim
 
     "aur
@@ -18,8 +18,8 @@ sudo apt install audacity filezilla flameshot gimp
 
     "desktop_packages": (
         
-        "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
-        "sqlitebrowser vlc wireshark-qt "
+        "obs-studio opensnitch qbittorrent signal-desktop "
+        "sqlitebrowser vlc wireshark-qt"
         "virtualbox"
         "kdenlive"
     ),
