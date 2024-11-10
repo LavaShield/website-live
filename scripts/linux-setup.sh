@@ -5,15 +5,15 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 nix-env -iA nixpkgs.qFlipper
 
 
-        "base-devel gcc gdb git htop jdk21-openjdk "
-        "man-db man-pages nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python "
+        "base-devel git htop jdk21-openjdk "
+        "nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python "
         gvim
 
     "aur_general_packages": "backintime librewolf-bin",
 
 
     "desktop_packages": (
-        "audacity  cups filezilla flameshot gimp "
+        "audacity  filezilla flameshot gimp "
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
         "sqlitebrowser vlc wireshark-qt "
         "virtualbox"
