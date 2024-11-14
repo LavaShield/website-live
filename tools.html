@@ -29,7 +29,7 @@
             const caskPackages = document.getElementById('caskPackages');
             const cmdPackages = document.getElementById('cmdPackages');
 
-            brewInstall.innerHTML += '11';
+            brewInstall.innerHTML += '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
             caskPackages.innerHTML += '2';
             cmdPackages.innerHTML += '3';
 
