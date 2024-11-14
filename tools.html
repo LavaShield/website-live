@@ -10,88 +10,18 @@
 <main class="site-content">
     <!------------CONTENT HERE------------>
     <h6>Eventually actual utilities will be released here</h6>
-    <div os="win">
-        <h2>Windows:</h2>
-        <h3>Winget Software:</h3>
-        <p>
-            winget install LibreWolf.LibreWolf Valve.Steam OBSProject.OBSStudio Bitwarden.Bitwarden 
-            GOG.Galaxy DolphinEmulator.Dolphin OpenWhisperSystems.Signal qBittorrent.qBittorrent 
-            Logitech.UnifyingSoftware Logitech.OptionsPlus Intel.IntelDriverAndSupportAssistant 
-            IDRIX.VeraCrypt Microsoft.VisualStudioCode Mozilla.Thunderbird VideoLAN.VLC GitHub.GitHubDesktop 
-            GIMP.GIMP Flameshot.Flameshot WiresharkFoundation.Wireshark NordVPN.NordVPN Audacity.Audacity 
-            OpenJS.NodeJS vim.vim Python.Python.3.12 DBBrowserForSQLite.DBBrowserForSQLite JetBrains.PyCharm.Community 
-            Oracle.VirtualBox
+    <div os="mac">
+        <h2>MacOS Setup:</h2>
+    
             
-        </p>
-        <h3>Other Software:</h3>
-        <p>
-            7zip, nvidia drivers, amd software adrenalin, oculus setup, pcsx2, samsung magician, 
-            qFlipper, microsoft office, filezilla, 
-        </p>
-        <h3>Setup Steps:</h3>
-        <p>- https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab</p>
-        <p>- Disable Fast Startup</p>
-        <p>- Unlink then Uninstall Onedrive & Delete Folder</p>
-        <p>- Install Software</p>
-        <p>- System Updates</p>
-        <p>- Intel-dsa Updates</p>
-        <p>- Enable windows sandbox</p>
-        <p>- Enable Windows subsystem for linux</p>
-        <p>- enable bitlocker</p>
-        <p>- setup windows backup</p>
-        <p>- set monitor to 165hz</p>
+            
+       
+       
     </div>
-    <br>
-    <div os="arch">
-        <h2>ArchLinux:</h2>
-        <h6>
-            I've used a lot of Linux distributions, and the only remotely usable one has been ArchLinux. When you get it to work, it's perfect.
-            However, installing it and getting it to that point is annoying and pointless. If you just want something that works, when you've 
-            booted the Arch installer just do a 'sudo pacman -Syu archinstall' and then use the archinstall command to get an Arch install. 
-            This will leave you with a functioning Arch Installation with all the essentials you need to use your machine.
-        </h6>
-        <h3>During install (for archinstall application):</h3>
-        <p>sudo pacman -Sy archinstall</p>
-        <h3>Setup Script:</h3>
-        <p class="p_copy" id="archSetup"></p>
-    </div>
-    <br>
-    <p># Arch Linux TTY and Graphical Session Shortcuts</p>
-    <p>Ctrl + Alt + F1  - Switch to TTY1 (usually graphical session or text console)</p>
-    <p>Ctrl + Alt + F(2-6)  - Switch to TTY(2-6) (text console)</p>
-    <p>Ctrl + Alt + F7  - Switch to TTY7 (usually graphical session)</p>
-    <p>Ctrl + Alt + F(8-12)  - Unused virtual console (blank screen) or additional graphical session</p>
-    <br>
-    <h3>This is all subject to change (not definitive)</h3>
     <br>
     <!------------------------------------>
     <script>
-        $(document).ready(function () {
-            let commands = {
-                "arch": {
-                    "archSetup": "curl -sSL https://lavashield.net/scripts/archsetup.py -o /tmp/archsetup.py && python3 /tmp/archsetup.py && rm -f /tmp/archsetup.py"
-                }
-            };
-
-            $(".p_copy").each(function () {
-                let id = $(this).attr("id");
-                let osType = $(this).closest('div').attr('os');
-                if (id && commands[osType] && commands[osType][id]) {
-                    $(this).text(commands[osType][id]);
-                }
-                // Add the copy button after each <p> with the class p_copy
-                $(this).after('<button onclick="copyText(\'' + $(this).text().trim() + '\')">Copy Text</button>');
-            });
-        });
-
-        function copyText(text) {
-            let tempInput = document.createElement("textarea");
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-        }
+        /*make fuck copy button functionality for here*/
     </script>
     <style>
 
