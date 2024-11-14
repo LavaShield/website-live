@@ -29,9 +29,15 @@
             const caskPackages = document.getElementById('caskPackages');
             const cmdPackages = document.getElementById('cmdPackages');
 
+            // Install Brew Command
             brewInstall.innerHTML += '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
-            caskPackages.innerHTML += '2';
-            cmdPackages.innerHTML += '3';
+            // Brew Casks Packages To Install
+            caskPackages.innerHTML += 'signal bitwarden visual-studio-code nordvpn steam rectangle wireshark vlc' +
+                                      'veracrypt thunderbird db-browser-for-sqlite session virtualbox qflipper' +
+                                      'qbittorrent librewolf obs dolphin flameshot gimp audacity github' +
+                                      'gog-galaxy';
+            // Brew Formula Packages To Install
+            cmdPackages.innerHTML += 'p7zip vim openjdk@21 pthon@3.13';
 
 
             
