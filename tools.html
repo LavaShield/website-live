@@ -14,38 +14,39 @@
     <div os="mac">
         <h2>MacOS Setup:</h2>
             <h3>Brew Install:</h3>
-                <p class="copy">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</p>
+                <p class="copy" id="brewInstall">{brewInstall}</p>
             <h3>Brew Cask Packages:</h3>
-                <p class="copy">brew install --cask {cask_packages}</p>
+                <p class="copy" id="caskPackages">brew install --cask {caskPackages}</p>
             <h3>Brew Terminal Packages:</h3>
-                <p class="copy">brew install {cmd_packages}</p>
+                <p class="copy" id="cmdPackages">brew install {cmdPackages}</p>
     </div>
     <br>
     <!------------------------------------>
     <script>
         $(document).ready(function() {
-            // Iterate over each <p> element with the 'copy' class
+            // Text Inserts
+            const brewInstall = '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
+            const caskPackages = '';
+            const cmdPackages = '';
+
+            $(brewInstall).text(brewInstall);
+            $(caskPackages).text(caskPackages);
+            $(cmdPackages).text(cmdPackages);
+
+
+            
+            // Copy Button
             $('.copy').each(function() {
-                // Create a 'Copy' button and insert it after the <p> element
                 const button = $('<button class="copy-btn">Copy</button>');
                 $(this).after(button);
-
-                // Add a click event listener to the button
                 button.on('click', function() {
-                    // Get the text content of the <p> element before the button
                     const textToCopy = $(this).prev('.copy').text();
-
-                    // Use the Clipboard API to copy text to clipboard
                     navigator.clipboard.writeText(textToCopy).then(() => {
-                        // Change the button text to 'Copied!' and style
                         $(this).text('Copied!').css('background-color', '#5CB85C'); // Green color for 'Copied!'
-
-                        // After 1 second, revert the button text and style back to 'Copy'
                         setTimeout(() => {
                             $(this).text('Copy').css('background-color', '#F00000'); // Original color for 'Copy'
                         }, 1000);
                     }).catch(err => {
-                        // Log an error if copying fails
                         console.error('Error copying text:', err);
                     });
                 });
