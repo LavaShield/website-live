@@ -35,7 +35,13 @@
 
                     // Use the Clipboard API to copy text to clipboard
                     navigator.clipboard.writeText(textToCopy).then(() => {
-                        alert('Text copied to clipboard!'); // Notify user of success
+                        // Change the button text to 'Copied!' and style
+                        $(this).text('Copied!').css('background-color', '#5CB85C'); // Green color for 'Copied!'
+
+                        // After 1 second, revert the button text and style back to 'Copy'
+                        setTimeout(() => {
+                            $(this).text('Copy').css('background-color', '#F00000'); // Original color for 'Copy'
+                        }, 1000);
                     }).catch(err => {
                         // Log an error if copying fails
                         console.error('Error copying text:', err);
@@ -68,18 +74,19 @@
         .copy-btn {
             display: inline-block; /* Ensures buttons are inline */
             margin-top: 5px; /* Adds space above the button */
-            padding: 5px 10px; /* Button padding for a better click area */
-            background-color: #F00000; /* light half of the shield */
-            color: #fff; /* White text */
+            padding: 5px 15px; /* More padding for a larger clickable area */
+            background-color: #F00000; /* Red color for the button */
+            color: #000; /* Black text for contrast */
             border: none; /* Removes border */
             border-radius: 5px; /* Rounds button corners */
             cursor: pointer; /* Pointer cursor on hover */
             font-size: 14px; /* Button font size */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button styles */
         }
 
         /* Hover effect for the copy button */
         .copy-btn:hover {
-            background-color: #c70000; /* Dark half of the shield */
+            background-color: #c70000; /* Darker red on hover */
         }
     </style>
 </main>
