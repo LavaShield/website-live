@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Importing jQuery library for simplified JavaScript functions -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to an external script file if needed -->
 </head>
 <body>
 <header></header>
@@ -13,39 +14,75 @@
     <div os="mac">
         <h2>MacOS Setup:</h2>
             <h3>Brew Install:</h3>
+                <!-- Paragraph with class 'copy' that will have a copy button added below it -->
                 <p class="copy">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</p>
             <h3>Packages:</h3>
-                <p></p>
-            
-            
-       
-       
+                <!-- Another paragraph with 'copy' class for copy functionality -->
+                <p class="copy">brew install git node python3</p>
     </div>
     <br>
     <!------------------------------------>
     <script>
-        /*make fuck copy button functionality for here*/
+        $(document).ready(function() {
+            // Iterate over each <p> element with the 'copy' class
+            $('.copy').each(function() {
+                // Create a 'Copy' button and insert it after the <p> element
+                const button = $('<button class="copy-btn">Copy</button>');
+                $(this).after(button);
+
+                // Add a click event listener to the button
+                button.on('click', function() {
+                    // Get the text content of the <p> element before the button
+                    const textToCopy = $(this).prev('.copy').text();
+
+                    // Use the Clipboard API to copy text to clipboard
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        alert('Text copied to clipboard!'); // Notify user of success
+                    }).catch(err => {
+                        // Log an error if copying fails
+                        console.error('Error copying text:', err);
+                    });
+                });
+            });
+        });
     </script>
     <style>
-
+        /* Styling for main content container */
         .site-content {
-          width: 33.33%; 
-          max-width: 600px; 
-          margin: 0 auto; 
-          padding: 10px;
-          text-align: center; 
+            width: 33.33%; /* Sets the container width */
+            max-width: 600px; /* Maximum width for larger screens */
+            margin: 0 auto; /* Centers the container */
+            padding: 10px; /* Adds padding around the content */
+            text-align: center; /* Centers text */
         }
 
-
+        /* Adjust layout for smaller screens */
         @media (max-width: 768px) {
-          .site-content {
-            width: 100%; 
-            max-width: none; 
-            text-align: left;
-            padding: 10px;
-          }
+            .site-content {
+                width: 100%; /* Full width for smaller devices */
+                max-width: none; /* Removes the max-width */
+                text-align: left; /* Aligns text to the left */
+                padding: 10px; /* Maintains padding */
+            }
         }
 
+        /* Styling for the copy button */
+        .copy-btn {
+            display: inline-block; /* Ensures buttons are inline */
+            margin-top: 5px; /* Adds space above the button */
+            padding: 5px 10px; /* Button padding for a better click area */
+            background-color: #4CAF50; /* Green background */
+            color: #fff; /* White text */
+            border: none; /* Removes border */
+            border-radius: 5px; /* Rounds button corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 14px; /* Button font size */
+        }
+
+        /* Hover effect for the copy button */
+        .copy-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
     </style>
 </main>
 <footer></footer>
