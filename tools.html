@@ -20,7 +20,7 @@
             <h3>Brew Terminal Packages:</h3>
                 <p class="copy" id="cmdPackages">brew install </p>
             <h3>Software Installed Via Executable:</h3>
-                <p></p>
+                <p id='otherSoftware'></p>
     </div>
     <br>
     <!------------------------------------>
@@ -30,6 +30,7 @@
             const brewInstall = document.getElementById('brewInstall');
             const caskPackages = document.getElementById('caskPackages');
             const cmdPackages = document.getElementById('cmdPackages');
+            const otherSoftware = document.getElementById('otherSoftware');
 
             // Install Brew Command
             brewInstall.innerHTML += '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
@@ -40,6 +41,7 @@
                                       'gog-galaxy libreoffice mos steam';
             // Brew Formula Packages To Install
             cmdPackages.innerHTML += 'p7zip vim openjdk@21 python@3.13';
+            otherSoftware.innerHTML += 'test';
 
 
             
