@@ -14,24 +14,24 @@
     <div os="mac">
         <h2>MacOS Setup:</h2>
             <h3>Brew Install:</h3>
-                <p class="copy" id="brewInstall">brewInstall</p>
+                <p class="copy" id="brewInstall"></p>
             <h3>Brew Cask Packages:</h3>
-                <p class="copy" id="caskPackages">'brew install --cask ' + caskPackages</p>
+                <p class="copy" id="caskPackages">brew install --cask </p>
             <h3>Brew Terminal Packages:</h3>
-                <p class="copy" id="cmdPackages">'brew install ' + cmdPackages</p>
+                <p class="copy" id="cmdPackages">brew install </p>
     </div>
     <br>
     <!------------------------------------>
     <script>
         $(document).ready(function() {
             // Text Inserts
-            const brewInstall = '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
-            const caskPackages = 'p';
-            const cmdPackages = 'p';
+            const brewInstall = document.getElementById('brewInstall');
+            const caskPackages = document.getElementById('caskPackages');
+            const cmdPackages = document.getElementById('cmdPackages');
 
-            $('#brewInstall').text(brewInstall);
-            $('#caskPackages').text(caskPackages);
-            $('#cmdPackages').text(cmdPackages);
+            brewInstall.innerHTML += '11';
+            caskPackages.innerHTML += '2';
+            cmdPackages.innerHTML += '3';
 
 
             
