@@ -26,17 +26,27 @@
         $(document).ready(function() {
             // Text Inserts
             const nixInstall = document.getElementById('nixInstall');
-            const caskPackages = document.getElementById('nixPackages');
+            const nixPackages = document.getElementById('nixPackages');
 
             // Install Nix Command
             nixInstall.innerHTML += "sh <(curl -L https://nixos.org/nix/install) --no-daemon";
 
+            // Package List
+            function addPrefix(str, prefix) {
+                return str.split(' ').map(word => prefix + word).join(' ');
+            }
+
+            let packagesNames = "android-studio audacity bitwarden-desktop blender chromium clion sqlitebrowser dolphin-emu " +
+                                "drawio firefox flameshot freecad gimp github-desktop gzdoom kdenlive libreoffice-fresh " +
+                                "librewolf minecraft obs-studio qflipper session-desktop signal-desktop steam pcsx2 " +
+                                "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla" +
+                                "python313 p7zip jdk21_headless ";
+            
+            let packages = addPrefix(packages, "nixpkgs.");
+
+            
             // Nix Packages to Install (MAKE SURE TO ADD nixpkgs. BEFORE EVERY PACKAGE)
-            nixPackages.innerHTML += "android-studio audacity bitwarden-desktop blender chromium clion sqlitebrowser dolphin-emu " +
-                                     "drawio firefox flameshot freecad gimp github-desktop gzdoom kdenlive libreoffice-fresh " +
-                                     "librewolf minecraft obs-studio qflipper session-desktop signal-desktop steam pcsx2 " +
-                                     "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla" +
-                                     "python313 p7zip jdk21_headless ";
+            nixPackages.innerHTML += packages;
 
             // other software is android-file-transfer, gog galaxy, iina, intellij, microsoft-office, mos, nordvpn, numi, obsidian, pycharm, 
             // qittorrent, rectangle, webstorm, whisky, crossover, littlesnitch, cmake, dotnet, gcc, gdb, git, go, lua, luajit, luarocks,
