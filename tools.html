@@ -36,17 +36,18 @@
                 return str.split(' ').map(word => prefix + word).join(' ');
             }
 
-            let packages = "android-studio audacity bitwarden-desktop blender chromium clion sqlitebrowser dolphin-emu " +
+            let packagesNames = "android-studio audacity bitwarden-desktop blender chromium clion sqlitebrowser dolphin-emu " +
                                 "drawio firefox flameshot freecad gimp github-desktop gzdoom kdenlive libreoffice-fresh " +
                                 "librewolf minecraft obs-studio qflipper session-desktop signal-desktop steam pcsx2 " +
-                                "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla" +
-                                "python313 p7zip jdk21_headless ";
-            
-            let packages = addPrefix(packages, "nixpkgs.");
+                                "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla " +
+                                "python313 p7zip jdk21_headless";
 
-            
+            // Use the addPrefix function to add nixpkgs. to each package
+            let packages = addPrefix(packagesNames, "nixpkgs.");
+
             // Nix Packages to Install (MAKE SURE TO ADD nixpkgs. BEFORE EVERY PACKAGE)
             nixPackages.innerHTML += packages;
+
 
             // other software is android-file-transfer, gog galaxy, iina, intellij, microsoft-office, mos, nordvpn, numi, obsidian, pycharm, 
             // qittorrent, rectangle, webstorm, whisky, crossover, littlesnitch, cmake, dotnet, gcc, gdb, git, go, lua, luajit, luarocks,
