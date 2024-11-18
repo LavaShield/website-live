@@ -11,43 +11,36 @@
 <main class="site-content">
     <!------------CONTENT HERE------------>
     <h6>Eventually actual utilities will be released here</h6>
-    <div os="mac">
-        <h2>MacOS Setup:</h2>
-            <h3>Brew Install:</h3>
-                <p class="copy" id="brewInstall"></p>
-            <h3>Brew Cask Packages:</h3>
-                <p class="copy" id="caskPackages">brew install --cask </p>
-            <h3>Brew Terminal Packages:</h3>
-                <p class="copy" id="cmdPackages">brew install </p>
-            <h3>Software Installed Via Executable:</h3>
-                <p id='otherSoftware'></p>
+    <div os="linux">
+        <h2>Linux Setup:</h2>
+            <h3>Nix Install (Single-user installation):</h3>
+                <p class="copy" id="nixInstall"></p>
+            <h3>Nix Packages:</h3>
+                <p class="copy" id="nixPackages">nix-env -iA </p>
+            <br>
+            <p>Add backintime, flameshot, and timeshift to start</p>
     </div>
     <br>
     <!------------------------------------>
     <script>
         $(document).ready(function() {
             // Text Inserts
-            const brewInstall = document.getElementById('brewInstall');
-            const caskPackages = document.getElementById('caskPackages');
-            const cmdPackages = document.getElementById('cmdPackages');
-            const otherSoftware = document.getElementById('otherSoftware');
+            const nixInstall = document.getElementById('nixInstall');
+            const caskPackages = document.getElementById('nixPackages');
 
-            // Install Brew Command
-            brewInstall.innerHTML += '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"';
-            // Brew Casks Packages To Install
-            caskPackages.innerHTML += "android-file-transfer android-studio audacity bitwarden blender chromium clion " +
-                                      "db-browser-for-sqlite dolphin drawio firefox flameshot freecad gimp github " +
-                                      "gog-galaxy gzdoom iina intellij-idea-ce kdenlive libreoffice librewolf love " +
-                                      "microsoft-office minecraft mos nordvpn numi obs obsidian pycharm-ce qbittorrent " +
-                                      "qflipper rectangle session signal steam thunderbird veracrypt virtualbox " +
-                                      "visual-studio-code vlc webstorm whisky wireshark zoom";
-            // Brew Formula Packages To Install
-            cmdPackages.innerHTML += "cmake curl dotnet gcc gdb git go lua luajit luarocks neovim node openjdk@21 " +
-                                     "p7zip php@8.3 python@3.13 rsync ruby@3.3 vim";
-            // Pkgs apps executables etc
-            otherSoftware.innerHTML += `crossover filezilla littlesnitch pcsx2 samsung-magician`;
+            // Install Nix Command
+            nixInstall.innerHTML += "sh <(curl -L https://nixos.org/nix/install) --no-daemon";
 
-            // Opensnitch is on nix
+            // Nix Packages to Install (MAKE SURE TO ADD nixpkgs. BEFORE EVERY PACKAGE)
+            nixPackages.innerHTML += "android-studio audacity bitwarden-desktop blender chromium clion sqlitebrowser dolphin-emu " +
+                                     "drawio firefox flameshot freecad gimp github-desktop gzdoom kdenlive libreoffice-fresh " +
+                                     "librewolf minecraft obs-studio qflipper session-desktop signal-desktop steam pcsx2 " +
+                                     "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla" +
+                                     "python313 p7zip jdk21_headless ";
+
+            // other software is android-file-transfer, gog galaxy, iina, intellij, microsoft-office, mos, nordvpn, numi, obsidian, pycharm, 
+            // qittorrent, rectangle, webstorm, whisky, crossover, littlesnitch, cmake, dotnet, gcc, gdb, git, go, lua, luajit, luarocks,
+            // love, samsung-magician, ruby, php, node, npm                                  
 
 
             
