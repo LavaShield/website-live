@@ -13,10 +13,11 @@
     <h6>Eventually actual utilities will be released here</h6>
     <div os="macos">
         <h2>MacOS Setup:</h2>
-            <h3>Nix Install (Single-user installation):</h3>
-                <p class="copy" id="nixInstall"></p>
-            <h3>Nix Packages:</h3>
-                <p class="copy" id="nixPackages">nix-env -iA </p>
+            <h3>Brew Install:</h3>
+                <p class="copy" id="brewInstall"></p>
+            <h3>Brew Packages:</h3>
+                <p class="copy" id="brewCaskPackages">brew install --cask </p>
+                <p class="copy" id="brewCmdPackages">brew install </p>
             <br>
             <p>Add backintime, flameshot, and timeshift to start</p>
     </div>
@@ -25,25 +26,21 @@
     <script>
         $(document).ready(function() {
             // Text Inserts
-            const nixInstall = document.getElementById('nixInstall');
-            const nixPackages = document.getElementById('nixPackages');
+            const brewInstall = document.getElementById('brewInstall');
+            const brewCaskPackages = document.getElementById('brewCaskPackages');
+            const brewCmdPackages = document.getElementById('brewCmdPackages');
 
-            // Install Nix Command
-            nixInstall.innerHTML += "sh <(curl -L https://nixos.org/nix/install)";
+            // Install Brew Command
+            brewInstall.innerHTML += "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"";
 
-            // Package List
-            function addPrefix(str, prefix) {
-                return str.split(' ').map(word => prefix + word).join(' ');
-            }
-
+            // Brew Cask Packages
             let packagesNames = "android-studio audacity bitwarden-desktop blender chromium sqlitebrowser dolphin-emu " +
                                 "drawio firefox flameshot freecad gimp github-desktop gzdoom kdePackages.kdenlive libreoffice-fresh " +
                                 "librewolf minecraft obs-studio qflipper session-desktop signal-desktop steam pcsx2 " +
                                 "thunderbird veracrypt virtualbox vscode vlc opensnitch wireshark zoom vim filezilla " +
                                 "python313 p7zip jdk21 qbittorrent yt-dlg";
 
-            // Use the addPrefix function to add nixpkgs. to each package
-            let packages = addPrefix(packagesNames, "nixpkgs.");
+        
 
             // Nix Packages to Install (MAKE SURE TO ADD nixpkgs. BEFORE EVERY PACKAGE)
             nixPackages.innerHTML += packages;
