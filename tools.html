@@ -11,8 +11,8 @@
 <main class="site-content">
     <!------------CONTENT HERE------------>
     <h6>Eventually actual utilities will be released here</h6>
-    <div os="linux">
-        <h2>Linux Setup:</h2>
+    <div os="macos">
+        <h2>MacOS Setup:</h2>
             <h3>Nix Install (Single-user installation):</h3>
                 <p class="copy" id="nixInstall"></p>
             <h3>Nix Packages:</h3>
@@ -29,7 +29,7 @@
             const nixPackages = document.getElementById('nixPackages');
 
             // Install Nix Command
-            nixInstall.innerHTML += "sh <(curl -L https://nixos.org/nix/install) --no-daemon";
+            nixInstall.innerHTML += "sh <(curl -L https://nixos.org/nix/install)";
 
             // Package List
             function addPrefix(str, prefix) {
