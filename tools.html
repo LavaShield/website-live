@@ -19,6 +19,9 @@
                 <p class="copy" id="brewCaskPackages">brew install --cask </p>
                 <p class="copy" id="brewCmdPackages">brew install </p>
             <br>
+            <h3>Other Software:</h3>
+                <p class="copy" id="otherSoftware"></p>
+            <br>
             <p>Add backintime, flameshot, and timeshift to start</p>
     </div>
     <br>
@@ -29,6 +32,7 @@
             const brewInstall = document.getElementById('brewInstall');
             const brewCaskPackages = document.getElementById('brewCaskPackages');
             const brewCmdPackages = document.getElementById('brewCmdPackages');
+            const otherSoftware = document.getElementById('otherSoftware');
 
             // Install Brew Command
             brewInstall.innerHTML += "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"";
@@ -44,7 +48,8 @@
             // Brew Cmd Packages
             brewCmdPackages.innerHTML += "cmake curl gcc gdb git go lua luajit luarocks neovim node p7zip php python@3.13 ruby vim";
 
-            // Other software: filezilla, opensnitch (linux only), pcsx2, samsung-magician, youtube-dlg 
+            // Other software
+            otherSoftware.innerHTML += "filezilla, opensnitch (linux only), pcsx2, samsung-magician, youtube-dlg ";
             
             // Copy Button
             $('.copy').each(function() {
