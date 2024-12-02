@@ -10,6 +10,14 @@ qbittorrent qflipper rsync ruby sqlitebrowser steam thunderbird timeshift tmux v
 vim-gui-common virtualbox vlc wireshark youtubedl-gui
 # Maybe need nvidia nvidiasettings nvidiautils
 
+# Packages installed with snap
+sudo apt update
+sudo apt install snapd
+sudo snap install android-studio --classic
+sudo snap install clion --classic
+sudo snap install code --classic
+sudo snap install bitwarden drawio 
+
 # Install LibreWolf
 sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
@@ -32,6 +40,6 @@ for file in ~/.lavashield/pkgs/u/*.deb; do sudo dpkg -i "$file"; done
 # Final Notes
 echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
-# Installed via .deb: android-studio, bitwarden, clion, crossover, davinci-resolve, drawio, 
+# Installed via .deb: crossover, davinci-resolve,  
 # github-desktop, gog-galaxy, gzdoom, iina, intellij, minecraft, nordvpn, numi, pycharm,
-# samsung-magician, session, veracrypt, vscode, webstorm, zoom
+# samsung-magician, session, , webstorm, zoom
