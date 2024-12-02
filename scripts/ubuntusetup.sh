@@ -1,5 +1,5 @@
 # Packages installed with apt
-sudo apt install audacity
+sudo apt install audacity firefox love filezilla
 
 # Install LibreWolf
 sudo apt update && sudo apt install extrepo -y
