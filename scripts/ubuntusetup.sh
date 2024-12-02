@@ -1,5 +1,5 @@
 # Packages installed with apt
-sudo apt install audacity filezilla flameshot gimp git obs-studio qbittorrent opensnitch kdenlive vim vlc sqlitebrowser wireshark backintime-common
+sudo apt install audacity
 
 # Install LibreWolf
 sudo apt update && sudo apt install extrepo -y
@@ -17,6 +17,4 @@ sudo apt update && sudo apt install signal-desktop
 sudo systemctl start --now opensnitch.service
 sudo systemctl enable --now opensnitch.service
 
-# Additional packages are Bitwarden, vscode, nordvpn, python, steam, libreoffice, thunderbird and veracrypt (installed via local installer).
 
-# Add flameshot, backintime, and timeshift to startup
