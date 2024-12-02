@@ -1,3 +1,43 @@
+#!/bin/bash
+
+# Add repositories for Focal, Oracular, and Plucky
+echo "Adding Focal, Oracular, and Plucky repositories..."
+# Define repository components
+COMPONENTS="main universe restricted multiverse"
+# Backup existing sources.list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+# Add Focal, Oracular, and Plucky repositories
+{
+  echo "# Focal (20.04)"
+  for component in $COMPONENTS; do
+    echo "deb http://archive.ubuntu.com/ubuntu focal $component"
+    echo "deb http://archive.ubuntu.com/ubuntu focal-updates $component"
+    echo "deb http://archive.ubuntu.com/ubuntu focal-security $component"
+  done
+  echo "# Oracular"
+  for component in $COMPONENTS; do
+    echo "deb http://archive.ubuntu.com/ubuntu oracular $component"
+    echo "deb http://archive.ubuntu.com/ubuntu oracular-updates $component"
+    echo "deb http://archive.ubuntu.com/ubuntu oracular-security $component"
+  done
+  echo "# Plucky"
+  for component in $COMPONENTS; do
+    echo "deb http://archive.ubuntu.com/ubuntu plucky $component"
+    echo "deb http://archive.ubuntu.com/ubuntu plucky-updates $component"
+    echo "deb http://archive.ubuntu.com/ubuntu plucky-security $component"
+  done
+} | sudo tee -a /etc/apt/sources.list
+# Update package lists
+echo "Updating package lists..."
+sudo apt update
+# Install a package from a specific release (optional example)
+echo "To install a package from a specific release, use the following syntax:"
+echo "sudo apt install -t <release> <package-name>"
+echo "Example: sudo apt install -t focal vim"
+echo "Done!"
+
+
+
 # Packages installed with apt
 sudo apt install \
 android-file-transfer audacity backintime-common blender chromium-brower cmake curl dasher \
@@ -6,9 +46,6 @@ libreoffice love lua5.4 luajit luarocks man-db manpages neofetch neovim nodejs o
 openjdk-21-doc openjdk-21-jdk openjdk-21-source opensnitch p7zip pcsx2 php8.3 python3.13 \
 qbittorrent qflipper rsync ruby sqlitebrowser steam thunderbird timeshift tmux vim \
 vim-gui-common virtualbox vlc wireshark youtubedl-gui
-       
- 
-
 # Maybe need nvidia nvidiasettings nvidiautils
 
 # Install LibreWolf
