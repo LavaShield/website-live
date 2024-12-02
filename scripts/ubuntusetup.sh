@@ -13,10 +13,15 @@ vim-gui-common virtualbox vlc wireshark youtubedl-gui
 # Packages installed with snap
 sudo apt update
 sudo apt install snapd
-sudo snap install android-studio --classic
-sudo snap install clion --classic
-sudo snap install code --classic
-sudo snap install bitwarden drawio 
+# Regular Packages
+sudo snap install bitwarden drawio session-desktop nordvpn
+# Classic Packages
+classicPkgs="android-studio clion code pycharm-community webstorm intellij-idea-community "
+for pkg in $classicPkgs; do
+  sudo snap install "$pkg" --classic
+done
+
+
 
 # Install LibreWolf
 sudo apt update && sudo apt install extrepo -y
@@ -40,6 +45,5 @@ for file in ~/.lavashield/pkgs/u/*.deb; do sudo dpkg -i "$file"; done
 # Final Notes
 echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
-# Installed via .deb: crossover, davinci-resolve,  
-# github-desktop, gog-galaxy, gzdoom, iina, intellij, minecraft, nordvpn, numi, pycharm,
-# samsung-magician, session, , webstorm, zoom
+# Installed via .deb: gzdoom, minecraft, veracrypt, zoom
+# Installed via .AppImage: session
