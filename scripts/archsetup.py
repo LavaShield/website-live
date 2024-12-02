@@ -6,23 +6,23 @@ import sys
 CONFIG = {
     # General packages for all setups
     "general_packages": (
-        "base-devel curl dosfstools exfat-utils gcc gdb git htop jdk21-openjdk "
-        "man-db man-pages nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python "
-        "rsync timeshift tmux gvim pipewire pipewire-pulse pipewire-alsa reflector "
-        "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader "
-        "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon"
+        "base-devel curl dosfstools exfat-utils gcc gdb git htop jdk21-openjdk luajit luarocks curl pycharm-community-edition "
+        "man-db man-pages nodejs npm ntfs-3g openjdk21-doc openjdk21-src p7zip python lua go gdb cmake intellij-idea-community-edition "
+        "rsync timeshift tmux gvim pipewire pipewire-pulse pipewire-alsa reflector php love dasher "
+        "vulkan-icd-loader vulkan-tools vulkan-validation-layers lib32-vulkan-icd-loader neovim p7zip "
+        "lib32-libglvnd mesa lib32-mesa gnome gnome-extra cinnamon blender chromium firefox drawio-desktop ruby "
     ),
-    "aur_general_packages": "backintime librewolf-bin nordvpn-bin",
+    "aur_general_packages": "backintime librewolf-bin nordvpn-bin zoom webstorm",
 
     # Desktop-specific packages
     "desktop_packages": (
-        "audacity bitwarden bluez bluez-utils code cups filezilla flameshot gimp "
+        "audacity bitwarden bluez bluez-utils code cups filezilla flameshot gimp freecad "
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
         "sqlitebrowser system-config-printer thunderbird veracrypt vlc wireshark-qt "
-        "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arch"
-        "kdenlive steam"
+        "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arch "
+        "kdenlive steam android-file-transfer dolphin-emu "
     ),
-    "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin yt-dlg-git pcsx2-latest-bin",
+    "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin yt-dlg-git pcsx2-latest-bin android-studio clion crossover github-desktop-bin gzdoom minecraft-launcher ",
     "desktop_services": "bluetooth.service cups.service opensnitchd",
 
     # Server-specific packages
