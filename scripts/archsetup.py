@@ -20,7 +20,7 @@ CONFIG = {
         "libreoffice-fresh neofetch obs-studio opensnitch qbittorrent signal-desktop "
         "sqlitebrowser system-config-printer thunderbird veracrypt vlc wireshark-qt "
         "redshift pipewire-jack easyeffects virtualbox virtualbox-host-modules-arch"
-        "kdenlive"
+        "kdenlive steam"
     ),
     "aur_desktop_packages": "qflipper-bin davinci-resolve session-desktop-bin yt-dlg-git pcsx2-latest-bin",
     "desktop_services": "bluetooth.service cups.service opensnitchd",
