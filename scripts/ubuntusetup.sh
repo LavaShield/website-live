@@ -46,4 +46,4 @@ for file in ~/.lavashield/pkgs/u/*.deb; do sudo dpkg -i "$file"; done
 echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
 # Installed via .deb: gzdoom, minecraft, veracrypt, zoom
-# Installed via .AppImage: session
+# Installed via .AppImage: session, rpcs3, cemu, 
