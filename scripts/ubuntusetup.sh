@@ -1,5 +1,9 @@
 # Packages installed with apt
-sudo apt install audacity firefox love filezilla
+sudo apt install \
+audacity wireshark firefox love filezilla kdenlive opensnitch vim vlc thunderbird blender \
+qbittorrent dolphin-emu obs-studio backintime-common qflipper dasher timeshift git steam \
+neovim curl android-file-transfer
+
 
 # Install LibreWolf
 sudo apt update && sudo apt install extrepo -y
@@ -17,4 +21,7 @@ sudo apt update && sudo apt install signal-desktop
 sudo systemctl start --now opensnitch.service
 sudo systemctl enable --now opensnitch.service
 
+# Final Notes
+echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
+# Installed via .deb: bitwarden, veracrypt, session, minecraft, github-desktop
