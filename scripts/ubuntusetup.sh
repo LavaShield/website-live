@@ -26,6 +26,9 @@ sudo apt update && sudo apt install signal-desktop
 sudo systemctl start --now opensnitch.service
 sudo systemctl enable --now opensnitch.service
 
+# Install Local Debs
+for file in ~/.lavashield/pkgs/u/*.deb; do sudo dpkg -i "$file"; done
+
 # Final Notes
 echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
