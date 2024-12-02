@@ -1,11 +1,14 @@
 # Packages installed with apt
 sudo apt install \
-audacity wireshark firefox love filezilla kdenlive opensnitch vim vlc thunderbird blender \
-qbittorrent dolphin-emu obs-studio backintime-common qflipper dasher timeshift git steam \
-neovim curl android-file-transfer chromium-browser libreoffice python3.13 gimp flameshot \
-freecad htop neofetch virtualbox pcsx2 ruby rsync sqlitebrowser lua5.4 luajit luarocks \
-nodejs php8.3 tmux golang gcc gdb cmake openjdk-21-doc openjdk-21-jdk man-db manpages \
-vim-gui-common p7zip
+android-file-transfer audacity backintime-common blender chromium-brower cmake curl dasher \
+dolphin-emu filezilla firefox flameshot freecad gcc gdb gimp git golang htop kdenlive \
+libreoffice love lua5.4 luajit luarocks man-db manpages neofetch neovim nodejs obs-studio \
+openjdk-21-doc openjdk-21-jdk openjdk-21-source opensnitch p7zip pcsx2 php8.3 python3.13 \
+qbittorrent qflipper rsync ruby sqlitebrowser steam thunderbird timeshift tmux vim \
+vim-gui-common virtualbox vlc wireshark youtubedl-gui
+       
+ 
+
 # Maybe need nvidia nvidiasettings nvidiautils
 
 # Install LibreWolf
@@ -27,5 +30,6 @@ sudo systemctl enable --now opensnitch.service
 # Final Notes
 echo "Make sure to add flameshot, backintime, and timeshift to startup"
 
-# Installed via .deb: bitwarden, veracrypt, session, minecraft, github-desktop, android-studio, clion, iina, gzdoom, gog-galaxy, nordvpn, vscode
-# intellij, drawio, pycharm, zoom, samsung-magician, crossover, webstorm, youtube-dlg, davinci-resolve, numi
+# Installed via .deb: android-studio, bitwarden, clion, crossover, davinci-resolve, drawio, 
+# github-desktop, gog-galaxy, gzdoom, iina, intellij, minecraft, nordvpn, numi, pycharm,
+# samsung-magician, session, veracrypt, vscode, webstorm, zoom
