@@ -8,7 +8,7 @@ JetBrains.CLion WiresharkFoundation.Wireshark qBittorrent.qBittorrent GitHub.Git
 choco install samsung-magician pcsx2 php qflipper youtube-dl-gui
 
 
-
+# Software installed as exe: Nvidia Display Driver, 
 
 # Final Notes
 echo "Make sure to add flameshot, backintime, and timeshift to startup. Also enable windows mobility centre and \
