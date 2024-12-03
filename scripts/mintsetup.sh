@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# Packages installed with apt
+# Enable Snap :(
+sudo rm /etc/apt/preferences.d/nosnap.pref
+apt update
+apt install snapd
+
+# Apt Packages
 sudo apt install \
 android-file-transfer audacity backintime-qt blender chromium-browser cmake curl dasher \
 dolphin-emu filezilla firefox flameshot freecad gcc gdb gimp git golang htop kdenlive \
@@ -8,11 +13,8 @@ libreoffice love lua5.4 luajit luarocks man-db manpages neofetch neovim nodejs o
 openjdk-21-doc openjdk-21-jdk openjdk-21-source opensnitch p7zip pcsx2 php8.3 python3.13 \
 qbittorrent qflipper rsync ruby sqlitebrowser steam thunderbird timeshift tmux vim \
 vim-gui-common virtualbox vlc wireshark youtubedl-gui dotnet-sdk-9.0
-# Maybe need nvidia nvidiasettings nvidiautils
 
-# Packages installed with snap
-sudo apt update
-sudo apt install snapd
+# Snap Packages
 # Regular Packages
 sudo snap install bitwarden drawio session-desktop nordvpn
 # Classic Packages
