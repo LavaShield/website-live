@@ -2,7 +2,7 @@
 
 # Packages installed with apt
 sudo apt install \
-android-file-transfer audacity backintime-common blender chromium-browser cmake curl dasher \
+android-file-transfer audacity backintime-qt blender chromium-browser cmake curl dasher \
 dolphin-emu filezilla firefox flameshot freecad gcc gdb gimp git golang htop kdenlive \
 libreoffice love lua5.4 luajit luarocks man-db manpages neofetch neovim nodejs obs-studio \
 openjdk-21-doc openjdk-21-jdk openjdk-21-source opensnitch p7zip pcsx2 php8.3 python3.13 \
