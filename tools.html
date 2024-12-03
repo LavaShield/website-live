@@ -12,51 +12,17 @@
     <!------------CONTENT HERE------------>
     <h6>Eventually actual utilities will be released here</h6>
     <div os="macos">
-        <h2>MacOS Setup:</h2>
-            <h3>Brew Install:</h3>
-                <p class="copy" id="brewInstall"></p>
-            <h3>Brew Packages:</h3>
-                <p class="copy" id="brewCaskPackages">brew install --cask </p>
-                <p class="copy" id="brewCmdPackages">brew install </p>
+        <h2>Nix Setup:</h2>
+            <h3>Setup Script:</h3>
+                <p class="copy">curl -s http://lavashield.net/scripts/nixsetup.sh | bash</p>
             <br>
-            <h3>Other Software:</h3>
-                <p id="otherSoftware"></p>
         <br>
-        <br>
-        <h2>Archlinux Setup:</h2>
-        <p class="copy">curl -sSL https://lavashield.net/scripts/archsetup.py -o /tmp/archsetup.py && python3 /tmp/archsetup.py && rm -f /tmp/archsetup.py</p>
-        <br>
-        <br>
-        <p>Add backintime, flameshot, and timeshift to start (dasher is interesting software)</p>
         <br>
     </div>
     <br>
     <!------------------------------------>
     <script>
         $(document).ready(function() {
-            // Text Inserts
-            const brewInstall = document.getElementById('brewInstall');
-            const brewCaskPackages = document.getElementById('brewCaskPackages');
-            const brewCmdPackages = document.getElementById('brewCmdPackages');
-            const otherSoftware = document.getElementById('otherSoftware');
-
-            // Install Brew Command
-            brewInstall.innerHTML += "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"";
-
-            // Brew Cask Packages
-            brewCaskPackages.innerHTML += "android-file-transfer android-studio audacity bitwarden blender chromium clion crossover " + 
-                                          "db-browser-for-sqlite dolphin drawio firefox flameshot freecad gimp github gog-galaxy gzdoom " +
-                                          "iina intellij-idea-ce kdenlive libreoffice librewolf little-snitch love microsoft-office " +
-                                          "minecraft mos nordvpn numi obs obsidian openjdk@21 pycharm-ce qbittorrent qflipper rectangle " +
-                                          "session signal steam thunderbird veracrypt virtualbox visual-studio-code vlc webstorm whisky " +
-                                          "wireshark zoom";
-                    
-            // Brew Cmd Packages
-            brewCmdPackages.innerHTML += "cmake curl gcc gdb git go lua luajit luarocks neovim node p7zip php python@3.13 ruby vim";
-
-            // Other software
-            otherSoftware.innerHTML += "filezilla, opensnitch (linux only), pcsx2, samsung-magician, youtube-dlg ";
-            
             // Copy Button
             $('.copy').each(function() {
                 const button = $('<button class="copy-btn">Copy</button>');
