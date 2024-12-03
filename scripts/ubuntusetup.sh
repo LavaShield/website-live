@@ -7,7 +7,7 @@ dolphin-emu filezilla firefox flameshot freecad gcc gdb gimp git golang htop kde
 libreoffice love lua5.4 luajit luarocks man-db manpages neofetch neovim nodejs obs-studio \
 openjdk-21-doc openjdk-21-jdk openjdk-21-source opensnitch p7zip pcsx2 php8.3 python3.13 \
 qbittorrent qflipper rsync ruby sqlitebrowser steam thunderbird timeshift tmux vim \
-vim-gui-common virtualbox vlc wireshark youtubedl-gui
+vim-gui-common virtualbox vlc wireshark youtubedl-gui dotnet-sdk-9.0
 # Maybe need nvidia nvidiasettings nvidiautils
 
 # Packages installed with snap
