@@ -6,3 +6,10 @@ JetBrains.CLion WiresharkFoundation.Wireshark qBittorrent.qBittorrent GitHub.Git
 
 
 choco install samsung-magician pcsx2 php qflipper youtube-dl-gui
+
+
+
+
+# Final Notes
+echo "Make sure to add flameshot, backintime, and timeshift to startup. Also enable windows mobility centre and \
+      windows features like the vms"
