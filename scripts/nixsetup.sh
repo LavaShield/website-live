@@ -16,7 +16,7 @@ yt-dlg zoom-us go"
 # Nix Package List Named Properly
 FILTERED_PACKAGES=$(echo "$UNFILTERED_PACKAGES" | sed 's/\b\([^ ]*\)/nixos.\1/g')
 
-# Prepend "nixos." to each package and install in one command
+# Prepend "nixos." to each package and install in one command.
 nix-env -iA $FILTERED_PACKAGES
 
 echo "Remember To Add Backintime, Flameshot, And Timeshift To Startup!"
