@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Allow Unfree
+export NIXPKGS_ALLOW_UNFREE=1
+
 # Nix Packages
 PACKAGES="android-file-transfer android-studio audacity backintime bitwarden-desktop blender cemu cmake dasher \
 davinci-resolve dolphin-emu drawio filezilla firefox flameshot freecad gcc gdb gimp git github-desktop gzdoom \
