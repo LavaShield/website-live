@@ -2,7 +2,7 @@
 
 # Nix Packages
 PACKAGES="librewolf android-file-transfer android-studio rpcs3 audacity backintime bitwarden-desktop blender cemu \
-ungoogled-chromium jetbrains.clion cmake vscode dasher davinci-resolve zoom-us "
+ungoogled-chromium jetbrains.clion cmake vscode dasher davinci-resolve zoom-us nodejs_22"
 
 # Install Packages
 nix-env -iA $(echo $PACKAGES | sed 's/\b/nixos./g')
