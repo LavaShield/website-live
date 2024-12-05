@@ -8,3 +8,6 @@ GIMP.GIMP, DolphinEmulator.Dolphin, JGraph.Draw, KDE.Kdenlive, TheDocumentFounda
 Mojang.MinecraftLauncher, OBSProject.OBSStudio
 
 echo "Also install the local exe's: nvidia drivers, dotnet-sdk-9, simple64, cemu"
+
+echo "Press Enter to close this window..."
+set /p=  <!-- This pauses until Enter is pressed -->
