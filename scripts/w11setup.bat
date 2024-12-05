@@ -1,5 +1,5 @@
 # Winget Packages
-winget install -e --id LibreWolf.LibreWolf, Intel.IntelDriverAndSupportAssistantm, qBittorrent.qBittorrent, ^
+winget install LibreWolf.LibreWolf, Intel.IntelDriverAndSupportAssistantm, qBittorrent.qBittorrent, ^
 Google.AndroidStudio, Audacity.Audacity, Bitwarden.Bitwarden, BlenderFoundation.Blender, GitHub.GitHubDesktop, ^
 Mozilla.Firefox, Microsoft.VisualStudioCode, VideoLAN.VLC, vim.vim, IDRIX.VeraCrypt, Python.Python.3.12, ^
 OpenWhisperSystems.Signal, Oxen.Session, Zoom.Zoom, yt-dlg.yt-dlg, WiresharkFoundation.Wireshark, Valve.Steam ^
