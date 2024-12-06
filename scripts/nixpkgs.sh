@@ -30,7 +30,7 @@ nix-env -iA $pkgs
 
 # Other Packages
 echo "Installing other packages..."
-sudo apt install backintime-qt timeshift steam firefox thunderbird
+sudo apt install backintime-qt timeshift steam firefox thunderbird kiwix
 sudo snap install bitwarden
 
 # Installing Signal
