@@ -15,7 +15,7 @@ export NIXPKGS_ALLOW_UNFREE=1
 raw_pkgs="audacity backintime bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
 kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
 ryujinx session-desktop signal-desktop simple64 steam-unwrapped thunderbird timeshift ungoogled-chromium veracrypt vlc \
-vscode yt-dlg"
+vscode yt-dlg vim"
 
 # Prepend nixpkgs. in front of all packages and sort alphabetically
 pkgs=$(echo "$raw_pkgs" | tr ' ' '\n' | sort | sed 's/^/nixpkgs./' | tr '\n' ' ')
