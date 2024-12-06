@@ -3,7 +3,7 @@
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Pkgs List
-raw_pkgs = "librewolf audacity python313 backintime veracrypt bitwarden-desktop vim qbittorrent gzdoom cemu"
+raw_pkgs = "librewolf audacity python313 backintime veracrypt bitwarden-desktop vim qbittorrent gzdoom cemu pcsx2"
 
 # Prepend nixpkgs. in front of all packages
 
