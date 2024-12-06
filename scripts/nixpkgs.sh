@@ -40,6 +40,11 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
   sudo tee /etc/apt/sources.list.d/signal-xenial.list
 sudo apt update && sudo apt install signal-desktop
 
+# Installing Librewolf
+sudo apt update && sudo apt install extrepo -y
+sudo extrepo enable librewolf
+sudo apt update && sudo apt install librewolf -y
+
 # Goodbye Message
 echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
