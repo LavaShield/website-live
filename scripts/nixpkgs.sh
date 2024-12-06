@@ -8,6 +8,9 @@ if ! command -v nix-env &> /dev/null; then
   exit 1
 fi
 
+# Temporarily Allow Unfree Packages
+export NIXPKGS_ALLOW_UNFREE=1
+
 # Pkgs List
 raw_pkgs="audacity backintime bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
 kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
