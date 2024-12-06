@@ -12,7 +12,7 @@ fi
 export NIXPKGS_ALLOW_UNFREE=1
 
 # Pkgs List
-raw_pkgs="audacity backintime-common bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
+raw_pkgs="audacity backintime bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
 kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
 ryujinx session-desktop signal-desktop simple64 steam-unwrapped thunderbird timeshift ungoogled-chromium veracrypt vlc \
 vscode yt-dlg vim"
