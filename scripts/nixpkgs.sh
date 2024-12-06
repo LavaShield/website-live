@@ -6,7 +6,7 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 raw_pkgs = "librewolf audacity python313 backintime veracrypt bitwarden-desktop vim qbittorrent gzdoom cemu pcsx2 \
 minecraft rpcs3 gimp dolphin-emu vlc github-desktop opensnitch flameshot timeshift freecad signal-desktop ryujinx \
 session-desktop obs-studio libreoffice kdePackages.kdenlive neofetch thunderbird vscode simple64 firefox \
-ungoogled-chromium drawio yt-dlg"
+ungoogled-chromium drawio yt-dlg steam-unwrapped"
 
 # Prepend nixpkgs. in front of all packages
 
