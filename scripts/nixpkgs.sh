@@ -14,7 +14,7 @@ export NIXPKGS_ALLOW_UNFREE=1
 # Pkgs List
 raw_pkgs="audacity bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
 kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
-ryujinx session-desktop signal-desktop simple64 steam-unwrapped thunderbird ungoogled-chromium veracrypt vlc \
+ryujinx session-desktop signal-desktop simple64 thunderbird ungoogled-chromium veracrypt vlc \
 vscode yt-dlg vim"
 
 # Prepend nixpkgs. in front of all packages and sort alphabetically
@@ -26,7 +26,7 @@ nix-env -iA $pkgs
 
 # Other Packages
 echo "Installing other packages..."
-sudo apt install backintime-qt timeshift
+sudo apt install backintime-qt timeshift steam
 
 # Goodbye Message
 echo "Remember to add flameshot, backintime, and timeshift to startup."
