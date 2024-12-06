@@ -42,6 +42,10 @@ sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf -y
 
+# Enable Services
+sudo systemctl start --now opensnitch.service
+sudo systemctl enable --now opensnitch.service
+
 # Goodbye Message
 echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
