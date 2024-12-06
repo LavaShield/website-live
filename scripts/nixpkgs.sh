@@ -15,7 +15,7 @@ fi
 
 # Pkgs List
 raw_pkgs="audacity cemu dolphin-emu drawio flameshot freecad gimp github-desktop gzdoom \
-kdePackages.kdenlive libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
+kdePackages.kdenlive libreoffice minecraft neofetch obs-studio pcsx2 python313 qbittorrent rpcs3 \
 ryujinx session-desktop simple64 ungoogled-chromium veracrypt vlc vscode yt-dlg vim"
 
 # Prepend nixpkgs. in front of all packages and sort alphabetically
@@ -27,7 +27,7 @@ nix-env -iA $pkgs
 
 # Other Packages
 echo "Installing other packages..."
-sudo apt install backintime-qt timeshift steam firefox thunderbird kiwix
+sudo apt install backintime-qt timeshift steam firefox thunderbird kiwix opensnitch
 sudo snap install bitwarden nordvpn
 
 # Installing Signal
