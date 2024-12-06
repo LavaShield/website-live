@@ -1,17 +1,27 @@
+#!/bin/bash
 
-# Install Nix (Globally)
-sh <(curl -L https://nixos.org/nix/install) --daemon
+# Check if Nix is installed
+read -p "Do you already have Nix installed? (y/n): " has_nix
+if [[ "$has_nix" != "y" ]]; then
+  echo "Installing Nix..."
+  sh <(curl -L https://nixos.org/nix/install) --daemon
+  echo "Nix installed successfully. Please restart your terminal session to ensure Nix is initialized."
+  exit 0
+fi
 
 # Pkgs List
-raw_pkgs = "librewolf audacity python313 backintime veracrypt bitwarden-desktop vim qbittorrent gzdoom cemu pcsx2 \
-minecraft rpcs3 gimp dolphin-emu vlc github-desktop opensnitch flameshot timeshift freecad signal-desktop ryujinx \
-session-desktop obs-studio libreoffice kdePackages.kdenlive neofetch thunderbird vscode simple64 firefox \
-ungoogled-chromium drawio yt-dlg steam-unwrapped"
+raw_pkgs="audacity backintime bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp \
+github-desktop gzdoom kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch \
+pcsx2 python313 qbittorrent rpcs3 ryujinx session-desktop signal-desktop simple64 steam-unwrapped thunderbird \
+timeshift ungoogled-chromium veracrypt vlc vscode yt-dlg"
 
 # Prepend nixpkgs. in front of all packages
+pkgs=$(echo "$raw_pkgs" | tr ' ' '\n' | sort | sed 's/^/nixpkgs./' | tr '\n' ' ')
 
 # Install Pkgs
-
+echo "Installing packages..."
+nix-env -iA $pkgs
 
 # Goodbye Message
-echo "Remember to add flameshot, backintime, and timeshift to startup"
+echo "Remember to add flameshot, backintime, and timeshift to startup."
+echo "Installation complete!"
