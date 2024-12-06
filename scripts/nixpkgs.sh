@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Installing Snap
+sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
+sudo apt update
+sudo apt install snapd
+
 # Check if Nix is installed
 if ! command -v nix-env &> /dev/null; then
   echo "Nix is not installed or not properly configured. Please install Nix manually first."
@@ -12,7 +17,7 @@ fi
 export NIXPKGS_ALLOW_UNFREE=1
 
 # Pkgs List
-raw_pkgs="audacity bitwarden-desktop cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
+raw_pkgs="audacity cemu dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom \
 kdePackages.kdenlive librewolf libreoffice minecraft neofetch obs-studio opensnitch pcsx2 python313 qbittorrent rpcs3 \
 ryujinx session-desktop simple64 thunderbird ungoogled-chromium veracrypt vlc vscode yt-dlg vim"
 
@@ -26,6 +31,7 @@ nix-env -iA $pkgs
 # Other Packages
 echo "Installing other packages..."
 sudo apt install backintime-qt timeshift steam
+sudo snap install bitwarden
 
 # Installing Signal
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
