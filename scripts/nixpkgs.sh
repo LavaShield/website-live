@@ -3,7 +3,7 @@
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Pkgs List
-raw_pkgs = "librewolf audacity python313 backintime"
+raw_pkgs = "librewolf audacity python313 backintime veracrypt"
 
 # Prepend nixpkgs. in front of all packages
 
