@@ -1,9 +1,9 @@
 
-# Install Nix
+# Install Nix (Globally)
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Pkgs List
-raw_pkgs = "librewolf audacity python313"
+raw_pkgs = "librewolf audacity python313 backintime"
 
 # Prepend nixpkgs. in front of all packages
 
