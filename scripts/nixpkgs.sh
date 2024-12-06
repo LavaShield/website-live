@@ -28,7 +28,7 @@ nix-env -iA $pkgs
 # Other Packages
 echo "Installing other packages..."
 sudo apt install backintime-qt timeshift steam firefox thunderbird kiwix
-sudo snap install bitwarden
+sudo snap install bitwarden nordvpn
 
 # Installing Signal
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
