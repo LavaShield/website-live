@@ -7,7 +7,7 @@ vlc
 
 # Apt Packages
 sudo apt install \
-audacity backintime-qt dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
+audacity backintime-qt curl dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
 qbittorrent timeshift vim
 
 # Signal Install
