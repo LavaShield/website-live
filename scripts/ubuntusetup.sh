@@ -2,8 +2,11 @@
 
 # Snap Packages
 sudo snap install \
-bitwarden chromium code drawio firefox freecad gitkraken kdenlive libreoffice nordvpn steam thunderbird \
+bitwarden chromium drawio firefox freecad gitkraken kdenlive libreoffice nordvpn steam thunderbird \
 vlc 
+
+# Snap Classic Packages
+sudo snap install code --classic
 
 # Apt Packages
 sudo apt install \
