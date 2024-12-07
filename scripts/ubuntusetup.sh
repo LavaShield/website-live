@@ -31,4 +31,4 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-# cemu, gzdoom, minecraft, rpcs3, ryujinx, session, simple64, veracrypt, yt-dlg
+# Installed with .deb or N/A: cemu, gzdoom, minecraft, rpcs3, ryujinx, session, simple64, veracrypt, yt-dlg
