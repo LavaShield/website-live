@@ -2,11 +2,13 @@
 
 # Snap Packages
 sudo snap install \
-
+bitwarden chromium code drawio firefox freecad gitkraken kdenlive libreoffice nordvpn steam thunderbird \
+vlc 
 
 # Apt Packages
 sudo apt install \
-
+audacity backintime-qt dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
+qbittorrent timeshift vim
 
 # Signal Install
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -29,4 +31,4 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-audacity backintime bitwarden cemu chromium code dlg dolphin drawio emu firefox flameshot freecad gimp gitkraken gzdoom kdenlive kiwix libreoffice minecraft neofetch nordvpn obs opensnitch pcsx2 python3 qbittorrent qt rpcs3 ryujinx sessiondesktop simple64 steam studio thunderbird timeshift veracrypt vim vlc youtube
+# cemu, gzdoom, minecraft, rpcs3, ryujinx, session, simple64, veracrypt, yt-dlg
