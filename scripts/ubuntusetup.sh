@@ -29,8 +29,8 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-vlc steam firefox thunderbird bitwarden nordvpn drawio freecad gimp gitkraken kdenlive libreoffice \
+vlc steam firefox thunderbird bitwarden nordvpn drawio freecad gimp gitkraken kdenlive libreoffice 
 chromium code
-audacity timeshift backintime-qt kiwix opensnitch dolphin-emu flameshot neofetch obs-studio pcsx2 \
+audacity timeshift backintime-qt kiwix opensnitch dolphin-emu flameshot neofetch obs-studio pcsx2 
 python3.13 qbittorrent vim
-# cemu, gzdoom, minecraft, rpcs3, ryujinx, sessiondesktop, simple64, veracrypt, youtube-dlg
+ cemu gzdoom minecraft rpcs3 ryujinx sessiondesktop simple64 veracrypt youtube-dlg
