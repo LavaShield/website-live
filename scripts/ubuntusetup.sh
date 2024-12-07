@@ -1,19 +1,14 @@
 #!/bin/bash
 
+# Apt Packages
+sudo apt install \
+audacity timeshift backintime-qt kiwix opensnitch dolphin-emu flameshot neofetch obs-studio pcsx2 \
+python3.13 qbittorrent vim
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Snap Packages
+sudo snap install \
+vlc steam firefox thunderbird bitwarden nordvpn drawio freecad gimp gitkraken kdenlive libreoffice \
+chromium code
 
 # Signal Install
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -27,33 +22,12 @@ sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf -y
 
+# Enable Services
+# sudo systemctl start --now opensnitch.service
+# sudo systemctl enable --now opensnitch.service
+
 # Goodbye Message
 echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
-# -------------------------------------------------------------------------
 
-
-
-# Pkgs List
-raw_pkgs="audacity cemu dolphin-emu drawio flameshot freecad gimp github-desktop gzdoom \
-kdePackages.kdenlive libreoffice minecraft neofetch obs-studio pcsx2 python313 qbittorrent rpcs3 \
-ryujinx session-desktop simple64 ungoogled-chromium veracrypt vlc vscode yt-dlg vim"
-
-# Prepend nixpkgs. in front of all packages and sort alphabetically
-pkgs=$(echo "$raw_pkgs" | tr ' ' '\n' | sort | sed 's/^/nixpkgs./' | tr '\n' ' ')
-
-# Install Pkgs
-echo "Installing packages..."
-nix-env -iA $pkgs
-
-# Other Packages
-echo "Installing other packages..."
-sudo apt install backintime-qt timeshift steam firefox thunderbird kiwix opensnitch
-sudo snap install bitwarden nordvpn
-
-
-
-# Enable Services
-sudo systemctl start --now opensnitch.service
-sudo systemctl enable --now opensnitch.service
-
+# cemu, gzdoom, minecraft, rpcs3, ryujinx, sessiondesktop, simple64, veracrypt, youtube-dlg
