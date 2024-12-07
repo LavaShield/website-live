@@ -7,6 +7,14 @@
 
 
 
+
+
+
+
+
+
+
+
 # Signal Install
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
@@ -18,14 +26,6 @@ sudo apt update && sudo apt install signal-desktop
 sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf -y
-
-
-
-
-
-
-
-
 
 # Goodbye Message
 echo "Remember to add flameshot, backintime, and timeshift to startup."
