@@ -1,18 +1,13 @@
 #!/bin/bash
-
-# Snap Packages
-sudo snap install \
-bitwarden chromium drawio firefox freecad kdenlive libreoffice nordvpn steam thunderbird \
-vlc 
-
-# Snap Classic Packages
-sudo snap install code --classic
-sudo snap install gitkraken --classic
+# Preference: 1-Apt, 2-Flatpak
 
 # Apt Packages
-sudo apt install \
-audacity backintime-qt curl dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
-qbittorrent timeshift vim
+
+
+# Flatpak (Flathub) Packages
+
+
+
 
 # Signal Install
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -36,3 +31,12 @@ echo "Installation complete!"
 
 # ------------------------------------------------------
 # Installed with .deb or N/A: cemu, gzdoom, minecraft, rpcs3, ryujinx, session, simple64, veracrypt, yt-dlg
+
+# Snap Classic Packages
+sudo snap install code --classic
+sudo snap install gitkraken --classic
+bitwarden chromium drawio firefox freecad kdenlive libreoffice nordvpn steam thunderbird \
+vlc 
+sudo apt install \
+audacity backintime-qt curl dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
+qbittorrent timeshift vim
