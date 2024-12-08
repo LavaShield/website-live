@@ -2,9 +2,12 @@
 # Preference: 1-Apt, 2-Flatpak
 
 # Apt Packages
-
+sudo apt install \
+audacity backintime-qt dolphin-emu firefox
 
 # Flatpak (Flathub) Packages
+flatpak install flathub \
+com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.jgraph.drawio.desktop \
 
 
 
@@ -30,4 +33,6 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-audacity backintime-qt bitwarden cemu, chromium code curl dolphin-emu drawio firefox flameshot freecad gimp gitkraken gzdoom, install kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
+   firefox flameshot freecad gimp gitkraken gzdoom, install kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
+
+# Install with .deb: vscode,
