@@ -3,13 +3,10 @@
 
 # Apt Packages
 sudo apt install \
-audacity backintime-qt dolphin-emu firefox flameshot librewolf obs-studio
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
-com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.jgraph.drawio.desktop \
-org.freecad.FreeCAD org.gimp.GIMP io.github.shiftey.Desktop org.zdoom.GZDoom org.kde.kdenlive org.kiwix.desktop \
-com.mojang.Minecraft
+
 
 # NordVPN Install
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
@@ -36,5 +33,8 @@ echo "Installation complete!"
 
 # ------------------------------------------------------
     opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
-
+com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.jgraph.drawio.desktop \
+org.freecad.FreeCAD org.gimp.GIMP io.github.shiftey.Desktop org.zdoom.GZDoom org.kde.kdenlive org.kiwix.desktop \
+com.mojang.Minecraft
+audacity backintime-qt dolphin-emu firefox flameshot librewolf obs-studio
 # Install with .deb: vscode,
