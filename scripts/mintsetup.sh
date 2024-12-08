@@ -3,14 +3,16 @@
 
 # Apt Packages
 sudo apt install \
-audacity backintime-qt dolphin-emu firefox
+audacity backintime-qt dolphin-emu firefox flameshot librewolf obs-studio
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
 com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.jgraph.drawio.desktop \
+org.freecad.FreeCAD org.gimp.GIMP io.github.shiftey.Desktop org.zdoom.GZDoom org.kde.kdenlive org.kiwix.desktop \
+com.mojang.Minecraft
 
-
-
+# NordVPN Install
+sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 
 # Signal Install
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
@@ -33,6 +35,6 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-   firefox flameshot freecad gimp gitkraken gzdoom, install kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
+    opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
 
 # Install with .deb: vscode,
