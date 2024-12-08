@@ -1,12 +1,16 @@
 #!/bin/bash
-# Preference: 1-Apt, 2-Flatpak
+# Preference: 1 - Apt, 2 - Flatpak, 3 - .deb
 
 # Apt Packages
 sudo apt install \
+audacity backintime-qt dolphin-emu firefox flameshot freecad gimp kdenlive kiwix libreoffice obs-studio opensnitch \
+pcsx2 python3.13 qbittorrent steam thunderbird timeshift vim vlc
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
-
+com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.visualstudio.code-oss \
+com.jgraph.drawio.desktop io.github.shiftey.Desktop org.zdoom.GZDoom com.mojang.Minecraft net.rpcs3.RPCS3 \
+org.ryujinx.Ryujinx network.loki.Session io.github.simple64.simple64
 
 # NordVPN Install
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
@@ -28,11 +32,5 @@ sudo apt update && sudo apt install librewolf -y
 # sudo systemctl enable --now opensnitch.service
 
 # Goodbye Message
-echo "Remember to add flameshot, backintime, and timeshift to startup."
+echo "Install Veracrypt and yt-dlg with local deb file and remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
-
-# ------------------------------------------------------
-# ------------------------------------------------------
-# ------------------------------------------------------
-
- audacity backintime-qt bitwarden cemu, chromium code curl dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom, kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, steam thunderbird timeshift veracrypt, vim vlc yt-dlg
