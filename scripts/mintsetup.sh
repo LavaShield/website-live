@@ -32,9 +32,7 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-    opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
-com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.jgraph.drawio.desktop \
-org.freecad.FreeCAD org.gimp.GIMP io.github.shiftey.Desktop org.zdoom.GZDoom org.kde.kdenlive org.kiwix.desktop \
-com.mojang.Minecraft
-audacity backintime-qt dolphin-emu firefox flameshot librewolf obs-studio
-# Install with .deb: vscode,
+# ------------------------------------------------------
+# ------------------------------------------------------
+
+ audacity backintime-qt bitwarden cemu, chromium code curl dolphin-emu drawio firefox flameshot freecad gimp github-desktop gzdoom, kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, steam thunderbird timeshift veracrypt, vim vlc yt-dlg
