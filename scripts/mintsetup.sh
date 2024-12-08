@@ -30,13 +30,4 @@ echo "Remember to add flameshot, backintime, and timeshift to startup."
 echo "Installation complete!"
 
 # ------------------------------------------------------
-# Installed with .deb or N/A: cemu, gzdoom, minecraft, rpcs3, ryujinx, session, simple64, veracrypt, yt-dlg
-
-# Snap Classic Packages
-sudo snap install code --classic
-sudo snap install gitkraken --classic
-bitwarden chromium drawio firefox freecad kdenlive libreoffice nordvpn steam thunderbird \
-vlc 
-sudo apt install \
-audacity backintime-qt curl dolphin-emu flameshot gimp kiwix neofetch obs-studio opensnitch pcsx2 python3.13 \
-qbittorrent timeshift vim
+audacity backintime-qt bitwarden cemu, chromium code curl dolphin-emu drawio firefox flameshot freecad gimp gitkraken gzdoom, install kdenlive kiwix libreoffice minecraft, neofetch nordvpn obs-studio opensnitch pcsx2 python3.13 qbittorrent rpcs3, ryujinx, session, simple64, snap steam sudo thunderbird timeshift veracrypt, vim vlc yt-dlg
