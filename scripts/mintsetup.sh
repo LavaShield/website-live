@@ -4,13 +4,13 @@
 # Apt Packages
 sudo apt install \
 audacity backintime-qt dolphin-emu firefox flameshot freecad gimp kdenlive kiwix libreoffice obs-studio opensnitch \
-pcsx2 python3.13 qbittorrent steam thunderbird timeshift vim vlc
+python3.13 qbittorrent steam thunderbird timeshift vim vlc
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
 com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chromium com.visualstudio.code-oss \
 com.jgraph.drawio.desktop io.github.shiftey.Desktop org.zdoom.GZDoom com.mojang.Minecraft net.rpcs3.RPCS3 \
-org.ryujinx.Ryujinx network.loki.Session io.github.simple64.simple64
+org.ryujinx.Ryujinx network.loki.Session io.github.simple64.simple64 net.pcsx2.PCSX2
 
 # NordVPN Install
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
