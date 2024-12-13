@@ -4,7 +4,7 @@
 # Apt Packages
 sudo apt install \
 audacity backintime-qt dolphin-emu firefox flameshot freecad gimp kdenlive kiwix libreoffice obs-studio opensnitch \
-python3.13 qbittorrent steam thunderbird timeshift vim vlc openjdk-21-jdk
+python3.13 qbittorrent steam thunderbird timeshift vim vlc openjdk-21-jdk handbrake
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
