@@ -9,7 +9,7 @@ sudo pacman -Sy \
 bitwarden firefox signal-desktop audacity chromium dolphin flameshot freecad gimp kdenlive kiwix-desktop libreoffice-fresh \
 obs-studio opensnitch python qbittorrent thunderbird timeshift vim vlc jdk21-openjdk openjdk21-doc openjdk21-src \
 nodejs git code drawio-desktop handbrake veracrypt bluez bluez-utils cups system-config-printer cinnamon gnome \
-gnome-extra nodejs ntfs-3g gvim timeshift
+gnome-extra nodejs ntfs-3g gvim timeshift exfat-utils htop dosfstools curl p7zip
 
 
 # Yay Packages
