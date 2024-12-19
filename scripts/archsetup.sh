@@ -1,6 +1,8 @@
 
 
-
+# Archlinux Packages
+sudo pacman -Sy \
+bitwarden firefox
 
 
 
