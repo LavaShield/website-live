@@ -19,7 +19,7 @@ yay -S librewolf nordvpn-bin backintime github-desktop minecraft-launcher pcsx2-
 
 # System Specific Packages
 sudo pacman -Syu \
-intel-ucode nvidia nvidia-settings nvidia-utils lib32-nvidia-utils intel-media-driver vulkan-intel lib32-vulkan-intel \
+intel-ucode nvidia nvidia-settings nvidia-utils intel-media-driver vulkan-intel
 
 
 # Enable Services
