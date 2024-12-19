@@ -15,12 +15,15 @@ nodejs git code drawio-desktop handbrake
 yay -S librewolf nordvpn-bin cemu backintime github-desktop minecraft-launcher rpcs3-git ryujinx pcsx2-git
 
 
+# System Specific Packages
+sudo pacman -Syu \
+intel-ucode nvidia nvidia-settings nvidia-utils lib32-nvidia-utils intel-media-driver vulkan-intel lib32-vulkan-intel \
 
 
 
 # Enable Services
-# sudo systemctl start --now opensnitch.service
-# sudo systemctl enable --now opensnitch.service
+# sudo systemctl start --now opensnitch, cups, bluetooth
+# sudo systemctl enable --now opensnitch, cups, bluetooth
 
 
 # Goodbye Message
