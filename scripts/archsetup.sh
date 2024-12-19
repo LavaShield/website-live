@@ -8,11 +8,11 @@ git clone https://aur.archlinux.org/yay.git ~/Downloads/yay && cd ~/Downloads/ya
 sudo pacman -Sy \
 bitwarden firefox signal-desktop audacity chromium dolphin flameshot freecad gimp kdenlive kiwix-desktop libreoffice-fresh \
 obs-studio opensnitch python qbittorrent thunderbird timeshift vim vlc jdk21-openjdk openjdk21-doc openjdk21-src \
-
+nodejs git code drawio-desktop handbrake
 
 
 # Yay Packages
-yay -S librewolf nordvpn-bin cemu backintime
+yay -S librewolf nordvpn-bin cemu backintime github-desktop minecraft-launcher rpcs3-git ryujinx pcsx2-git
 
 
 
