@@ -14,7 +14,7 @@ git clone https://aur.archlinux.org/yay.git ~/Downloads/yay && cd ~/Downloads/ya
 
 
 # Yay Packages
-yay -S librewolf nordvpn-bin backintime github-desktop minecraft-launcher pcsx2-git yt-dlg \
+yay -S librewolf nordvpn-bin backintime github-desktop minecraft-launcher pcsx2-git yt-dlg
 
 
 # System Specific Packages
