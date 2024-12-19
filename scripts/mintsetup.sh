@@ -13,12 +13,6 @@ com.bitwarden.desktop info.cemu.Cemu io.github.ungoogled_software.ungoogled_chro
 com.jgraph.drawio.desktop io.github.shiftey.Desktop org.zdoom.GZDoom com.mojang.Minecraft net.rpcs3.RPCS3 \
 org.ryujinx.Ryujinx network.loki.Session io.github.simple64.simple64 net.pcsx2.PCSX2 fr.handbrake.ghb
 
-# Brew Install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Brew Packages
-brew install node@22
-
 # NordVPN Install
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 
