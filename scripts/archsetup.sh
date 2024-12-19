@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install Yay
-git clone https://aur.archlinux.org/yay.git ~/Downloads/yay && cd ~/Downloads/yay && makepkg -si --noconfirm && sudo rm -rf ~/Downloads/yay
-
 
 # Archlinux Packages
 sudo pacman -Sy \
@@ -10,6 +7,10 @@ bitwarden firefox signal-desktop audacity chromium dolphin flameshot freecad gim
 obs-studio opensnitch python qbittorrent thunderbird timeshift vim vlc jdk21-openjdk openjdk21-doc openjdk21-src \
 nodejs git code drawio-desktop handbrake veracrypt bluez bluez-utils cups system-config-printer cinnamon gnome \
 gnome-extra nodejs ntfs-3g gvim timeshift exfat-utils htop dosfstools curl p7zip
+
+
+# Install Yay
+git clone https://aur.archlinux.org/yay.git ~/Downloads/yay && cd ~/Downloads/yay && makepkg -si --noconfirm && sudo rm -rf ~/Downloads/yay
 
 
 # Yay Packages
