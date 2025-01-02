@@ -5,7 +5,7 @@
 # Apt Packages
 sudo apt install \
 audacity backintime-qt firefox flameshot freecad gimp kdenlive kiwix libreoffice obs-studio opensnitch \
-python3.13 qbittorrent thunderbird timeshift vim vlc git gcc
+python3.13 qbittorrent thunderbird timeshift vim vlc git gcc dotnet-sdk-8.0
 
 # Flatpak (Flathub) Packages
 flatpak install flathub \
