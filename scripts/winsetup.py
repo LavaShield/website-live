@@ -2,7 +2,8 @@
 local_software = "audacity bitwarden dolphin drawio firefox flameshot gimp github-desktop" +
                  "handbrake intel-dsa kiwix lenovo-service-bridge libreoffice librewolf" + 
                  "microsoft-office nordvpn nvidia-drivers obs pcsx2 python3 qbittorrent" + 
-                 "samsung-magician signal thunderbird veracrypt vlc vscode youtube-dlg"
+                 "samsung-magician signal thunderbird veracrypt vlc vscode youtube-dlg" +
+                 "rufus"
 
 
 
