@@ -1,8 +1,8 @@
 # Installed via exe
-local_software = "dolphin nvidia-drivers bitwarden intel-dsa librewolf lenovo-service-bridge pcsx2" +
-                 "python3 signal veracrypt vscode youtube-dlg qbittorrent nordvpn samsung-magician" +
-                 "firefox thunderbird github-desktop handbrake libreoffice audacity flameshot gimp" +
-                 "obs vlc kiwix microsoft-office drawio"
+local_software = "audacity bitwarden dolphin drawio firefox flameshot gimp github-desktop" +
+                 "handbrake intel-dsa kiwix lenovo-service-bridge libreoffice librewolf" + 
+                 "microsoft-office nordvpn nvidia-drivers obs pcsx2 python3 qbittorrent" + 
+                 "samsung-magician signal thunderbird veracrypt vlc vscode youtube-dlg"
 
 
 
