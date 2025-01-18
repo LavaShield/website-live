@@ -8,7 +8,7 @@
 # Brew GUI Packages
 brew install --cask \
 audacity bitwarden chromium visual-studio-code crossover dolphin drawio firefox flameshot freecad gimp \
-github handbrake libreoffice librewolf samsung-magician minecraft mos nordvpn obs qbittorrent rectangle \
+github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent rectangle \
 signal thunderbird veracrypt vlc wireshark zoom
 
 
@@ -17,5 +17,5 @@ brew install \
 node@22 python@3.13 vim
 
 
-echo "With installer: pcsx2, yt-dlg, kiwix"
+echo "With installer: pcsx2, yt-dlg, kiwix, librewolf"
 echo "Finished! Installation Complete!"
