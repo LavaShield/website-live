@@ -17,5 +17,5 @@ brew install \
 node@22 python@3.13 vim
 
 
-echo "With installer: pcsx2, yt-dlg, kiwix, librewolf"
+echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, yubikey-manager, yubikey-authenticator"
 echo "Finished! Installation Complete!"
