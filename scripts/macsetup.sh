@@ -9,7 +9,8 @@
 brew install --cask \
 audacity bitwarden chromium visual-studio-code crossover dolphin drawio firefox flameshot freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
-signal thunderbird veracrypt vlc wireshark zoom microsoft-office
+signal thunderbird veracrypt vlc wireshark zoom microsoft-office librewolf yubico-yubikey-manager \
+yubico-authenticator
 
 
 # Brew CLI Packages
