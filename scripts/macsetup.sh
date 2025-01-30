@@ -9,7 +9,7 @@
 brew install --cask \
 audacity bitwarden visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
-signal thunderbird veracrypt vlc wireshark zoom microsoft-office librewolf yubico-yubikey-manager \
+signal thunderbird veracrypt vlc wireshark zoom microsoft-office librewolf \
 yubico-authenticator
 
 
