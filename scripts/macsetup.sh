@@ -7,7 +7,7 @@
 
 # Brew GUI Packages
 brew install --cask \
-audacity bitwarden chromium visual-studio-code crossover dolphin drawio firefox flameshot freecad gimp \
+audacity bitwarden visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
 signal thunderbird veracrypt vlc wireshark zoom microsoft-office librewolf yubico-yubikey-manager \
 yubico-authenticator
@@ -15,8 +15,9 @@ yubico-authenticator
 
 # Brew CLI Packages
 brew install \
-node@22 python@3.13 vim
+python@3.13
 
 
 echo "With installer: pcsx2, yt-dlg, kiwix"
 echo "Finished! Installation Complete!"
+
