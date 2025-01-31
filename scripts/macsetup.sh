@@ -7,7 +7,7 @@
 
 # Brew GUI Packages
 brew install --cask \
-audacity bitwarden visual-studio-code dolphin drawio firefox freecad gimp \
+audacity visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
 thunderbird vlc wireshark zoom microsoft-office \
 yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t
@@ -18,6 +18,6 @@ brew install \
 python@3.13
 
 
-echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, veracrypt (fuse-t), signal"
+echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, veracrypt (fuse-t), signal, bitwarden"
 echo "Finished! Installation Complete!"
 
