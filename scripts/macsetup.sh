@@ -9,8 +9,8 @@
 brew install --cask \
 audacity bitwarden visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
-signal thunderbird veracrypt vlc wireshark zoom microsoft-office \
-yubico-authenticator
+thunderbird vlc wireshark zoom microsoft-office \
+yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t
 
 
 # Brew CLI Packages
@@ -18,6 +18,6 @@ brew install \
 python@3.13
 
 
-echo "With installer: pcsx2, yt-dlg, kiwix, librewolf"
+echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, veracrypt (fuse-t), signal"
 echo "Finished! Installation Complete!"
 
