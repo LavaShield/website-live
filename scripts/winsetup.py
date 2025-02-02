@@ -1,12 +1,12 @@
 # Installed Locally
-OculusSetup Nvidia-Drivers
+OculusSetup Nvidia-Drivers NordVPN
 
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
 # Install Chocolatey Packages
-choco install dolphin flameshot handbrake intel-dsa librewolf nordvpn rufus samsung-magician qbittorrent obs-studio pcsx2 python3 vlc vscode youtube-dl-gui steam
+choco install dolphin flameshot handbrake intel-dsa librewolf rufus samsung-magician qbittorrent obs-studio pcsx2 python3 vlc vscode youtube-dl-gui steam
 
 
 
