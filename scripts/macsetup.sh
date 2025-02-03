@@ -15,7 +15,7 @@ yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t
 
 # Brew CLI Packages
 brew install \
-python@3.13 yt-dlp
+python@3.13 yt-dlp ffmpeg
 
 
 echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, veracrypt (fuse-t), signal, bitwarden"
