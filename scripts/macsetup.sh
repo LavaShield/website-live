@@ -9,7 +9,7 @@
 brew install --cask \
 audacity visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent \
-thunderbird vlc wireshark zoom microsoft-office avogadro \
+vlc wireshark zoom microsoft-office avogadro \
 yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t
 
 
