@@ -6,7 +6,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 
 # Install Chocolatey Packages
-choco install audacity dolphin flameshot handbrake intel-dsa librewolf rufus samsung-magician qbittorrent obs-studio pcsx2 python3 vlc vscode youtube-dl-gui steam
+choco install audacity bitwarden dolphin flameshot handbrake intel-dsa librewolf rufus samsung-magician qbittorrent obs-studio pcsx2 python3 vlc vscode youtube-dl-gui steam
 
 
 
