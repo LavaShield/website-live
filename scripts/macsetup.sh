@@ -10,7 +10,7 @@ brew install --cask \
 audacity visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent thunderbird \
 vlc wireshark zoom microsoft-office avogadro roblox \
-yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t
+yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t kdenlive
 
 
 # Brew CLI Packages
