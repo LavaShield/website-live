@@ -8,7 +8,7 @@
 # Brew GUI Packages
 brew install --cask \
 audacity visual-studio-code dolphin drawio firefox freecad gimp \
-github handbrake libreoffice samsung-magician minecraft mos nordvpn obs qbittorrent thunderbird \
+github handbrake libreoffice samsung-magician mos nordvpn obs qbittorrent thunderbird \
 vlc wireshark zoom microsoft-office avogadro roblox \
 yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t kdenlive blender
 
