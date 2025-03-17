@@ -11,12 +11,12 @@ audacity visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician mos nordvpn obs qbittorrent thunderbird \
 vlc wireshark zoom microsoft-office avogadro roblox \
 yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t kdenlive blender \
-intellij-idea-ce openjdk
+intellij-idea-ce
 
 
 # Brew CLI Packages
 brew install \
-python@3.13 yt-dlp ffmpeg python-tk
+python@3.13 yt-dlp ffmpeg python-tk openjdk
 
 
 echo "With installer: pcsx2, yt-dlg, kiwix, librewolf, veracrypt (fuse-t), signal, bitwarden"
