@@ -11,7 +11,7 @@ audacity visual-studio-code dolphin drawio firefox freecad gimp \
 github handbrake libreoffice samsung-magician mos nordvpn obs qbittorrent thunderbird \
 vlc wireshark zoom microsoft-office avogadro roblox \
 yubico-authenticator macos-fuse-t/homebrew-cask/fuse-t kdenlive blender \
-intellij-idea-ce
+intellij-idea-ce wine-stable
 
 
 # Brew CLI Packages
